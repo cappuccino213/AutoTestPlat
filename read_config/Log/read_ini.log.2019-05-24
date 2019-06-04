@@ -1,0 +1,1962 @@
+[时间]:2019-05-20 16:24:47,144
+[线程]:18232
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:24:48,382
+[线程]:18356
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:32:35,907
+[线程]:1420
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:34:44,725
+[线程]:17164
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:34:45,891
+[线程]:18352
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:35:42,176
+[线程]:2476
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:35:47,181
+[线程]:880
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:35:48,404
+[线程]:2008
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:36:50,626
+[线程]:18116
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:36:52,491
+[线程]:18212
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:37:08,139
+[线程]:14488
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:37:09,981
+[线程]:3724
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:39:21,648
+[线程]:14744
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:39:22,925
+[线程]:18188
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:42:37,039
+[线程]:17692
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 16:42:38,358
+[线程]:16984
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 18:52:09,043
+[线程]:20784
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 18:52:10,315
+[线程]:20992
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 19:00:07,922
+[线程]:20692
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-20 19:00:09,131
+[线程]:21396
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 10:38:58,468
+[线程]:17740
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 10:38:59,693
+[线程]:3084
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 10:41:56,867
+[线程]:22476
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 10:41:58,076
+[线程]:11040
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:14:53,037
+[线程]:23872
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:16:57,351
+[线程]:7956
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:17:43,457
+[线程]:1716
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:18:45,367
+[线程]:18756
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:19:33,576
+[线程]:22624
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:20:11,620
+[线程]:20992
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:20:12,938
+[线程]:18616
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:28:46,372
+[线程]:20400
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:28:47,700
+[线程]:24376
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 11:41:03,704
+[线程]:20308
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:21:56,572
+[线程]:23092
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:21:57,860
+[线程]:20864
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:23:12,970
+[线程]:20056
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:24:13,380
+[线程]:4480
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:24:15,409
+[线程]:23092
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:28:11,286
+[线程]:12752
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:28:26,099
+[线程]:24620
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:28:28,085
+[线程]:8256
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:29:34,390
+[线程]:14404
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:31:26,684
+[线程]:25324
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:31:28,669
+[线程]:10044
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 12:34:04,984
+[线程]:24772
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:05:43,094
+[线程]:25264
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:05:44,432
+[线程]:26016
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:10:39,836
+[线程]:24508
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:10:41,185
+[线程]:25228
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:28:05,409
+[线程]:26784
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:28:06,951
+[线程]:12228
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:30:32,595
+[线程]:26444
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:31:41,987
+[线程]:25452
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:31:43,462
+[线程]:25360
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:32:31,671
+[线程]:2976
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:32:38,946
+[线程]:3816
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:32:40,217
+[线程]:21876
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:33:21,860
+[线程]:26736
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:33:23,265
+[线程]:26052
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:34:24,655
+[线程]:18532
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:34:26,746
+[线程]:18840
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:37:12,785
+[线程]:13420
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:37:14,858
+[线程]:25736
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:40:51,377
+[线程]:27324
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:41:30,716
+[线程]:26428
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:41:32,030
+[线程]:26328
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:43:37,087
+[线程]:26888
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:43:38,470
+[线程]:19420
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:50:03,803
+[线程]:28560
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 14:50:05,157
+[线程]:27996
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 16:04:37,649
+[线程]:21664
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 16:04:38,938
+[线程]:25920
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 16:05:15,498
+[线程]:13480
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-21 16:05:41,739
+[线程]:19052
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:39:32,106
+[线程]:23260
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:39:33,583
+[线程]:25632
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:44:29,391
+[线程]:5376
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:44:30,744
+[线程]:29100
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:48:34,765
+[线程]:30744
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:48:36,109
+[线程]:28912
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:54:05,093
+[线程]:31152
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:54:06,444
+[线程]:29400
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:57:19,481
+[线程]:31084
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 09:57:20,770
+[线程]:31500
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 10:59:51,845
+[线程]:31084
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 10:59:53,285
+[线程]:24616
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 11:07:27,459
+[线程]:24132
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 11:35:33,598
+[线程]:32640
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 11:35:34,910
+[线程]:32676
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 11:42:43,301
+[线程]:32824
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 11:42:44,609
+[线程]:33048
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 14:13:01,123
+[线程]:22164
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 14:21:41,023
+[线程]:32744
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 14:21:42,456
+[线程]:33688
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 14:22:23,487
+[线程]:29528
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 16:14:30,529
+[线程]:34296
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 16:14:31,861
+[线程]:32428
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 16:26:13,555
+[线程]:33476
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 17:48:08,936
+[线程]:30528
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 17:48:10,311
+[线程]:37036
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 17:53:35,781
+[线程]:8744
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 18:11:24,226
+[线程]:37804
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 18:11:25,542
+[线程]:35024
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 18:56:55,068
+[线程]:37088
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 18:57:26,621
+[线程]:38140
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 18:57:42,002
+[线程]:35884
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:01:20,600
+[线程]:38140
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:04:55,857
+[线程]:35832
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:07:56,103
+[线程]:36716
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:07:56,218
+[线程]:37268
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:15:37,446
+[线程]:26632
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:16:58,555
+[线程]:34296
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:17:52,160
+[线程]:38112
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:18:03,842
+[线程]:33308
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:25:09,241
+[线程]:35792
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-22 19:25:10,599
+[线程]:36124
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 09:39:01,569
+[线程]:22276
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 09:42:54,864
+[线程]:37272
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 09:46:17,016
+[线程]:4144
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 09:46:33,353
+[线程]:13620
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 09:47:19,218
+[线程]:38304
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 09:51:00,268
+[线程]:11992
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 10:04:39,989
+[线程]:39276
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 10:29:49,368
+[线程]:22712
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 10:32:45,554
+[线程]:39664
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 10:38:45,400
+[线程]:22140
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 10:41:22,179
+[线程]:38084
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:00:57,530
+[线程]:24660
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:01:16,235
+[线程]:35824
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:02:05,328
+[线程]:39048
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:05:29,682
+[线程]:32820
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:23:03,928
+[线程]:41916
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:39:50,355
+[线程]:38960
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:56:48,925
+[线程]:34068
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:57:40,814
+[线程]:17584
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:57:42,145
+[线程]:40172
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:59:11,720
+[线程]:41928
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 11:59:13,079
+[线程]:39852
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 12:01:47,690
+[线程]:38968
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 12:01:52,572
+[线程]:17132
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 12:01:54,120
+[线程]:36748
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 12:03:00,285
+[线程]:37924
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 13:45:16,361
+[线程]:36332
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 13:45:18,390
+[线程]:39232
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 13:46:19,166
+[线程]:42268
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 13:46:21,229
+[线程]:10520
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 13:47:53,944
+[线程]:40336
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 13:47:55,380
+[线程]:22888
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 13:59:05,883
+[线程]:20784
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 13:59:07,238
+[线程]:31148
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 14:31:06,131
+[线程]:38700
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-23 14:31:07,463
+[线程]:3676
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 14:29:16,045
+[线程]:27696
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 14:40:04,008
+[线程]:22536
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 14:52:07,908
+[线程]:49284
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 14:56:02,360
+[线程]:41768
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:14:33,730
+[线程]:27212
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:18:41,379
+[线程]:48240
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:19:23,742
+[线程]:42976
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:21:13,454
+[线程]:46660
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:21:35,694
+[线程]:36008
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:22:00,905
+[线程]:46336
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:24:43,388
+[线程]:34008
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:26:36,880
+[线程]:39208
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:29:24,769
+[线程]:15468
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:32:18,779
+[线程]:8748
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:39:54,479
+[线程]:48056
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:41:20,279
+[线程]:48616
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:41:50,031
+[线程]:47836
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:42:06,785
+[线程]:49040
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:43:32,834
+[线程]:48028
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:43:52,285
+[线程]:4052
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:44:05,617
+[线程]:49264
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:53:57,470
+[线程]:36452
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 15:58:05,020
+[线程]:46752
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 16:06:20,054
+[线程]:49132
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 16:11:35,337
+[线程]:24132
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 16:19:37,863
+[线程]:17344
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 16:24:28,631
+[线程]:336
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 16:28:20,771
+[线程]:39584
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:04:29,912
+[线程]:34180
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:04:58,374
+[线程]:16524
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:19:48,530
+[线程]:15036
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:19:50,191
+[线程]:61268656
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:19:54,954
+[线程]:25568
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:19:56,512
+[线程]:47987408
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:21:20,773
+[线程]:30640
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:21:22,106
+[线程]:52748976
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:22:34,479
+[线程]:36828
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:24:25,619
+[线程]:31976
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:24:33,762
+[线程]:17513168
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:27:22,999
+[线程]:38056
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:27:34,700
+[线程]:37160
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:28:18,408
+[线程]:25712
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:28:41,492
+[线程]:48392
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:29:18,254
+[线程]:24240
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:29:25,779
+[线程]:26876
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:53:20,356
+[线程]:26352
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:54:08,691
+[线程]:20124
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:55:29,138
+[线程]:33080
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:56:25,840
+[线程]:34812
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 17:57:53,421
+[线程]:29720
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:00:58,220
+[线程]:8464
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:01:24,962
+[线程]:49732
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:02:59,276
+[线程]:44188
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:03:22,629
+[线程]:45692
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:05:39,971
+[线程]:24276
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:07:35,994
+[线程]:40136
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:08:36,260
+[线程]:27036
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:08:39,101
+[线程]:13040
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:14:00,344
+[线程]:49572
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:14:26,487
+[线程]:9400
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:15:06,777
+[线程]:27352
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:25:11,209
+[线程]:24432
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:26:39,492
+[线程]:23020
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:27:16,856
+[线程]:14492
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	
+[时间]:2019-05-24 18:28:49,318
+[线程]:34080
+[级别]:INFO
+[路径]:D:\flask-project\ApiPerformanceTest\read_config\read_ini.py
+[函数]:get_conf
+[行号]:80
+[信息]:read ini:{'connect_string': 'mysql+pymysql://test:123456@192.168.1.16:3306/APIPerformanceTest?charset=utf8', 'report_path': '', 'log_path': '', 'log_level': 'debug', 'api_port': '8181', 'host': 'http://192.168.1.27', 'port': '8080', 'token_server': '', 'mem': '0.9', 'cpu': '0.8', 'io': '', 'width': '', 'api_rt': '2500', 'api_rps': '400'}
+------------------
+	

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>403错误页面</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="css/matrix-style.css" />
+		<link rel="stylesheet" href="css/matrix-media.css" />
+		<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<!--Header-part-->
+		<div id="header">
+			<h1><a href="dashboard.html">MatAdmin</a></h1>
+		</div>
+		<!--close-Header-part-->
+
+		<!--top-Header-menu-->
+		<div id="user-nav" class="navbar navbar-inverse">
+			<ul class="nav">
+				<li class="dropdown" id="profile-messages"><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages"
+					 class="dropdown-toggle"><i class="icon icon-user"></i> <span class="text">Welcome User</span><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="icon-check"></i> My Tasks</a></li>
+						<li class="divider"></li>
+						<li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+					</ul>
+				</li>
+				<li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+			</ul>
+		</div>
+
+		<!--start-top-serch-->
+		<!--close-top-serch-->
+
+		<!--sidebar-menu-->
+		<div id="sidebar"> <a href="case.html" class="visible-phone"><i class="icon icon-info-sign"></i> case</a>
+			<ul>
+				<li><a href="product.html"><i class="icon icon-home"></i> <span>product</span></a> </li>
+				<li> <a href="api.html"><i class="icon icon-signal"></i> <span>api</span></a> </li>
+				<li class="submenu active"> <a href="case.html"><i class="icon icon-info-sign"></i> <span>case</span> </a></li>
+				<li> <a href="task.html"><i class="icon icon-inbox"></i> <span>task</span></a> </li>
+				<li><a href="report.html"><i class="icon icon-th"></i> <span>report</span></a></li>
+
+			</ul>
+		</div>
+		<div id="content">
+			<div id="content-header">
+				<div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="case.html">caselist</a>
+					<a href="#" class="current">addcase</a> </div>
+				<h1>增加case:点击所属产品时，产生对应的api列表</h1>
+			</div>
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="widget-box">
+							<div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+								<h5>增加case</h5>
+							</div>
+							<div class="widget-content">
+								<div class="error_ex">
+									<table width="505" border="1" cellspacing="1" cellpadding="1">
+										<tr>
+											<td width="139">CASE名称</td>
+											<td width="353" id="case_nameid"></td>
+										</tr>
+										<tr>
+											<td>所属产品</td>
+											<td><select id="product">
+													<option id="-1" value="请选择产品">请选择产品</option>
+												</select></td>
+										</tr>
+										<tr>
+											<td>APILIT</td>
+											<td id="apilistone"></td>
+											<td id="apilisttwo">APILIST展示需要先选择产品</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<button type="submit" name="button" id="button" onclick="updateCASE()" value="提交">修改</button>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Footer-part-->
+		<div class="row-fluid">
+			<div id="footer" class="span12">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
+		</div>
+		<!--end-Footer-part-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.ui.custom.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/maruti.html"></script>
+		<script type='text/css'>
+
+		</script>
+		<script>
+			$(function() {
+
+				//获取url中的参数
+				function getUrlParam(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+					var r = window.location.search.substr(1).match(reg); //匹配目标参数
+					if (r != null) return unescape(r[2]);
+					return null; //返回参数值
+				}
+				//接收URL中的参数booksId
+				var case_id = getUrlParam('id');
+				console.log('id:' + case_id);
+				$.ajax({
+					//url: 'http://192.168.1.18:8181/api/caseinfo/api?cid='+case_id+'',
+					url: 'http://192.168.1.18:8181/api/caseinfo/case?cid=6',
+					type: 'get',
+					dataType: 'json',
+					success: function(data) {
+						var msg = data.message;
+						$("#case_nameid").append('<input type="text" name="api_namename" id="api_nameid" value="' + msg.case_name +
+							'">')
+						var capi_id = msg.api_weight[0].api_id;
+						console.log("capi_id:" + capi_id);
+						$.ajax({
+							url: 'http://192.168.1.18:8181/api/apiinfo/api?aid=2',
+							type: 'get',
+							dataType: 'json',
+							success: function(data) {
+								var cpdt_id = data.message.pdt_id;
+								console.log("cpdt_id:" + cpdt_id);
+								//获取api对应
+								$.ajax({
+								url: 'http://192.168.1.18:8181/api/product/getproductlist',
+								type: 'get',
+								dataType: 'json',
+								success: function(data) {
+									$.each(data.message, function(index, item) {
+										/* console.log("数据对象：" + item.pdt_name); */
+											var div = "";
+ 									if(cpdt_id==item.pdt_id){
+										div = '<option id=' + item.pdt_id + ' value=' + item.pdt_id + ' selected>' + item.pdt_name + '</option>';
+										$("#product").append(div)
+										} else{
+									div = '<option id=' + item.pdt_id + ' value=' + item.pdt_id + '>' + item.pdt_name + '</option>';
+									$("#product").append(div)}
+										})
+									}
+							});
+							var pdt_id=$("select option:selected").attr("id");
+							if(pdt_id=="-1"){
+								$("#apilistone").hide();
+								$("#apilisttwo").show();}
+							console.log("a:"+pdt_id); 
+							$("#product").change(function(){
+								var pdt_id=$("select option:checked").attr("id");
+								if(pdt_id!="-1"){
+									$("#apilistone").show();
+									$("#apilisttwo").hide();				
+								}else{
+								$("#apilistone").hide();
+								$("#apilisttwo").show();}
+							  console.log("pdt_id:"+pdt_id);
+								/* canVote=false; */
+								$("#apilistone").html("");
+							$.ajax({
+								url: 'http://192.168.1.18:8181/api/apiinfo/api?pid='+pdt_id+'',
+								type: 'get',
+								dataType: 'json',
+								success: function(data) {
+									$.each(data.message, function(index, item) {
+											var div = "";
+											div='<table width="287" border="1"><tr><td width="147"><input type="checkbox" name="interest" id='+item.api_id+' value='+item.api_name+' class-="gcs-checkbox"><label style="width:300px">'+item.api_name+'</label></td><td width="124"><table width="10" border="1"><tr><td width="14">权重</td><td width="20"><input type="text" name="weight" id=nme'+item.api_id+'></td></tr></table></td></tr></table>';	
+											$("#apilistone").append( div )
+											/* canVote=true; */
+										})
+									}
+							});
+								
+							});
+							},
+						});
+
+					}
+
+				});
+				updateCASE = function() {
+					var datalist=new Array();;//定义一个数组 
+															var flg=0;
+									            $('input[name="interest"]:checked').each(function(){
+									             /* var id1=id_array.push($(this).attr('id')); */
+															 /* var content = $("#"+id1 +).val(); */
+															flg++;
+															 console.log("fla:"+flg);
+															 var id1=$(this).attr('id');
+															 console.log("复选框id:"+$(this).attr('value'));
+															 var id2="nme"+id1;
+															 console.log("weight_idname:"+id2);	
+															var weight = document.getElementById(id2).value;
+															 console.log("weight_text:"+weight);
+					/* 										 var weight1={
+																 "api_id":id1,
+																 "weight":weight
+															 }; */
+															 var obj=new Object();
+															 obj.api_id=id1;
+															 obj.weight=weight;
+															 datalist.push(obj);
+															console.log("weight_text1:"+JSON.stringify(datalist));
+									            });
+										          var case_name = document.getElementById("case_nameid").value; 
+					
+										var dataobj = {
+											"case_name": case_name,
+											"api_weight":datalist
+					  };
+									console.log("dataobj:"+JSON.stringify(dataobj));
+										if (confirm("确认要添加吗？")) {
+											window.event.returnValue = true;
+										} else {
+											window.event.returnValue = false;
+										}
+										if (window.event.returnValue == true) {
+											$.ajax({
+												//url: 'http://192.168.1.18:8181/api/caseinfo/case',
+												type: 'post',
+												dataType: 'json',
+												contentType: 'application/json',
+												data: JSON.stringify(dataobj),
+												success: function(data) {
+													alert("添加成功");
+													//window.location.href="case.html"; 
+												},
+											});
+										}
+									}
+});
+		</script>
+	</body>
+	
+</html>

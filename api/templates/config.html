@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>修改task</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="../static/css/matrix-style.css" />
+		<link rel="stylesheet" href="../static/css/matrix-media.css" />
+		<link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<!--Header-part-->
+		<div id="header">
+			<h1><a href="#">全网云</a></h1>
+		</div>
+		<!--close-Header-part-->
+
+		<!--top-Header-menu-->
+		<div id="user-nav" class="navbar navbar-inverse">
+			<ul class="nav">
+				<li class="dropdown" id="profile-messages"><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages"
+					 class="dropdown-toggle"><i class="icon icon-user"></i> <span class="text">Welcome User</span><b class="caret"></b></a>
+				</li>
+				<li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+			</ul>
+		</div>
+
+		<!--start-top-serch-->
+		<!--close-top-serch-->
+
+		<!--sidebar-menu-->
+		<div id="sidebar"> <a href="case.html" class="visible-phone"><i class="icon icon-info-sign"></i> case</a>
+			<ul>
+				<li><a href="index.html"><i class="icon icon-home"></i> <span>product</span></a> </li>
+				<li> <a href="api.html"><i class="icon icon-signal"></i> <span>api</span></a> </li>
+				<li> <a href="case.html"><i class="icon icon-info-sign"></i> <span>case</span> </a></li>
+				<li class="active"> <a href="task.html"><i class="icon icon-inbox"></i> <span>task</span></a> </li>
+				<li><a href="report.html"><i class="icon icon-th"></i> <span>report</span></a></li>
+
+			</ul>
+		</div>
+		<div id="content">
+			<div id="content-header">
+				<div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="task.html">tasklist</a>
+					<a href="#" class="current">LocustConfig</a> </div>
+				<h1 id="hone"></h1>
+			</div>
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="widget-box">
+							<div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+								<h5>LocustConfig</h5>
+							</div>
+							<div class="widget-content">
+								<div class="error_ex">
+									<table width="505" border="1" cellspacing="1" cellpadding="1">
+										<thead>
+											<tr>
+												<th width="5%"><input type="checkbox" name="token" id="havetoken" value="havetoken"></th>
+												<th width="20%">名称</th>
+												<th width="20%">值</th>
+												<th width="55%">描述</th>
+											</tr>
+										</thead>
+										<tbody id="tbody-result">
+										</tbody>
+										<tr>
+											<td colspan="4">
+												<button type="submit" name="button" id="button" onclick="updateConfig()" value="提交">修改</button>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Footer-part-->
+		<div class="row-fluid">
+			<div id="footer" class="span12">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
+		</div>
+		<!--end-Footer-part-->
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/jquery.ui.custom.js"></script>
+		<script src="../static/js/bootstrap.min.js"></script>
+		<script src="../static/config.js"></script>
+		<script src="../static/locust.js"></script>
+		<script>
+			$(function() {
+				function getUrlParam(name) {
+					//http://127.0.0.1:8848/ProHTML1/templates/config.html?id=4&name=13
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+					var r = window.location.search.substr(1).match(reg); //匹配目标参数
+					if (r != null) return unescape(r[2]);
+					return null; //返回参数值
+				}
+				//接收URL中的参数
+				var task_id = getUrlParam('id');
+				//勾画全部列表
+				console.log("locust长度:" + locust.length);
+				for (i = 0; i < locust.length; i++) {
+					var div = "";
+					var str = locust[i].parameter;
+					var reg = RegExp(/=/);
+					arr = str.split("=");
+					if (locust[i].need == 1) {
+						div = '<td><input type="checkbox" name="need" id="' + arr[0] + '" value="havetoken" checked=checked>';
+					} else {
+						div = '<td><input type="checkbox" name="need" id="' + arr[0] + '" value="havetoken" >';
+					}
+					div += '<td>' + locust[i].parameter + '</td>'
+
+					if (str.match(reg)) {
+
+						//console.log("数据对象：" + arr[0]);
+
+						div += '<td><input id="a' + arr[0] + '" class="locustconfig" name="interest" value="' + arr[1] + '"></td>'
+						// 包含        
+					} else {
+						div += '<td><input id="a'+str+'" class="locustconfig"  value="只可勾选" disabled="disabled"></td>'
+					}
+					div += '<td align="left">' + locust[i].description + '</td>';
+					$("#tbody-result").append('<tr class="gradeX">' + div + '</tr>')
+				}
+				$.ajax({
+					//url: 'http://192.168.1.18:8181/api/taskinfo/task?tid=8',
+					url: ''+host+'/api/taskinfo/task?tid='+task_id+'',
+					type: 'get',
+					dataType: 'json',
+					success: function(data) {
+						var msg = data.message;
+						console.log("cs:" + msg.task_name);
+						$("#hone").append(msg.task_name);
+						$.each(data.message.locust_cl, function(index, item) {
+							//console.log("数据对象：" + item.parameter);
+							var reg1 = RegExp(/=/);
+							if (item.parameter.match(reg1)) {
+								//console.log("数据对象：" + item.parameter);
+								arr = item.parameter.split("=");
+								//console.log("数据对象1：" + arr[0]);
+								//console.log("数据对象2：" + arr[1]);
+							}
+							//console.log("下标:" + index)
+							//勾选复选框
+							var id_array = new Array();
+							$('input[name="need"]').each(function() {
+								var inputid = $(this).attr('id');
+								if (item.parameter.match(reg1)) {
+									if(arr[0]==inputid){
+										this.checked = "checked";
+									}
+								}else if(item.parameter==inputid){
+									this.checked = "checked";
+								}
+							});
+							//写入值
+							$('input[name="interest"]').each(function() {
+								var inputid2 = $(this).attr('id');
+								//console.log("id:" + inputid2);
+								var arra="a"+arr[0];
+								if (inputid2 == arra) {
+									this.value = arr[1];
+									//console.log("123:" + inputid2);
+								}
+							});
+
+						})
+
+					}
+
+				});
+				updateConfig = function() {
+					var datalist = new Array();; //定义一个数组 
+					var flg = 0;
+					$('input[name="need"]:checked').each(function() {
+						flg++;
+						console.log("fla:" + flg);
+						var config_id = $(this).attr('id');
+						console.log("id:" + config_id);
+						var name = "a" + config_id;
+						var config_name= document.getElementById(name).value;
+						console.log("id2:" + config_name);
+						var obj = new Object();
+						if(config_name=="只可勾选"){obj.parameter=config_id;}
+						else{obj.parameter=config_id+"="+config_name;}
+						obj.need = 1;
+						datalist.push(obj);
+						console.log("weight_text1:" + JSON.stringify(datalist));
+					});
+					var dataobj = {
+						locust_cl:datalist,
+						task_id:task_id
+					};
+					console.log("dataobj:" + JSON.stringify(dataobj));
+					if (confirm("确认要修改吗？")) {
+						window.event.returnValue = true;
+					} else {
+						window.event.returnValue = false;
+					}
+					if (window.event.returnValue == true) {
+						$.ajax({
+							url: ''+host+'/api/taskinfo/task/locust',
+							type: 'put',
+							dataType: 'json',
+							contentType: 'application/json',
+							data: JSON.stringify(dataobj),
+							success: function(data) {
+								alert("修改成功");
+								window.location.href="Task.html"; 
+							},
+						});
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
