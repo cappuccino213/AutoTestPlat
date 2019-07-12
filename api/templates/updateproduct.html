@@ -36,12 +36,17 @@
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-info-sign"></i> </a>
    <ul>
-    <li class="active"><a href="index.html"><i class="icon icon-home"></i><span>product</span></a> </li>
+    <li class="active"><a href="index.html"><i class="icon icon-home"></i><span>产品管理</span></a> </li>
    <!-- <li> <a href="product.html"><i class="icon icon-signal"></i> <span>product</span></a> </li> -->
-    <li > <a href="api.html"><i class="icon icon-file"></i><span>api</a></span></li>
-    <li> <a href="case.html"><i class="icon icon-inbox"></i><span>case</a></span></li>
-    <li><a href="task.html"><i class="icon icon-th"></i><span>task</a></span></li>
-    <li><a href="report.html"><i class="icon icon-fullscreen"></i><span>report</span></a></li>
+    <li > <a href="api.html"><i class="icon icon-file"></i><span>api接口</a></span></li>
+    <li> <a href="case.html"><i class="icon icon-inbox"></i><span>用例管理</a></span></li>
+    <li><a href="task.html"><i class="icon icon-th"></i><span>任务管理</a></span></li>
+    <li><a href="report.html"><i class="icon icon-fullscreen"></i><span>报告管理</span></a></li>
+       <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>其他</span> </a>
+           <ul>
+               <li><a href="template.html">模板生成</a></li>
+           </ul>
+       </li>
   </ul>
 </div>
 <div id="content">
@@ -71,12 +76,23 @@
 											<td>产品地址</td>
 											<td id="host"></td>
 										</tr>
+                                        </tr>
+                                        <tr><td>是否导入文件</td>
+                                            <td><input  type="file" onchange="upload(this)"> </td>
+                                        </tr>
+                                        <tr>
 										<tr>
 											<td>产品描述</td>
 											<td id="description">
 
 											</td>
 										</tr>
+                                        <tr>
+                                            <td>api_json</td>
+                                            <td id="addapi_json">
+                                                <textarea name="description" id="api_json" cols="45" rows="5"></textarea>
+                                            </td>
+                                        </tr>
 										<tr>
 											<td colspan="2">
 												<button type="submit" name="button" id="button" onclick="updateproduct()" value="提交">修改</button>
@@ -108,8 +124,47 @@
 					var r = window.location.search.substr(1).match(reg); //匹配目标参数
 					if (r != null) return unescape(r[2]);
 					return null; //返回参数值
-				}id
-				//接收URL中的参数booksId
+				}
+                //js读取本地文件
+                function upload(input) {
+                    //支持chrome IE10
+                    $('#addapi_json').html("");
+                    if (window.FileReader) {
+                        var file = input.files[0];
+                        filename = file.name.split(".")[0];
+                        var reader = new FileReader();
+                        reader.onload = function() {
+                            api_json=this.result;
+                            console.log("1:"+json);
+                            var div = "";
+                            div = '<textarea id="api_json" cols="45" rows="5">'+JSON.stringify(api_json)+'</textarea>';
+                            $("#addapi_json").append(div);
+                        }
+                        reader.readAsText(file);
+
+
+                    }
+                    //支持IE 7 8 9 10
+                    else if (typeof window.ActiveXObject != 'undefined'){
+                        var xmlDoc;
+                        xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+                        xmlDoc.async = false;
+                        xmlDoc.load(input.value);
+                        console.log("2:"+xmlDoc.xml);
+                    }
+                    //支持FF
+                    else if (document.implementation && document.implementation.createDocument) {
+                        var xmlDoc;
+                        xmlDoc = document.implementation.createDocument("", "", null);
+                        xmlDoc.async = false;
+                        xmlDoc.load(input.value);
+                        console.log("3:"+xmlDoc.xml);
+                    } else {
+                        alert('error');
+                    }
+                }
+
+                //接收URL中的参数booksId
 				var id = getUrlParam('id');
 				console.log('id:' + id);
 				$.ajax({
@@ -117,11 +172,13 @@
 					type: 'get',
 					dataType: 'json',
 					success: function(data) {
+                        $('#addapi_json').html("");
                        var msg=data.message;
 						$("#product").append('<input type="text" name="productid" id="productid" value="' + msg.pdt_name + '">')
 						$("#version").append('<input type="text" name="versionname" id="versionid" value="' + msg.version + '">')
 						$("#host").append('<textarea name="hostname" id="hostid"  cols="2" rows="2">'+msg.host+'</textarea>')
-						$("#description").append('<textarea name="descriptionname" id="descriptionid"  cols="3" rows="6" >'+msg.description+'</textarea>')
+						$("#description").append('<textarea name="descriptionname" id="descriptionid"  cols="3" rows="3" >'+msg.description+'</textarea>')
+                        $("#addapi_json").append('<textarea name="api_json" id="api_json"  cols="3" rows="6" >'+JSON.stringify(msg.api_json)+'</textarea>')
 					}
 				});
 				updateproduct = function() {

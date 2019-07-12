@@ -117,7 +117,7 @@ $.ajax({
 			div = '<td>' + item.case_id + '</td>' +
 				'<td>' + item.case_name + '</td>' +
 				'<td><table width="100" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td><a href="#" id="dela1" onclick="del(this)" type="' +
-				item.case_id + '" ><img src="../static/img/u48.svg"></td><td><a href="updateCASE.html?id=' + item.case_id +
+				item.case_id + '" ><img src="../static/img/u48.svg"></td><td><a href="updatecase.html?id=' + item.case_id +
 				'"><img src="../static/img/u50.svg"></a></td></tr></table></td></tr>';
 			$("#tbody-result").append('<tr class="gradeX">' + div + '</tr>')
 		})

@@ -47,6 +47,7 @@ class Product(db.Model):
 	description = db.Column(db.String(128))
 	host = db.Column(db.String(64))
 	api_info = db.relationship('ApiInfo', backref='product', lazy='dynamic')
+	api_json = db.Column(db.JSON)
 	delete_flag = db.Column(db.Boolean,default=False)
 
 
@@ -60,6 +61,9 @@ class ApiInfo(db.Model):
 	has_token = db.Column(db.Boolean,default=False)
 	pdt_id = db.Column(db.Integer, db.ForeignKey('product.pdt_id'))
 	values = db.Column(db.String(128))
+	proto_file = db.Column(db.String(64))
+	proto_message = db.Column(db.String(64))
+	
 
 
 class CaseInfo(db.Model):

@@ -11,7 +11,7 @@ from api.modles import *
 
 # product相关操作
 def pdt_select():
-	products = Product.query.filter(Product.delete_flag!=1).all()
+	products = Product.query.filter(Product.delete_flag != 1).all()
 	pl = []
 	for i in range(len(products)):
 		to_json = {
@@ -19,7 +19,8 @@ def pdt_select():
 			'pdt_name': products[i].pdt_name,
 			'version': products[i].version,
 			'description': products[i].description,
-			'host': products[i].host
+			'host': products[i].host,
+			'api_json': products[i].api_json
 		}
 		pl.append(to_json)
 	return pl
@@ -33,7 +34,8 @@ def pdt_select_id(pdt_id):
 			'pdt_name': result.pdt_name,
 			'version': result.version,
 			'description': result.description,
-			'host': result.host
+			'host': result.host,
+			'api_json': result.api_json
 		}
 		return to_json
 	except Exception as e:
@@ -42,7 +44,7 @@ def pdt_select_id(pdt_id):
 
 def pdt_insert(post_json):
 	pro = Product(pdt_name=post_json['pdt_name'], version=post_json['version'], description=post_json['description'],
-				  host=post_json['host'])
+				  host=post_json['host'], api_json=post_json['api_json'])
 	db.session.add(pro)
 	db.session.commit()
 
@@ -54,6 +56,7 @@ def pdt_update(put_json):
 	result.version = put_json['version']
 	result.host = put_json['host']
 	result.description = put_json['description']
+	result.api_json = put_json['api_json']
 	db.session.commit()
 
 
@@ -69,9 +72,16 @@ def api_select():
 	apis = ApiInfo.query.all()
 	al = []
 	for i in range(len(apis)):
-		to_json = {'api_id': apis[i].api_id, 'api_name': apis[i].api_name, 'method': apis[i].method, 'url': apis[i].url,
-				   'header': apis[i].header, 'body': apis[i].body, 'has_token': apis[i].has_token,
-				   'pdt_id': apis[i].pdt_id,'values':apis[i].values}
+		to_json = {'api_id': apis[i].api_id,
+				   'api_name': apis[i].api_name,
+				   'method': apis[i].method,
+				   'url': apis[i].url,
+				   'header': apis[i].header,
+				   'body': apis[i].body, 'has_token': apis[i].has_token,
+				   'pdt_id': apis[i].pdt_id,
+				   'values': apis[i].values,
+				   'proto_message': apis[i].proto_message,
+				   'proto_file': apis[i].proto_file}
 		al.append(to_json)
 	return al
 
@@ -88,7 +98,9 @@ def api_select_id(api_id):
 			'body': result.body,
 			'has_token': result.has_token,
 			'pdt_id': result.pdt_id,
-			'values': result.values
+			'values': result.values,
+			'proto_message': result.proto_message,
+			'proto_file': result.proto_file
 		}
 		return to_json
 	except Exception as e:
@@ -109,7 +121,9 @@ def api_select_filter(pdt_id):
 				'body': result[i].body,
 				'has_token': result[i].has_token,
 				'pdt_id': result[i].pdt_id,
-				'values':result[i].values
+				'values': result[i].values,
+				'proto_message': result[i].proto_message,
+				'proto_file': result[i].proto_file
 			}
 			al.append(to_json)
 		return al
@@ -118,9 +132,16 @@ def api_select_filter(pdt_id):
 
 
 def api_insert(post_json):
-	api = ApiInfo(api_name=post_json['api_name'], method=post_json['method'], url=post_json['url'],
-				  header=post_json['header'], body=post_json['body'], has_token=post_json['has_token'],
-				  pdt_id=post_json['pdt_id'],values=post_json['values'])
+	api = ApiInfo(api_name=post_json['api_name'],
+				  method=post_json['method'],
+				  url=post_json['url'],
+				  header=post_json['header'],
+				  body=post_json['body'],
+				  has_token=post_json['has_token'],
+				  pdt_id=post_json['pdt_id'],
+				  values=post_json['values'],
+				  proto_message=post_json['proto_message'],
+				  proto_file=post_json['proto_file'])
 	db.session.add(api)
 	db.session.commit()
 
@@ -135,6 +156,8 @@ def api_update(put_json):
 	result.has_token = put_json['has_token']
 	result.pdt_id = put_json['pdt_id']
 	result.values = put_json['values']
+	result.proto_message = put_json['proto_message']
+	result.proto_file = put_json['proto_file']
 	db.session.commit()
 
 
@@ -191,11 +214,11 @@ def task_select():
 	tasks = TaskInfo.query.all()
 	tl = []
 	for i in range(len(tasks)):
-		to_json = {'task_id':tasks[i].task_id,
-				   'task_name':tasks[i].task_name,
-				   'associated_case':tasks[i].associated_case,
-				   'task_status':tasks[i].task_status,
-				   'locust_cl':tasks[i].locust_cl}
+		to_json = {'task_id': tasks[i].task_id,
+				   'task_name': tasks[i].task_name,
+				   'associated_case': tasks[i].associated_case,
+				   'task_status': tasks[i].task_status,
+				   'locust_cl': tasks[i].locust_cl}
 		tl.append(to_json)
 	return tl
 
@@ -207,8 +230,8 @@ def task_select_id(task_id):
 			'task_id': result.task_id,
 			'task_name': result.task_name,
 			'associated_case': result.associated_case,
-			'task_status':result.task_status,
-			'locust_cl':result.locust_cl
+			'task_status': result.task_status,
+			'locust_cl': result.locust_cl
 		}
 		return to_json
 	except Exception as e:
@@ -227,10 +250,11 @@ def task_insert(post_json):
 def task_update(put_json):
 	result = TaskInfo.query.get(put_json['task_id'])
 	result.task_name = put_json['task_name']
-	result.associated_case=put_json['associated_case']
+	result.associated_case = put_json['associated_case']
 	result.task_status = put_json['task_status']
 	db.session.commit()
-	
+
+
 def task_cl_update(put_json):
 	result = TaskInfo.query.get(put_json['task_id'])
 	result.locust_cl = put_json['locust_cl']
@@ -242,11 +266,12 @@ def task_delete(del_json):
 	db.session.delete(result)
 	db.session.commit()
 
+
 # task的运行状态
-def task_run():
-	from script import locust_run
-	locust_run.main()
-	return True
+# def task_run():
+# 	from script import run_script
+# 	run_script.main()
+# 	return True
 
 
 # report的相关操作
@@ -258,17 +283,19 @@ def report_insert(post_json):
 	db.session.add(report)
 	db.session.commit()
 
+
 def report_select():
 	reports = Report.query.all()
 	rl = []
 	for i in range(len(reports)):
-		to_json = {'rpt_id':reports[i].rpt_id,
-				   'report_name':reports[i].report_name,
-				   'case_id':reports[i].case_id,
-				   'create_date':reports[i].create_date,
-				   'file_path':reports[i].file_path}
+		to_json = {'rpt_id': reports[i].rpt_id,
+				   'report_name': reports[i].report_name,
+				   'case_id': reports[i].case_id,
+				   'create_date': reports[i].create_date,
+				   'file_path': reports[i].file_path}
 		rl.append(to_json)
 	return rl
+
 
 def report_select_id(rpt_id):
 	try:
@@ -281,7 +308,8 @@ def report_select_id(rpt_id):
 		return to_json
 	except Exception as e:
 		return {"desc": "暂未查询到数据,原因：%s" % str(e)}
-	
+
+
 if __name__ == '__main__':
 	# ph = pdt_select()
 	# print(ph)
@@ -289,6 +317,6 @@ if __name__ == '__main__':
 	# print(pdt_update(data))
 	# print(api_select())
 	# print(pdt_select_id(3))
-	print(api_select_filter(48))
+	print(api_select_id(35))
 
 # insert('')

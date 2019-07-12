@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>TASK页面</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="../static/css/uniform.css" />
+		<link rel="stylesheet" href="../static/css/select2.css" />
+		<link rel="stylesheet" href="../static/css/matrix-style.css" />
+		<link rel="stylesheet" href="../static/css/matrix-media.css" />
+		<link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link rel="icon" href="../static/images/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+		<!--Header-part-->
+		<div id="header">
+			<h1><a href="dashboard.html">全网云</a></h1>
+		</div>
+		<!--close-Header-part-->
+		<!--top-Header-menu-->
+		<div id="user-nav" class="navbar navbar-inverse">
+			<ul class="nav">
+				<li class="dropdown" id="profile-messages"><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages"
+					 class="dropdown-toggle"><i class="icon icon-user"></i> <span class="text">欢迎Admin</span><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#"><i class="icon-user"></i> 我的资料</a></li>
+						<li class="divider"></li>
+						<li><a href="#"><i class="icon-check"></i> 我的任务</a></li>
+						<li class="divider"></li>
+						<li><a href="login.html"><i class="icon-key"></i> 退出</a></li>
+					</ul>
+				</li>
+				<li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+			</ul>
+		</div>
+
+		<!--start-top-serch-->
+		<!--close-top-serch-->
+
+		<!--sidebar-menu-->
+
+		<div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-th"></i>Tables</a>
+			<ul>
+				<li> <a href="index.html"><i class="icon icon-home"></i> <span>产品管理</span></a> </li>
+				<li> <a href="api.html"><i class="icon icon-file"></i> <span>api接口</span></a> </li>
+				<li> <a href="case.html"><i class="icon icon-inbox"></i> <span>用例管理</span> </a> </li>
+				<li class="active"><a href="task.html"><i class="icon icon-th"></i> <span>任务管理</span></a></li>
+				<li><a href="report.html"><i class="icon icon-fullscreen"></i> <span>报告管理</span></a></li>
+				<li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>其他</span> </a>
+					<ul>
+						<li><a href="template.html">模板生成</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		</div>
+		<div id="content">
+			<div id="content-header">
+				<div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#"
+					 class="current">tasklist</a> </div>
+				<h1>TASK列表</h1>
+			</div>
+			<div class="container-fluid">
+				<hr>
+				<div class="row-fluid">
+
+					<div class="widget-box">
+						<div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+							<h5>Data table</h5>
+						</div>
+						<div class="widget-content nopadding">
+							<table class="table table-bordered data-table">
+								<thead>
+									<tr>
+										<th width="27%">ID</th>
+										<th width="37%">名称</th>
+										<th width="37%">操作</th>
+										<th width="36%"><a href="addtask.html"><input type="button" value="增加task" style="height:25px; width:70px;" /></th>
+
+									</tr>
+								</thead>
+								<tbody id="tbody-result">
+									<tr class="gradeX" style='display: none;'>
+										<td>集成平台</td>
+										<td>POST</td>
+										<td>集成平台涉及按需平台，自助打印，影像浏览器等服务</td>
+										<td>
+											<input type="submit" name="button" id="0" value="停止">
+											<input type="submit" name="button" id="1" value="运行">
+										</td>
+
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!--Footer-part-->
+		<div class="row-fluid">
+			<div id="footer" class="span12">Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="#">性能页面</a></div>
+		</div>
+		<!--end-Footer-part-->
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/jquery.ui.custom.js"></script>
+		<script src="../static/js/bootstrap.min.js"></script>
+		<script src="../static/js/jquery.uniform.js"></script>
+		<script src="../static/js/select2.min.js"></script>
+		<script src="../static/js/jquery.dataTables.min.js"></script>
+		<script src="../static/js/matrix.js"></script>
+		<script src="../static/js/matrix.tables.js"></script>
+		<script src="../static/config.js"></script>
+		<script src="../static/js1/TASK.js"></script>		
+
+	</body>
+</html>

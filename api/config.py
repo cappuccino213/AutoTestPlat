@@ -6,7 +6,7 @@
 # @Software: PyCharm
 # @license : Copyright(C), eWord Technology Co., Ltd.
 # @Contact : yeahcheung213@163.com
-from read_config.read_ini import CONF
+from appconfig.read_ini import CONF
 
 SQLALCHEMY_DATABASE_URI = CONF['connect_string']
 SQLALCHEMY_ECHO = True

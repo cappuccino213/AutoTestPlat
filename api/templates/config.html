@@ -35,11 +35,16 @@
 		<!--sidebar-menu-->
 		<div id="sidebar"> <a href="case.html" class="visible-phone"><i class="icon icon-info-sign"></i> case</a>
 			<ul>
-				<li><a href="index.html"><i class="icon icon-home"></i> <span>product</span></a> </li>
-				<li> <a href="api.html"><i class="icon icon-signal"></i> <span>api</span></a> </li>
-				<li> <a href="case.html"><i class="icon icon-info-sign"></i> <span>case</span> </a></li>
-				<li class="active"> <a href="task.html"><i class="icon icon-inbox"></i> <span>task</span></a> </li>
-				<li><a href="report.html"><i class="icon icon-th"></i> <span>report</span></a></li>
+				<li><a href="index.html"><i class="icon icon-home"></i> <span>产品管理</span></a> </li>
+				<li> <a href="api.html"><i class="icon icon-signal"></i> <span>api接口</span></a> </li>
+				<li> <a href="case.html"><i class="icon icon-info-sign"></i> <span>c用例管理</span> </a></li>
+				<li class="active"> <a href="task.html"><i class="icon icon-inbox"></i> <span>任务管理</span></a> </li>
+				<li><a href="report.html"><i class="icon icon-th"></i> <span>报告管理</span></a></li>
+				<li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>其他</span> </a>
+					<ul>
+						<li><a href="template.html">模板生成</a></li>
+					</ul>
+				</li>
 
 			</ul>
 		</div>
@@ -213,7 +218,7 @@
 							data: JSON.stringify(dataobj),
 							success: function(data) {
 								alert("修改成功");
-								window.location.href="Task.html"; 
+								window.location.href="task.html"; 
 							},
 						});
 					}

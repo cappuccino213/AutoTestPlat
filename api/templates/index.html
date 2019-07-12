@@ -42,12 +42,17 @@
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-th"></i>Tables</a>
    <ul>
-    <li class="active"><a href="index.html"><i class="icon icon-home"></i><span>product</span></a> </li>
+    <li class="active"><a href="index.html"><i class="icon icon-home"></i><span>产品管理</span></a> </li>
    <!-- <li> <a href="product.html"><i class="icon icon-signal"></i> <span>product</span></a> </li> -->
-    <li > <a href="api.html"><i class="icon icon-file"></i><span>api</a></span></li>
-    <li> <a href="case.html"><i class="icon icon-inbox"></i><span>case</a></span></li>
-    <li><a href="task.html"><i class="icon icon-th"></i><span>task</a></span></li>
-    <li><a href="report.html"><i class="icon icon-fullscreen"></i><span>report</span></a></li>
+    <li > <a href="api.html"><i class="icon icon-file"></i><span>api接口</a></span></li>
+    <li> <a href="case.html"><i class="icon icon-inbox"></i><span>用例管理</a></span></li>
+    <li><a href="task.html"><i class="icon icon-th"></i><span>任务管理</a></span></li>
+    <li><a href="report.html"><i class="icon icon-fullscreen"></i><span>报告管理</span></a></li>
+     <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>其他</span> </a>
+           <ul>
+               <li><a href="template.html">模板生成</a></li>
+           </ul>
+       </li>
   </ul>
 </div>
 </div>
@@ -73,7 +78,7 @@
                   <th width="12%">版本</th>
                   <th width="49%">产品描述</th>
                   <th width="15%">产品地址</th>
-                  <th width="12%"><a href="addPRODUCT.html"><input type="button" value="增加产品" style="height:25px; width:70px;"/></a></th>
+                  <th width="12%"><a href="addproduct.html"><input type="button" value="增加产品" style="height:25px; width:70px;"/></a></th>
                 </tr>
               </thead>
               <tbody id="tbody-result">
@@ -112,58 +117,8 @@
 <script src="../static/js/matrix.js"></script> 
 <script src="../static/js/matrix.tables.js"></script>
 <script src="../static/config.js"></script>
-<script>
-		$(function() {
-			//搜索
-					$.ajax({
-						url: ''+host+'/api/product/getproductlist',
-						type: 'get',
-						dataType: 'json',
-						success: function(data) {
-							/*         var obj = eval("("+data+")"); 
-							        var jsonObj=JSON.parse(JSON.stringify(data));
-							        console.log("数据对象：" + jsonObj.description);        
-							        alert(data);
-							        console.log("数据对象：" + obj.description); */
-							$.each(data.message, function(index, item) {
-								/* alert(data); */
-								console.log("数据对象：" + data.desc);
-								var div = "";
-								div = '<td>' + item.pdt_id + '</td>' +
-									'<td>' + item.pdt_name + '</td>' +
-									'<td>' + item.version + '</td>' +
-									'<td >' + item.description + '</td>' +
-									'<td>' + item.host + '</td>' +
-									'<td><table width="100" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td><a href="#" id="dela1" onclick="del(this)" type="'+item.pdt_id+'" ><img src="../static/img/u48.svg"></td><td><a href="updateproduct.html?id='+item.pdt_id+'"><img src="../static/img/u50.svg"></a></td></tr></table></td></tr>';
-								$("#tbody-result").append('<tr class="gradeX">' + div + '</tr>')
-							})
-						}
-			});
-			//点击删除
-		del=function(obj) {
-			var pms=$(obj).attr("type");
-			 var obj={"pdt_id":pms}
-			  console.log("数据对象" + pms);
-				if (confirm("确认要删除吗？")) {
-					window.event.returnValue = true;
-				} else {
-					window.event.returnValue = false;
-				}
-				if (window.event.returnValue == true) {
-					$.ajax({
-						url: ''+host+'/api/product/delproduct',
-						type: 'delete',
-						dataType: 'json',
-						contentType: 'application/json', 
-						data:JSON.stringify(obj),
-						success: function(data) {
-							alert("操作:"+data.title+",\n结果:"+data.message);
-							window.location.href="index.html"; 
-						},
-					});
-				}
-			}
-		});
+<script src="../static/js1/PRODUCT.js">
+
 	</script>
 </body>
 </html>

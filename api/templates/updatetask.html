@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>修改task</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="../static/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="../static/css/matrix-style.css" />
+<link rel="stylesheet" href="../static/css/matrix-media.css" />
+<link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1><a href="dashboard.html">MatAdmin</a></h1>
+</div>
+<!--close-Header-part--> 
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
+    </li>
+    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+  </ul>
+</div>
+
+<!--start-top-serch--><!--close-top-serch--> 
+
+<!--sidebar-menu-->
+<div id="sidebar"> <a href="case.html" class="visible-phone"><i class="icon icon-info-sign"></i> case</a>
+  <ul>
+    <li><a href="index.html"><i class="icon icon-home"></i> <span>p产品管理</span></a> </li>
+    <li> <a href="api.html"><i class="icon icon-signal"></i> <span>api接口</span></a> </li>
+    <li> <a href="case.html"><i class="icon icon-info-sign"></i> <span>用例管理</span> </a></li>
+    <li class="active"> <a href="task.html"><i class="icon icon-inbox"></i> <span>任务管理</span></a> </li>
+    <li><a href="report.html"><i class="icon icon-th"></i> <span>报告管理</span></a></li>
+      <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>其他</span> </a>
+          <ul>
+              <li><a href="template.html">模板生成</a></li>
+          </ul>
+      </li>
+    
+  </ul>
+</div>
+<div id="content">
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="case.html">tasklist</a> <a href="#" class="current">addtask</a> </div>
+    <h1>修改task</h1>
+  </div>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+            <h5>修改task</h5></div>
+          <div class="widget-content">
+            <div class="error_ex">
+                <table width="505" border="1" cellspacing="1" cellpadding="1">
+                  <tr>
+                    <td width="139">TASK名称</td>
+                    <td width="353" id="task_name"></td>
+                  </tr>
+                  <tr>
+                    <td>CASELIT</td>
+                    <td id="caselist" align="center" style="border:#C8C8C8;"></td>
+                  </tr>
+                  <tr>
+                   <td colspan="2">
+                   	<button type="submit" name="button" id="button" onclick="updateTask()" value="提交">修改</button>
+                   </td>
+                  </tr>
+                </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+		<!--Footer-part-->
+		<div class="row-fluid">
+			<div id="footer" class="span12">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
+		</div>
+		<!--end-Footer-part-->
+		<script src="../static/js/jquery.min.js"></script>
+		<script src="../static/js/jquery.ui.custom.js"></script>
+		<script src="../static/js/bootstrap.min.js"></script>
+		<script src="../static/js/maruti.html"></script>
+		<script src="../static/config.js"></script>
+		<script>
+			$(function() {
+
+				//获取url中的参数
+				function getUrlParam(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+					var r = window.location.search.substr(1).match(reg); //匹配目标参数
+					if (r != null) return unescape(r[2]);
+					return null; //返回参数值
+				}
+				//接收URL中的参数booksId
+				var task_id = getUrlParam('id');
+				//console.log('id:' + case_id);
+				$.ajax({
+					//url: 'http://192.168.1.18:8181/api/taskinfo/task?tid=2',
+					url: ''+host+'/api/taskinfo/task?tid='+task_id+'',
+					type: 'get',
+					dataType: 'json',
+					success: function(data) {
+						var msg = data.message;
+						console.log("cs:"+msg.task_name);
+						$("#task_name").append('<input type="text" name="task_namename" id="task_nameid" value="' + msg.task_name +
+							'">')
+				$.ajax({
+					url: ''+host+'/api/caseinfo/caselist',
+					type: 'get',
+					dataType: 'json',
+					success: function(data) {
+						$.each(data.message, function(index, item) {
+								var div = "";
+								div='<tr ><td width="147" ><input type="checkbox" name="interest" id='+item.case_id+' value='+item.case_name+' class-="gcs-checkbox"><label style="width:300px">'+item.case_name+'</label></td></tr>';	
+								$("#caselist").append( div )
+								/* canVote=true; */
+							})
+							var caselist=msg.associated_case
+							var id_array = new Array();
+							$('input[name="interest"]').each(function() {
+								var inputid=$(this).attr('id');
+								console.log("inpitid:" + inputid);
+							  for (var i=0;i<caselist.length;i++){
+									var api=caselist[i].api_id;
+									 if(inputid==api){
+										 this.checked="checked";
+										 console.log("123:"+inputid);
+										 }
+								}
+							}); 
+						}
+				});
+					}
+
+				});
+				updateTask = function() {
+				                var datalist=new Array();;//定义一个数组 
+													var flg=0;
+							            $('input[name="interest"]:checked').each(function(){
+							             /* var id1=id_array.push($(this).attr('id')); */
+													 /* var content = $("#"+id1 +).val(); */
+													flg++;
+													 console.log("fla:"+flg);
+													 var case_id=$(this).attr('id');
+													 var case_name=$(this).attr('value');
+													 var obj=new Object();
+													 obj.case_id=case_id;
+													 obj.case_name=case_name;
+													 datalist.push(obj);
+													console.log("weight_text1:"+JSON.stringify(datalist));
+							            });
+								      var task_name = document.getElementById("task_nameid").value; 
+				console.log("aaa:"+task_name);
+								var dataobj = {
+									"task_id":task_id,
+									"task_name": task_name,
+									"associated_case":datalist,
+									"task_status":false
+				};
+							console.log("dataobj:"+JSON.stringify(dataobj));
+								if (confirm("确认要修改吗？")) {
+									window.event.returnValue = true;
+								} else {
+									window.event.returnValue = false;
+								}
+								if (window.event.returnValue == true) {
+									$.ajax({
+										url: ''+host+'/api/taskinfo/task',
+										type: 'put',
+										dataType: 'json',
+										contentType: 'application/json',
+										data: JSON.stringify(dataobj),
+										success: function(data) {
+											alert("修改成功");
+											window.location.href="task.html"; 
+										},
+									});
+								}
+							}
+				      					
+				      						});
+					</script>
+	</body>
+</html>

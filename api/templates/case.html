@@ -42,12 +42,17 @@
 
 		<div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-th"></i>Tables</a>
 			<ul>
-				<li><a href="index.html"><i class="icon icon-home"></i><span>product</span></a> </li>
+				<li><a href="index.html"><i class="icon icon-home"></i><span>产品管理</span></a> </li>
 				<!-- <li> <a href="product.html"><i class="icon icon-signal"></i> <span>product</span></a> </li> -->
-				<li> <a href="api.html"><i class="icon icon-file"></i><span>api</a></span></li>
-				<li class="active"> <a href="case.html"><i class="icon icon-inbox"></i><span>case</a></span></li>
-				<li><a href="task.html"><i class="icon icon-th"></i><span>task</a></span></li>
-				<li><a href="report.html"><i class="icon icon-fullscreen"></i><span>report</span></a></li>
+				<li> <a href="api.html"><i class="icon icon-file"></i><span>api接口</a></span></li>
+				<li class="active"> <a href="case.html"><i class="icon icon-inbox"></i><span>用例管理</a></span></li>
+				<li><a href="task.html"><i class="icon icon-th"></i><span>任务管理</a></span></li>
+				<li><a href="report.html"><i class="icon icon-fullscreen"></i><span>报告管理</span></a></li>
+				<li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>其他</span> </a>
+					<ul>
+						<li><a href="template.html">模板生成</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 		</div>
@@ -80,8 +85,8 @@
                   <td>集成平台涉及按需平台，自助打印，影像浏览器等服务</td>
                   <td ><table width="100" border="1" cellspacing="0" cellpadding="0" align="center" >
                     <tr>
-                      <td><img src="static/img/u48.svg"></td>
-                      <td><a href="error405.html"><img src="static/img/u50.svg"></a></td>
+                      <td><img src="../static/img/u48.svg"></td>
+                      <td><a href="error405.html"><img src="../static/img/u50.svg"></a></td>
                     </tr>
                   </table></td>
                 </tr>
@@ -107,49 +112,6 @@
 <script src="../static/js/matrix.js"></script> 
 <script src="../static/js/matrix.tables.js"></script>
 <script src="../static/config.js"></script>
-<script>
-		$(function() {
-			//搜索
-					$.ajax({
-						url: ''+host+'/api/caseinfo/caselist',
-						type: 'get',
-						dataType: 'json',
-						success: function(data) {
-							$.each(data.message, function(index, item) {
-							/* 	console.log("数据对象：" + data.desc); */
-								var div = "";
-								div = '<td>' + item.case_id + '</td>' +
-									'<td>' + item.case_name + '</td>' +
-									'<td><table width="100" border="0" cellspacing="0" cellpadding="0" align="center"><tr><td><a href="#" id="dela1" onclick="del(this)" type="'+item.case_id+'" ><img src="../static/img/u48.svg"></td><td><a href="updateCASE.html?id='+item.case_id+'"><img src="../static/img/u50.svg"></a></td></tr></table></td></tr>';
-								$("#tbody-result").append('<tr class="gradeX">' + div + '</tr>')
-							})
-						}
-			});
-			//点击删除
-		del=function(obj) {
-			var pms=$(obj).attr("type");
-			 var obj={"case_id":pms}
-			  console.log("数据对象" + pms);
-				if (confirm("确认要删除吗？")) {
-					window.event.returnValue = true;
-				} else {
-					window.event.returnValue = false;
-				}
-				if (window.event.returnValue == true) {
-					$.ajax({
-						url: ''+host+'/api/caseinfo/case',
-						type: 'delete',
-						dataType: 'json',
-						contentType: 'application/json', 
-						data:JSON.stringify(obj),
-						success: function(data) {
-							alert("操作:"+data.title+",\n结果:"+data.message);
-							 window.location.href="case.html"; 
-						},
-					});
-				}
-			}
-		});
-	</script>
+<script src="../static/js1/CASE.js"></script>
 </body>
 </html>
