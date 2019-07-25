@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "ClientPrintTaskRulesRequestPb.proto";
+
+
+//客户端打印任务规则列表
+message ClientPrintTaskRulesListRequestPb{
+
+//客户端打印任务规则
+repeated ClientPrintTaskRulesRequestPb clientPrintTaskRules = 1;
+
+}
+
+
+

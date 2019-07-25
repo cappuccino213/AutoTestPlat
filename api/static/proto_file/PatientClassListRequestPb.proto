@@ -1,0 +1,9 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "PatientClassRequestPb.proto";
+
+//就诊类别列表参数
+message PatientClassListRequestPb{
+//就诊类别列表
+repeated PatientClassRequestPb patientClass =1;
+}

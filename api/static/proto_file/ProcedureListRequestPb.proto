@@ -1,0 +1,9 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "ProcedureRequestPb.proto";
+
+//检查项目
+message ProcedureListRequestPb {
+//
+repeated ProcedureRequestPb list=1;
+}

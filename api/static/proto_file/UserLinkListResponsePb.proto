@@ -1,0 +1,16 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "PermissionResponsePb.proto";
+import "UserGroupResponsePb.proto";
+import "UserResponsePb.proto";
+
+message UserLinkListResponsePb{
+//用户信息
+UserResponsePb userInfo=1;
+//关联用户组信息
+repeated UserGroupResponsePb userGroup=2;
+//用户个人权限
+repeated PermissionResponsePb userPermission=3;
+//用户关联用户组权限
+repeated PermissionResponsePb userGroupPermission=4;
+}

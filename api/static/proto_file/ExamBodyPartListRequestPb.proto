@@ -1,0 +1,8 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "ExamBodyPartRequestPb.proto";
+
+//检查部位传参
+message ExamBodyPartListRequestPb {
+repeated ExamBodyPartRequestPb list=1;
+}

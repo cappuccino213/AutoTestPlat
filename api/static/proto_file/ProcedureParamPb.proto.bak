@@ -1,0 +1,13 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//检查项目参数信息
+message ProcedureParamPb{
+
+//检查项目ID
+string procedureID = 1;
+//检查项目名称
+string procedureName = 2;
+//参数值
+string parameterValue = 3;
+}

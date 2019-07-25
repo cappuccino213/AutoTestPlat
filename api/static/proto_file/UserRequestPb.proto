@@ -1,0 +1,75 @@
+syntax = "proto3"; 
+
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//用户
+message UserRequestPb {
+//用户ID
+string userID =1;
+//用户工号
+string userCode =2;
+//对应HIS系统工号
+string hISUserCode =3;
+//输入码
+string inPutCode =4;
+//用户名称
+string userName =5;
+//用户英文名称
+string userNameEng =6;
+//用户密码
+string userPassWord =7;
+//用户性别
+string userSex =8;
+//用户出生日期
+string userBirthDay =9;
+//签名图片
+string signatureImage =10;
+//用户头像
+string headPicture =11;
+//用户激活状态标志
+bool userActivateFlag =12;
+//身份证号
+string userIDCard =13;
+//用户电话
+string userPhone =14;
+//用户职务
+string userDuty =15;
+//用户类型
+string userType =16;
+//用户账户类型
+string accountType =17;
+//账户生效时间
+string effectivDate =18;
+//账户失效时间
+string expiryDate =19;
+//创建日期
+string createDate =20;
+//所属科室
+string observationDeptID =21;
+//所属医院
+string organizationID =22;
+//删除标志
+bool deletedFlag =23;
+//排序号
+int32 sortNo =24;
+//当前页数
+int32 currentPage=25;
+//当前页数大小
+int32 pageSize=26;
+//新密码
+string newPassword=27;
+//漫游来源用户ID
+string roamingSourceUserID=28;
+//漫游来源机构ID
+string roamingSourceOrgID=29;
+//漫游来源科室ID
+string roamingSourceDeptID=30;
+//账户名称
+string accountName=31;
+//办公室电话
+string officePhone=32;
+//邮箱
+string email=33;
+}
+
+

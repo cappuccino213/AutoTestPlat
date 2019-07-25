@@ -184,7 +184,7 @@ def task_handle():
 		return jsonify(format_result('405 Method Not Allowed', "The method is not allowed for the requested URL.", 405))
 
 
-@app.route('/api/taskinfo/task/locust', methods=['PUT'])
+@app.route('/api/taskinfo/task/locust', methods=['PUT']) # 2.0版本此接口弃用
 def task_locust():
 	if request.method == 'PUT':
 		put_json = json.loads(request.data)

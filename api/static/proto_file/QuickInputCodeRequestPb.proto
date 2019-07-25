@@ -1,0 +1,34 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//快捷输入码入参
+message QuickInputCodeRequestPb {
+//快捷输入码主键
+string codeID =1;
+//快捷输入码
+string quickInputCode =2;
+//检查类型
+string serviceSectID =3;
+//检查部位ID
+string examBodyPartID =4;
+//检查项目ID
+string procedureID =5;
+//检查机房ID
+string observationLocationID =6;
+//就诊类别
+int32 patientClass =7;
+//就诊类别中文描述
+string patientClassCH=8;
+//所属科室
+string observationDeptID =9;
+//所属机构
+string organizationID =10;
+//删除标志：0-未删除，1-已删除
+bool deletedFlag =11;
+//删除标志中文描述
+string deleteFlagCH=12;
+//当前页数
+int32 currentPage=13;
+//当前页数大小
+int32 pageSize=14;
+}

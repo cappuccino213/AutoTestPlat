@@ -1,0 +1,13 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//科室参数信息
+message ObservationDeptParamPb{
+
+//科室ID
+string observationDeptID = 1;
+//科室名称
+string deptName = 2;
+//参数值
+string parameterValue = 3;
+}

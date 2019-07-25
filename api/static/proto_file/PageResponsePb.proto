@@ -1,0 +1,26 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "google/protobuf/any.proto";
+
+//页面返回信息
+message PageResponsePb{
+//是否成功
+bool isSuccess=1;
+//结果描述
+string resultDesc=2;
+//支持以实用函数或其他形式打包/解包任何值生成任何类型的方法
+repeated google.protobuf.Any data=3;
+//页面信息
+PageBase pageBase=4;
+//Token
+string token = 5;
+}
+//页面信息
+message PageBase{
+//当前页
+int32 currentPage=1;
+//每页显示条数
+int32 pageSize=2;
+//总页数
+int32 totalRecords=3;
+}

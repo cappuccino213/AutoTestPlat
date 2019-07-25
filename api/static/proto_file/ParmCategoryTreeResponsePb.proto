@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//系统参数分类树
+message ParmCategoryTreeResponsePb{
+//参数分类ID
+string categoryID = 1;
+//参数分类
+string parameterCategory = 2;
+//参数分类名称
+string parameterCategoryName = 3;
+//参数分类父ID，若是根节点则存储自身的ID，保证不为空
+string parentCategoryID = 4;
+//根分类标志，0-不是，1-是
+bool rootFlag = 5;
+//树结构
+repeated ParmCategoryTreeResponsePb children = 6;
+
+}
+
+
+

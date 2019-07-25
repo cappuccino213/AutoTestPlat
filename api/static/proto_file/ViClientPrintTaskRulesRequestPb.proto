@@ -1,0 +1,60 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//客户端打印任务规则视图
+message ViClientPrintTaskRulesRequestPb{
+//规则ID
+string  rulesID = 1;
+//客户端ID
+string  clientID = 2;
+//检查类型
+string  serviceSectID = 3;
+//打印任务类型（0预约任务，1登记任务，2签到任务）
+string  printTaskType = 4;
+//打印单据规则（1引导单，2取片单，4预约通知单，8知情同意书），以相加的形成进行集合存储
+int32  printBillTypeCollection = 5;
+//规则描述
+string  remark = 6;
+//客户端名称
+string clientName = 7;
+//使用场景：0-医院科室，1-公共场景，2-个人家庭场景
+string useScenario = 8;
+//存储格式：浏览器名称/版本号
+string browserVersion = 9;
+//操作系统信息
+string oSVersion = 10;
+//客户端IP地址
+string clientIPAddress = 11;
+//客户端激活标志：0未激活，1已激活
+bool clientActivateFlag = 12;
+//客户端工作站类型：0登记，1技师，2报告
+int32 workStationType = 13;
+//记录上一次登陆的用户编号
+string lastLoginUserCode = 14;
+//上一次登陆时间
+string lastLoginDateTime = 15;
+//客户端运行标志：0未运行，1运行
+bool clientRunningFlag = 16;
+//客户端所在房间号码
+string clientRoomNo = 17;
+//应用服务器地址
+string appServerURL = 18;
+//加密客户端校验码
+string clientAuthCode = 19;
+//所属科室ID
+string observationDeptID = 20;
+//所属机构ID
+string organizationID = 21;
+//创建时间
+string createDate = 22;
+//备注
+string clientRemark = 23;
+//当前页数
+int32 currentPage = 24;
+//页数大小
+int32 pageSize = 25;
+
+}
+
+
+

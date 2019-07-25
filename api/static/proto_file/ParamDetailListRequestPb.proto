@@ -1,0 +1,37 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "OrganizationParamPb.proto";
+import "ClientParamPb.proto";
+import "UserParamPb.proto";
+import "ObservationDeptParamPb.proto";
+import "ServiceSectParamPb.proto";
+import "ProcedureParamPb.proto";
+import "SystemParameterRequestPb.proto";
+
+//参数详细数据列表
+message ParamDetailListRequestPb{
+
+//系统参数模板基础数据
+SystemParameterRequestPb systemParameter = 1;
+
+//全局参数
+repeated OrganizationParamPb organizationParam = 2;
+
+//客户端参数信息
+repeated ClientParamPb clientParam = 3;
+
+//用户参数信息
+repeated UserParamPb userParam = 4;
+
+//科室参数信息
+repeated ObservationDeptParamPb observationDeptParam = 5;
+
+//检查项目参数信息
+repeated ServiceSectParamPb serviceSectParam = 6;
+
+//检查类型参数信息
+repeated ProcedureParamPb procedureParam = 7;
+
+}
+
+

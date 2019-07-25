@@ -1,0 +1,16 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//字典树形结构
+message DictionaryCategoryRequestPb {
+//字典类别ID
+string dicCategoryID =1;
+//字典类别
+string dicCategory =2;
+//字典类别名称
+string dicCategoryName =3;
+//字典类别分类
+string dicCategoryClass =4;
+//字典类别分类中文描述
+string dicCategoryClassCH =5;
+}

@@ -1,0 +1,40 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//系统参数表
+message SystemParameterResponsePb{
+//系统参数主键
+string parameterID = 1;
+ //系统参数分类
+string parameterCategory = 2;
+//参数类型：1-全局参数，2-客户端参数，3-用户参数，4-科室参数,5-检查项目参数，7-检查类型参数
+string parameterType = 3;
+//关联ID，根据参数类型存储不同的类型数据ID
+string paramLinkID = 4;
+//参数关键字
+string parameterKey = 5;
+//参数名称
+string parameterName = 6;
+//参数描述
+string parameterMemo = 7;
+//参数默认值
+string parameterDefaultValue = 8;
+//参数选项值，用于提供用户选择实际值，多个以逗号“,"隔开
+string paramSelectValue = 9;
+//用于提供用户选择项展示的名称，与选项值一一对应，多个以","隔开
+string paramSelectDisplayName = 10;
+//参数值，存储通过选择或者直接输入的参数值，
+string parameterValue = 11;
+//显示标志：0-不显示，1-显示，用于标记该参数是否需要在参数管理界面进行显示
+bool paramVisibleFlag = 12;
+//模板数据标志:0-不是，1-是，模板数据用来展示的数据，非末班数据则用来存储具体的参数
+bool paramTemplateFlag = 13;
+//所属科室
+string observationDeptID = 14;
+//所属医院
+string organizationID = 15;
+
+}
+
+
+

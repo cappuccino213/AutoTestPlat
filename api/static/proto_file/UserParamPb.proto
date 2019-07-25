@@ -1,0 +1,18 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//用户参数信息
+message UserParamPb{
+
+//用户ID
+string userID = 1;
+//姓名
+string accountName = 2;
+//用户工号
+string userCode = 3;
+//用户出生日期
+string userBirthDay = 4;
+//参数值
+string parameterValue = 5;
+
+}

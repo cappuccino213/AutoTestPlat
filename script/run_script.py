@@ -12,7 +12,11 @@ from script.run_parameters import ScriptPara
 def start(task_id):
 	script_para = ScriptPara(task_id) # 脚本参数
 	script_name = 'case_' + script_para.case_id[0] + '.py'  # 脚本名称
-	script_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'proto_script',
+	if script_para.data_type()== 'json':
+		type_path ='json_script'
+	else:
+		type_path = 'proto_script'
+	script_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), type_path,
 							   script_name)  # 脚本文件
 	locust_option = script_para.locust_option()  # 运行参数
 	ls_command = ["locust", "-f"]
@@ -50,4 +54,4 @@ def is_running():
 			return False
 		
 if __name__=='__main__':
-	start(15)
+	start(10)

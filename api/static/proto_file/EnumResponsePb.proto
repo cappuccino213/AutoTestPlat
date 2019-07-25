@@ -1,0 +1,10 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//权限
+message EnumResponsePb{
+//名称
+string dicDisplayValue = 1;
+//值
+string DicCode = 2;
+}

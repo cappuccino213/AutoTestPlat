@@ -1,0 +1,13 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "ServiceSectRequestPb.proto";
+
+//检查类型列表参数
+message ServiceSectListRequestPb{
+//检查类型列表
+repeated ServiceSectRequestPb serviceSect =1;
+
+}
+
+
+

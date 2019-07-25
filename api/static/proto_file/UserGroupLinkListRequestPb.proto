@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "UserGroupRequestPb.proto";
+import "UserGroupLinkRequestPb.proto";
+import "UserGroupPermissionLinkRequestPb.proto";
+
+//新增/修改用户组信息
+message UserGroupLinkListRequestPb{
+
+//用户组基础信息
+UserGroupRequestPb userGroup = 1;
+
+//用户和用户组关联表
+repeated UserGroupLinkRequestPb userGroupLink = 2;
+
+//权限和用户组关联表
+repeated UserGroupPermissionLinkRequestPb userGroupPermissionLink = 3;
+
+}
+
+
+

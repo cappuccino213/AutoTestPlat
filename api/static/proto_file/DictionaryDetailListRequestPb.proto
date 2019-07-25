@@ -1,0 +1,8 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "DictionaryDetailRequestPb.proto";
+
+//◊÷µ‰œÍ«È¡–±Ì
+message DictionaryDetailListRequestPb {
+repeated DictionaryDetailRequestPb list =1;
+}

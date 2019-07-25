@@ -1,0 +1,24 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//检查项目类型表
+message ProcedureTypeResponsePb{
+//主键
+string typeID = 1;
+//关联检查类型
+string  serviceSectID = 2;
+//检查项目类型编码
+string  procedureTypeCode = 3;
+//检查项目类型
+string  procedureType = 4;
+//所属科室
+string  observationDeptID = 5;
+//所属机构
+string  organizationID = 6;
+//删除标记：0-未删除，1-已删除
+bool  deletedFlag = 7;
+
+}
+
+
+

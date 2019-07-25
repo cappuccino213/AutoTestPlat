@@ -1,0 +1,16 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "ClientManagementRequestPb.proto";
+
+message AuthorizeRequestPb{
+//账号名称
+string accountName=1;
+//账号名称
+string userPassWord=2;
+//机构ID
+string organizationID=3;
+//科室ID
+string observationDeptID=4;
+//客户端校验码
+string ClientAuthCode=5;
+}

@@ -1,0 +1,21 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//用户组权限关联表
+message UserGroupPermissionLinkRequestPb{
+//主键
+string  linkID=1;
+//关联用户组ID
+string  userGroupID=2;
+//关联权限ID(父和子数据权限节点ID相同)
+ string  permissionID = 3;
+//数据权限规则(父数据权限节点，此字段为空；子数据节点，此字段为PermissionCode)
+string  permissionRules = 4;
+//权限名称
+string permissionName = 5;
+//权限类型，参考权限表
+string permissionType = 6;
+
+}
+
+

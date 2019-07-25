@@ -1,0 +1,42 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//机构表
+message OrganizationRequestPb{
+//机构主键
+string  organizationID = 1;
+//机构编码
+string  organizationCode = 2;
+//机构对应HIS编码
+string  organizationHISCode = 3;
+//机构名称
+string  organizationName = 4;
+//机构英文名
+string  organizationEng = 5;
+//若OrgRootFlag=1，则存储自身的机构主键，若为0则存储其父机构的主键
+string  parentOrgID = 6;
+//机构地址
+string  orgAddress = 7;
+//机构电话
+string  orgTelephone = 8;
+//机构全名称
+string  orgFullName = 9;
+//根节点标志，搭配机构父ID使用，标记该机构是否为根机构，0否，1是
+bool  orgRootFlag = 10;
+//删除标志：0未删除，1删除
+bool  deletedFlag = 11;
+//诊断中心标志:0不是，1是
+bool  diagnoseCenterFlag = 12;
+//应用服务器地址
+string  appServerAddress = 13;
+//数据库链接字符串
+string  dBConnectionString = 14;
+//备注
+string  remark = 15;
+//排序号
+int32  sortNo = 16;
+
+}
+
+
+

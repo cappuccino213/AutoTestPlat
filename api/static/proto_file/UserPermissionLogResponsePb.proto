@@ -1,0 +1,44 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//权限日志表
+message UserPermissionLogResponsePb{
+	
+//主键
+string  permissionLogID = 1;
+//操作日期
+string  operateDate = 2;
+//操作用户ID
+string  operateUserID = 3;
+//操作用户名称
+string  operateUserName = 4;
+//权限ID
+string  permissionID = 5;
+//权限名称
+string  permissionName = 6;
+//权限类型，参考权限表
+string  permissionType = 7;
+//权限类型，参考权限表
+string  permissionTypeCH = 8;
+//1-用户，2-用户组
+string  operateObjectType = 9;
+//1-用户，2-用户组
+string  operateObjectTypeCH = 10;
+//操作对象ID，可以是用户ID，也可能是用户组ID
+string  operateObjectID = 11;
+//操作对象名称
+string  operateObjectName = 12;
+//操作类型，存储具体操作动作，如删除、添加、修改等
+string  operateType = 13;
+//日志描述
+string  logDescription = 14;
+//所属科室
+string  observationDeptID = 15;
+//所属机构
+string  organizationID = 16;
+
+
+}
+
+
+

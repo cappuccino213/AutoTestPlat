@@ -1,0 +1,34 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//特殊字符视图
+message ViSpecialCharInfoRequestPb{
+//特殊字符ID
+string  specialCharID = 1;
+//特殊字符编码
+string  specialCharCode = 2;
+//特殊字符
+string  specialChar = 3;
+//所属科室
+string  observationDeptID = 4;
+//所属机构
+string  organizationID = 5;
+//关联ID
+string  linkID = 6;
+//关联类型
+string  linkType = 7;
+//关联项ID
+string  linkItemID = 8;
+//所属检查类型
+string  belongServiceSectID = 9;
+//所属部位
+string  belongBodypartID = 10;
+//当前页数
+int32 currentPage = 11;
+//当前页数大小
+int32 pageSize = 12;
+
+}
+
+
+

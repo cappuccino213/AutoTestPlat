@@ -1,0 +1,8 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "KeyWordRequestPb.proto";
+
+//¹Ø¼ü´ÊÈë²Î
+message KeyWordListRequestPb {
+repeated KeyWordRequestPb list=1;
+}

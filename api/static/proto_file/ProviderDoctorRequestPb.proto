@@ -1,0 +1,44 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//申请医生表
+message ProviderDoctorRequestPb{
+//主键
+string  providerID = 1;
+//申请医生名称
+string  providerName = 2;
+//申请医生编码
+string  providerCode = 3;
+//性别：M-男，F-女，O-不详
+string  sex = 4;
+//出生日期
+string  birthDay = 5;
+//职务
+string  duty = 6;
+//办公电话
+string  officePhone = 7;
+//电话
+string  telephone = 8;
+//电子邮箱
+string  email = 9;
+//身份证号码
+string  iDCard = 10;
+//擅长领域
+string  speciality = 11;
+//所属科室ID
+string  observationDeptID = 12;
+//所属机构ID
+string  organizationID = 13;
+//删除标记：0-未删除，1-已删除
+bool  deletedFlag = 14;
+//排序号
+int32  sortNo = 15;
+//当前页
+int32 currentPage = 16;
+//每页条数
+int32 pageSize = 17;
+
+}
+
+
+

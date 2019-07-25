@@ -1,0 +1,24 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//关键词返参
+message KeyWordResponsePb {
+//关键词ID
+string keyWordID =1;
+//关键词名称
+string keyWordName =2;
+//关键词编码
+string keyWordCode =3;
+//关键词描述
+string keyDescription =4;
+//关键词类型：1001-疾病类型，1002-男性关键字，1003-女性关键字，1004-紧急关键字，1005-报告禁忌词
+string keyType =5;
+//关键词类型中文描述
+string keyTypeCH=6;
+//排斥词，多个排斥词以|分割，排斥词就是当出现排斥词时则不提示
+string excludeWords =7;
+//所属科室
+string observationDeptID =8;
+//所属机构
+string organizationID =9;
+}

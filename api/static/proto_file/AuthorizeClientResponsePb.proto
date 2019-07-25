@@ -1,0 +1,10 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+
+message AuthorizeClientResponsePb {
+//客户端激活标志：0未激活，1已激活
+bool clientActivateFlag =1;
+//客户端存在标志：0不存在，1已存在
+bool clientExistFlag=2;
+}

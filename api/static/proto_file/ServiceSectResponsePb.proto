@@ -1,0 +1,30 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//检查类型表
+message ServiceSectResponsePb{
+//主键
+string  pKID = 1;
+//检查类型
+string  serviceSectID = 2;
+//输入编码
+string  inputCode = 3;
+//检查类型名称
+string  serviceSectName = 4;
+//检查类型英文名
+string  serviceSectEng = 5;
+//父检查类型，检查项目细分
+string  parentServiceSectID = 6;
+//所属科室
+string  observationDeptID = 7;
+//所属机构
+string  organizationID = 8;
+//删除标记：0-未删除，1-已删除
+bool  deletedFlag = 9;
+//排序号
+int32  sortNo = 10;
+
+}
+
+
+

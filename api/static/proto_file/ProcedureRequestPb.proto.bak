@@ -1,0 +1,62 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//检查项目
+message ProcedureRequestPb {
+//检查项目主键
+string procedureID =1;
+//检查类型
+string serviceSectID =2;
+//关联检查部位ID
+string examBodyPartID =3;
+//检查项目输入码
+string inPutCode =4;
+//检查项目编号
+string procedureCode =5;
+//检查项目名称
+string procedureName =6;
+//检查项目英文名
+string procedureEngName =7;
+//对应HIS编码
+string hISCode =8;
+//映射HIS系统的检查项目编号
+string mappingHISCode =9;
+//增强检查标记：0不增强，1增强
+bool enhancerFlag =10;
+//增强检查标记中文描述
+string enhancerFlagCH=11;
+//后处理标志：0不需要后处理，1需要后处理
+bool reprocessingFlag =12;
+//后处理标志中文描述
+string reprocessingFlagCH=13;
+//胶片是否自动发往胶片自助打印服务：0不发送，1发送
+bool filmSendSelfServiceFlag =14;
+//是否自动发往中文描述
+string filmSendSelfServiceFlagCH=15;
+//删除标记:0未删除，1已删除
+bool deletedFlag =16;
+//删除标记中文描述
+string deletedFlagCH=17;
+//关联诊断组ID
+string diagnoseGroupID =18;
+//检查方法
+string procedureMethod =19;
+//工作量
+float procedureWorkload =20;
+//检查项目类别
+string procedureType =21;
+//预设胶片打印数量
+int32 filmCount =22;
+//所属科室
+string observationDeptID =23;
+//所属机构
+string organizationID =24;
+//排序号
+int32 sortNo =25;
+//备注
+string remark =26;
+//当前页数
+int32 currentPage=27;
+//当前页数大小
+int32 pageSize=28;
+}

@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//特殊字符关联表
+message SpecialCharLinkRequestPb{
+//关联ID
+string  linkID = 1;
+//特殊字符ID
+string  specialCharID = 2;
+//关联类型
+string  linkType = 3;
+//关联项ID
+string  linkItemID = 4;
+//所属检查类型
+string  belongServiceSectID = 5;
+//所属部位
+string  belongBodypartID = 6;
+
+
+}
+
+
+

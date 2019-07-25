@@ -1,0 +1,97 @@
+syntax = "proto3"; 
+
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//用户返回
+message UserResponsePb {
+//用户ID
+string userID =1;
+//用户工号
+string userCode =2;
+//对应HIS系统工号
+string hISUserCode =3;
+//输入码
+string inPutCode =4;
+//用户名称
+string userName =5;
+//用户英文名称
+string userNameEng =6;
+//用户性别 M男，F女，O不详
+string userSex =7;
+//用户性别中文描述
+string userSexCH=8;
+//用户出生日期
+string userBirthDay =9;
+//签名图片
+bytes signatureImage =10;
+//用户头像
+bytes headPicture =11;
+//用户激活状态标志 0-未激活，1-已激活
+bool userActivateFlag =12;
+//用户激活状态标志中文描述
+string userActivateFlagCH=13;
+//身份证号
+string userIDCard =14;
+//用户电话
+string userPhone =15;
+//用户职务
+string userDuty =16;
+//用户类型 1-普通用户，2-科室管理员，3-机构管理员，4-超级管理员
+string userType =17;
+//用户类型中文描述
+string userTypeCH =18;
+//用户账户类型 0-临时用户、1-永久账户、2-漫游账户
+string accountType =19;
+//用户账户类型中文描述 
+string accountTypeCH=20;
+//账户生效时间
+string effectivDate =21;
+//账户失效时间
+string expiryDate =22;
+//创建日期
+string createDate =23;
+//所属科室
+string observationDeptID =24;
+//所属医院
+string organizationID =25;
+//删除标志 0-未删除，1-已删除
+bool deletedFlag =26;
+//删除标志中文描述
+string deletedFlagCH =27;
+//排序号
+int32 sortNo =28;
+//当前页数
+int32 currentPage=29;
+//当前页数大小
+int32 pageSize=30;
+//用户组ID
+string userGroupID=31;
+//用户组代码
+string userGroupCode=32;
+//用户组名称
+string userGroupName=33;
+//用户组邮箱
+string userGroupEmail=34;
+//权限ID
+string permissionID=35;
+//权限编码
+string permissionCode=36;
+//权限名称
+string permissionName=37;
+//权限类型：1-菜单权限，2-流程权限，3-数据权限
+string permissionType=38;
+//权限类型中文描述
+string permissionTypeCH=39;
+//父权限ID
+string parentPermissionID=40;
+//根权限标志：0-不是根，1-是根
+bool rootFlag=41;
+//漫游来源用户ID
+string roamingSourceUserID=42;
+//漫游来源机构ID
+string roamingSourceOrgID=43;
+//漫游来源科室ID
+string roamingSourceDeptID=44;
+//账户
+string accountName=45;
+}

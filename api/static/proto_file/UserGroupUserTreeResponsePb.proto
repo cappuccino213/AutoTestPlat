@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "UserResponsePb.proto";
+
+//用户组下的用户树
+message UserGroupUserTreeResponsePb{
+//用户组ID
+string  userGroupID=1;
+//用户组编号
+string  userGroupCode=2;
+//用户组名称
+string  userGroupName=3;
+
+//树结构（用户）
+repeated UserResponsePb children = 4;
+
+}
+
+
+

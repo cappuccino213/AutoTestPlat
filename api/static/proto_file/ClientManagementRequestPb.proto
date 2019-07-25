@@ -1,0 +1,52 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//客户端入参
+message ClientManagementRequestPb {
+//客户端ID
+string clientID =1;
+//客户端名称
+string clientName =2;
+//使用场景：0-医院科室，1-公共场景，2-个人家庭场景
+string useScenario =3;
+//使用场景中文描述
+string useScenarioCH=4;
+//存储格式：浏览器名称/版本号
+string browserVersion =5;
+//操作系统信息
+string oSVersion =6;
+//客户端IP地址
+string clientIPAddress =7;
+//客户端激活标志：0未激活，1已激活
+bool clientActivateFlag =8;
+//客户端激活标志中文描述
+string clientActivateFlagCH=9;
+//客户端工作站类型：0登记，1技师，2报告
+int32 workStationType =10;
+//客户端工作站类型中文描述
+string workStationTypeCH=11;
+//记录上一次登陆的用户编号
+string lastLoginUserCode =12;
+//客户端运行标志：0未运行，1运行
+bool clientRunningFlag =13;
+//客户端运行标志中文描述
+string clientRunningFlagCH=14;
+//客户端所在房间号码
+string clientRoomNo =15;
+//应用服务器地址
+string appServerURL =16;
+//加密客户端校验码
+string clientAuthCode =17;
+//所属科室ID
+string observationDeptID =18;
+//所属机构ID
+string organizationID =19;
+//创建时间
+string createDate =20;
+//备注
+string remark =21;
+//当前页数
+int32 currentPage=22;
+//页数大小
+int32 pageSize=23;
+}

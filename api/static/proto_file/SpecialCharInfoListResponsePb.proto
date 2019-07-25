@@ -1,0 +1,18 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "SpecialCharInfoResponsePb.proto";
+import "SpecialCharLinkResponsePb.proto";
+
+//特殊字符关联详情
+message SpecialCharInfoListResponsePb{
+
+//特殊字符表
+SpecialCharInfoResponsePb specialCharInfo = 1;
+
+//特殊字符关联表
+repeated SpecialCharLinkResponsePb specialCharLink = 2;
+
+}
+
+
+

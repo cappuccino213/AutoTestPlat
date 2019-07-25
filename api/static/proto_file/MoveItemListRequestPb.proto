@@ -1,0 +1,30 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//移动项列表，支持单个移动和批量移动
+message MoveItemListRequestPb{
+//存储移动项信息
+repeated MoveItemRequestPb moveItemRequestPb=1;
+}
+
+//移动项参数
+message MoveItemRequestPb{
+//主键ID
+string ID = 1;
+//对应数据库字段SortNo
+int32 SortNo = 2;
+//前端界面序号
+int32 No=3;
+}
+
+//message MoveItemRequestPb{
+//要移动的主键ID
+//string moveSourceID = 1;
+//要移动项的SortNo
+//int32 moveSourceSortNo = 2;
+//要移动到目标项的ID
+//string moveDestinationID=3;
+//要移动到目标项的SortNo
+//int32 moveDestinationSortNo=4;
+//}

@@ -1,0 +1,35 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//就诊类别表
+message PatientClassResponsePb{
+//主键
+string  pKID = 1;
+//类别名称
+string  patientClassName = 2;
+//就诊类别，1000门诊、2000住院、3000体检、4000急诊
+string  patientClassCode = 3;
+//就诊类别英文
+string  patientClassNameEng = 4;
+//对应HIS编码
+string  hISCode = 5;
+//设置该类别的行字体颜色
+string  colorValue = 6;
+//存储该类别的父类别编码
+int32   parentClassCode = 7;
+//备注
+string  remark = 8;
+//所属科室
+string  observationDeptID = 9;
+//所属机构
+string  organizationID = 10;
+//0-未激活，1-已激活，用于有多个种类的类别时，根据激活标志去启用那些类别可以用
+bool  activatedFlag = 11;
+//删除标记：0-未删除，1-已删除
+bool  deletedFlag = 12;
+//排序号
+int32  sortNo = 13;
+}
+
+
+

@@ -1,0 +1,19 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//打印模板类别关联表
+message PrintTemplateClassLinkResponsePb{
+
+//类别关联ID
+string  classLinkID = 1;
+//关联P_PrintTemplate主键
+string  printTempID = 2;
+//关联类别（1检查类型，3检查项目，4打印角色）
+string  linkClass = 3;
+//关联类别详情，若是类别为检查类型则存储的是检查类型，若是检查项目则是存储检查项目ID，若是打印角色，则存储打印角色，可以多条
+string  LinkClassDetail = 4;
+
+}
+
+
+

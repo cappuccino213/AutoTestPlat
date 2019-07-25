@@ -1,0 +1,30 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//字典详情
+message DictionaryDetailResponsePb {
+//字典ID
+string dicDetailID =1;
+//字典类别
+string dicCategory =2;
+//字典输入码
+string dicInPutCode =3;
+//字典编码
+string dicCode =4;
+//字典展示值
+string dicDisplayValue =5;
+//字典映射HIS编码
+string dicMappingHISCode =6;
+//所属科室ID
+string observationDeptID =7;
+//所属机构
+string organizationID =8;
+//排序号
+int32 sortNo =9;
+//备注内容
+string remark =10;
+//删除标记：0未删除，1已删除
+bool deletedFlag =11;
+//删除标记中文描述
+string deletedFlagCH =12;
+}

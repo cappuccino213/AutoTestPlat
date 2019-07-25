@@ -1,0 +1,9 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "ObservationDeptRequestPb.proto";
+
+//科室列表入参
+message ObservationDeptListRequestPb {
+//科室列表
+repeated ObservationDeptRequestPb depts=1;
+}

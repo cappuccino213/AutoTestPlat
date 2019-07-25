@@ -1,0 +1,78 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//用户和用户权限串联视图
+message ViUserPermissionRequestPb{
+//用户ID
+string userID=1;
+//用户代码
+string userCode=2;
+//his用户代码
+string hISUserCode=3;
+//输入码
+string inputCode=4;
+//用户名字
+string userName=5;
+//用户英文名字
+string userNameEng=6;
+//用户性别:M男，F女，O不详
+string userSex=7;
+//用户生日
+string userBirthDay=8;
+//用户激活状态标志:0-未激活，1-已激活
+bool userActivateFlag=9;
+//用户身份证
+string userIDCard=10;
+//用户手机号
+string userPhone=11;
+//用户职务
+string userDuty=12;
+//用户类型:1-普通用户，2-科室管理员，3-机构管理员，4-超级管理员
+string userType=13;
+//账号类型 0-临时用户、1-永久账户、2-漫游账户，临时用户有有效期，永久账户和漫游账户没有有效期
+string accountType=14;
+//账户生效时间
+string effectivDate=15;
+//账户失效时间
+string expiryDate=16;
+//创建日期
+string createDate=17;
+//所属科室
+string observationDeptID=18;
+//所属医院
+string organizationID=19;
+//删除标志:0-未删除，1-已删除
+bool deletedFlag=20;
+//排序号
+int32 sortNo=21;
+//用户组ID
+string userGroupID=22;
+//用户组代码
+string userGroupCode=23;
+//用户组名称
+string userGroupName=24;
+//用户组邮箱
+string userGroupEmail=25;
+//权限ID
+string permissionID=26;
+//权限编码
+string permissionCode=27;
+//权限名称
+string permissionName=28;
+//权限类型：1-菜单权限，2-流程权限，3-数据权限
+string permissionType=29;
+//父权限ID
+string parentPermissionID=30;
+//根权限标志：0-不是根，1-是根
+string rootFlag=31;
+//当前页
+int32 currentPage=32;
+//每页条数
+int32 pageSize=33;
+//漫游来源用户ID
+string roamingSourceUserID=34;
+//漫游来源机构ID
+string roamingSourceOrgID=35;
+//漫游来源科室ID
+string roamingSourceDeptID=36;
+}

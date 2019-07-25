@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//客户端打印任务规则
+message ClientPrintTaskRulesRequestPb{
+//规则ID
+string  rulesID = 1;
+//客户端ID
+string  clientID = 2;
+//检查类型
+string  serviceSectID = 3;
+//打印任务类型（0预约任务，1登记任务，2签到任务）
+string  printTaskType = 4;
+//打印单据规则（1引导单，2取片单，4预约通知单，8知情同意书），以相加的形成进行集合存储
+int32  printBillTypeCollection = 5;
+//规则描述
+string  remark = 6;
+
+}
+
+
+

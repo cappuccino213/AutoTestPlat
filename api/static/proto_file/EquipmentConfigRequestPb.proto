@@ -1,0 +1,31 @@
+syntax = "proto3"; 
+
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//配置信息入参
+message EquipmentConfigRequestPb{
+//关联设备ID
+string EquipmentID=1;
+//就诊类型
+int32 patientClass=2;
+//关联类型
+string patientClassLinkType=3;
+//关联客户端ID列表
+repeated string clientList=4;
+//操作方式
+string operationType=5;
+
+repeated ProcedureDetailRequestPb details=6;
+}
+
+message ProcedureDetailRequestPb{
+//检查项目ID
+string procedureID=1;
+//检查项目名称
+string procedureName=3;
+//是否为默认设备
+bool defaultEquipmentFlag=2;
+
+string linkID=4;
+}
+

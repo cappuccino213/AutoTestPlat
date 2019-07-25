@@ -1,0 +1,46 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//打印模板关联视图
+message ViPrintTemplateLinkRequestPb{
+//主键
+string  printTempID = 1;
+//打印模板名称
+string  printTempName = 2;
+//打印模板类型：例如报告单、引导单、知情同意书等的Code
+string  printTempType = 3;
+//就诊类别
+int32  patientClass = 4;
+//存储模板文件
+bytes  prinTemptContent = 5;
+//模板内图片的数量
+int32  pictureCount = 6;
+//激活标记（0未激活，1激活）
+bool  activedFlag = 7;
+//妇科标记（0不是妇科，1是妇科）
+bool  gynecologyFlag = 8;
+//删除标记（0未删除，1删除）
+bool  deletedFlag = 9;
+//默认模板标记（0不是，1是）
+bool  defaultFlag = 10;
+//所属科室
+string  observationDeptID = 11;
+//所属机构
+string  organizationID = 12;
+//序列号
+int32  sortNo = 13;
+//类别关联ID
+string  classLinkID = 14;
+//关联类别（1检查类型，3检查项目，4打印角色）
+string  linkClass = 15;
+//关联类别详情，若是类别为检查类型则存储的是检查类型，若是检查项目则是存储检查项目ID，若是打印角色，则存储打印角色，可以多条
+string  LinkClassDetail = 16;
+//当前页数
+int32 currentPage = 17;
+//当前页数大小
+int32 pageSize = 18;
+
+}
+
+
+

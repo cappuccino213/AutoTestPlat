@@ -1,0 +1,20 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//客户端参数信息
+message ClientParamPb{
+
+//客户端ID
+string clientID = 1;
+//客户端名称
+string clientName = 2;
+//客户端IP地址
+string clientIPAddress = 3;
+//客户端工作站类型：0登记，1技师，2报告
+int32 workStationType = 4;
+//客户端工作站类型：0登记，1技师，2报告
+string workStationTypeCH = 5;
+//参数值
+string parameterValue = 6;
+
+}

@@ -1,0 +1,12 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//用户权限关联
+message UserPermissionLinkRequestPb {
+//主键
+string linkID =1;
+//用户ID
+string userID =2;
+//权限ID
+repeated string permissionID =3;
+}

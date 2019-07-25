@@ -1,0 +1,13 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//机构参数信息
+message OrganizationParamPb{
+
+//机构ID
+string organizationID = 1;
+//机构名称
+string organizationName = 2;
+//参数值
+string parameterValue = 3;
+}

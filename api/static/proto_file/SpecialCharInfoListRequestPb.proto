@@ -1,0 +1,18 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "SpecialCharInfoRequestPb.proto";
+import "SpecialCharLinkRequestPb.proto";
+
+//特殊字符列表参数
+message SpecialCharInfoListRequestPb{
+
+//特殊字符参数
+SpecialCharInfoRequestPb specialCharInfo = 1;
+
+//特殊字符关联参数
+repeated SpecialCharLinkRequestPb specialCharLink = 2;
+
+}
+
+
+

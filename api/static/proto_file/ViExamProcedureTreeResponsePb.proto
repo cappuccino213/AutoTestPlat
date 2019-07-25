@@ -1,0 +1,76 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+message ViExamProcedureResponsePb{
+//检查部位主键
+string examBodyPartID =1;
+//检查部位编码
+string examBodyPartCode =2;
+//检查部位名称
+string examBodyPartName =3;
+//检查部位英文名称
+string examBodyPartEng =4;
+//检查类型
+string serviceSectID =5;
+//是否为体检标记
+bool physicalFlag =6;
+//是否为体检标记中文名称
+string physicalFlagCH=7;
+//科室
+string observationDeptID =8;
+//所属机构
+string organizationID =9;
+//关联诊断组ID
+string diagnoseGroupID =10;
+//检查项目主键
+string procedureID =11;
+//检查项目编码
+string procedureCode =12;
+//检查项目名称
+string procedureName =13;
+//检查项目英文名称
+string procedureEngName =14;
+//对应HIS编码
+string hISCode =15;
+//映射HIS系统的检查项目编号
+string mappingHISCode =16;
+//增强检查标记：0不增强，1增强
+bool enhancerFlag =17;
+//增强检查标记中文描述
+string enhancerFlagCH=18;
+//后处理标志：0不需要后处理，1需要后处理
+bool reprocessingFlag =19;
+//后处理标志中文描述
+string reprocessingFlagCH=20;
+//胶片是否自动发往胶片自助打印服务：0不发送，1发送
+bool filmSendSelfServiceFlag =21;
+//是否自动发往中文描述
+string filmSendSelfServiceFlagCH=22;
+//检查方法
+string procedureMethod =23;
+//工作量
+string procedureWorkload =24;
+//检查项目类别：显示检查项目类别表中的项
+string procedureType =25;
+//预设胶片打印数量
+string filmCount =26;
+//排序号
+int32 sortNo =27;
+//备注
+string remark =28;
+}
+
+message ViExamProcedureTreeResponsePb{
+//检查部位主键
+string examBodyPartID =1;
+//检查部位编码
+string examBodyPartCode =2;
+//检查部位名称
+string examBodyPartName =3;
+//检查类型
+string serviceSectID =4;
+
+repeated ViExamProcedureResponsePb examProcedures=5;
+
+repeated ViExamProcedureTreeResponsePb childrens=6;
+}

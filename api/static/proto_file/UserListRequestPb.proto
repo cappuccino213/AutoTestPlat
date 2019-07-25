@@ -1,0 +1,9 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "UserRequestPb.proto";
+
+//多个用户
+message UserListRequestPb {
+//用户列表
+repeated UserRequestPb users=1;
+}

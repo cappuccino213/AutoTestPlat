@@ -1,0 +1,49 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+message ObservationLocationResponsePb{
+//检查机房ID
+string observationLocationID =1;
+//检查机房编码
+string observationLocationCode =2;
+//检查机房名称
+string observationLocation =3;
+//应用程序标识
+string aETitle =4;
+//检查优先级：0-普通，1-急诊，2-VIP，3-VVIP
+string observationPriority =5;
+//检查优先级中文描述
+string observationPriorityCH=6;
+//机房状态：0开启，1维护，2关闭
+string locationFlag =7;
+//机房状态中文描述
+string locationFlagCH=8;
+//后备机房名称
+string locationReserveName =9;
+//检查类型
+string serviceSectID =10;
+//关联的队列编号
+string linkQueueCode =11;
+//虚拟机房标志：0否，1是
+bool virtualLocationFlag =12;
+//虚拟机房标志中文描述
+string virtualLocationFlagCH=13;
+//责任技师ID
+string dutyTechniciansID =14;
+//责任技师名称
+string dutyTechniciansName =15;
+//叫号机房
+string callNoLocationID =16;
+//所属科室
+string observationDeptID =17;
+//所属机构
+string organizationID =18;
+//删除标志：0未删除，1已删除
+bool deletedFlag =19;
+//删除标志中文描述
+string deleteFlagCH=20;
+//备注
+string remark =21;
+//排序号
+int32 sortNo =22;
+}

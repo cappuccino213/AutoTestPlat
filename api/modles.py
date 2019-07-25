@@ -53,7 +53,7 @@ class Product(db.Model):
 
 class ApiInfo(db.Model):
 	api_id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)
-	api_name = db.Column(db.String(32), unique=True)
+	api_name = db.Column(db.String(128), unique=True)
 	method = db.Column(db.String(16))
 	url = db.Column(db.String(128))
 	header = db.Column(db.JSON)
@@ -70,9 +70,8 @@ class CaseInfo(db.Model):
 	case_id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)
 	case_name = db.Column(db.String(32), unique=True)
 	api_weight = db.Column(db.JSON)
-# type_id = db.Column(db.Integer)
-# api_info = db.relationship('ApiInfo', secondary='relation_info', backref=db.backref('case_info', lazy='dynamic'),
-# 						   lazy='dynamic')
+	type_id = db.Column(db.SmallInteger)
+	api_expection = db.Column(db.JSON)
 
 
 class RelationInfo(db.Model):
@@ -95,10 +94,10 @@ class TestType(db.Model):  # 测试类型，今后扩展自动化平台用
 class TaskInfo(db.Model):
 	task_id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)
 	task_name = db.Column(db.String(32), unique=True)
-	# case_id = db.Column(db.Integer, db.ForeignKey('case_info.case_id'))
 	associated_case = db.Column(db.JSON)
 	task_status = db.Column(db.Boolean,default=False)
 	locust_cl = db.Column(db.JSON)
+	pytest_para = db.Column(db.JSON)
 
 class Report(db.Model):
 	rpt_id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)

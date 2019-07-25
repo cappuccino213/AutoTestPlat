@@ -1,0 +1,13 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+import "ExamBodyPartResponsePb.proto";
+
+//检查部位返参树形结构
+message ServiceSectBodyTreeResponsePb {
+//检查类型ID
+string serviceSectID=1;
+//检查类型名称
+string serviceSectName=2;
+//子节点
+repeated ExamBodyPartResponsePb children=3;
+}

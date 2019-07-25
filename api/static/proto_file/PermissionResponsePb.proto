@@ -1,0 +1,30 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//权限
+message PermissionResponsePb {
+//权限ID
+string permissionID =1;
+//权限编码
+string permissionCode =2;
+//权限名称
+string permissionName =3;
+//权限类型
+string permissionType =4;
+//父权限ID
+string parentPermissionID =5;
+//根权限标志
+bool rootFlag =6;
+//关系属性
+string relatedAttribute =7;
+//排序号
+int32 sortNo =8;
+//当前页数
+int32 currentPage=9;
+//当前页数大小
+int32 pageSize=10;
+//树结构
+repeated PermissionResponsePb children = 11;
+//权限规则
+string permissionRules=12;
+}

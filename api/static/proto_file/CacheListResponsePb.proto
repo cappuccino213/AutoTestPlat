@@ -1,0 +1,55 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+import "DictionaryDetailResponsePb.proto";
+import "UserResponsePb.proto";
+import "ServiceSectResponsePb.proto";
+import "ExamBodyPartResponsePb.proto";
+import "ProcedureResponsePb.proto";
+import "ObservationLocationResponsePb.proto";
+import "OrganizationResponsePb.proto";
+import "ObservationDeptResponsePb.proto";
+import "ProviderDoctorResponsePb.proto";
+import "PatientClassResponsePb.proto";
+import "QuickInputCodeResponsePb.proto";
+
+//提供给前端的缓存
+message CacheListResponsePb{
+
+//字典信息
+repeated DictionaryDetailResponsePb dictionaryDetail = 1;
+
+//技师信息
+repeated UserResponsePb user = 2;
+
+//检查类型信息
+repeated ServiceSectResponsePb serviceSect = 3;
+
+//检查部位信息
+repeated ExamBodyPartResponsePb examBodyPart = 4;
+
+//检查项目信息
+repeated ProcedureResponsePb procedure = 5;
+
+//检查机房信息
+repeated ObservationLocationResponsePb observationLocation = 6;
+
+//机构信息
+repeated OrganizationResponsePb organization = 7;
+
+//请检科室信息
+repeated ObservationDeptResponsePb observationDept = 8;
+
+//请检医生信息
+repeated ProviderDoctorResponsePb providerDoctor = 9;
+
+//就诊类别信息
+repeated PatientClassResponsePb patientClass = 10;
+
+//快捷代码信息
+repeated QuickInputCodeResponsePb quickInputCode = 11;
+
+}
+
+
+

@@ -1,0 +1,32 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//科室入参
+message ObservationDeptRequestPb {
+//科室ID
+string observationDeptID =1;
+//观察科室编码
+string deptCode =2;
+//观察科室名称
+string deptName =3;
+//观察科室类型
+string deptType =4;
+//科室类型中文描述
+string deptTypeCH=5;
+//介入科室标记
+bool xADeptFlag =6;
+//介入科室标记中文描述
+string xADeptFlagCH=7;
+//删除标记
+bool deletedFlag =8;
+//删除标记中文描述
+string deletedFlagCH=9;
+//所属机构
+string organizationID =10;
+//排序号
+int32 sortNo =11;
+//当前页数
+int32 currentPage=12;
+//当前页数大小
+int32 pageSize=13;
+}

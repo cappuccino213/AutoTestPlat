@@ -172,7 +172,11 @@ def case_select():
 	cases = CaseInfo.query.all()
 	cl = []
 	for i in range(len(cases)):
-		to_json = {'case_id': cases[i].case_id, 'case_name': cases[i].case_name, 'api_weight': cases[i].api_weight}
+		to_json = {'case_id': cases[i].case_id,
+				   'case_name': cases[i].case_name,
+				   'api_weight': cases[i].api_weight,
+				   'type_id':cases[i].type_id,
+				   'api_expection':cases[i].api_expection}
 		cl.append(to_json)
 	return cl
 
@@ -183,7 +187,9 @@ def case_select_id(case_id):
 		to_json = {
 			'case_id': result.case_id,
 			'case_name': result.case_name,
-			'api_weight': result.api_weight
+			'api_weight': result.api_weight,
+			'type_id': result.type_id,
+			'api_expection': result.api_expection
 		}
 		return to_json
 	except Exception as e:
@@ -191,7 +197,10 @@ def case_select_id(case_id):
 
 
 def case_insert(post_json):
-	case = CaseInfo(case_name=post_json['case_name'], api_weight=post_json['api_weight'])
+	case = CaseInfo(case_name=post_json['case_name'],
+					api_weight=post_json['api_weight'],
+					type_id=post_json['type_id'],
+					api_expection=post_json['api_expection'])
 	db.session.add(case)
 	db.session.commit()
 
@@ -200,6 +209,8 @@ def case_update(put_json):
 	result = CaseInfo.query.get(put_json['case_id'])
 	result.case_name = put_json['case_name']
 	result.api_weight = put_json['api_weight']
+	result.type_id = put_json['type_id']
+	result.api_expection = put_json['api_expection']
 	db.session.commit()
 
 
@@ -218,7 +229,8 @@ def task_select():
 				   'task_name': tasks[i].task_name,
 				   'associated_case': tasks[i].associated_case,
 				   'task_status': tasks[i].task_status,
-				   'locust_cl': tasks[i].locust_cl}
+				   'locust_cl': tasks[i].locust_cl,
+				   'pytest_para':tasks[i].pytest_para}
 		tl.append(to_json)
 	return tl
 
@@ -231,7 +243,8 @@ def task_select_id(task_id):
 			'task_name': result.task_name,
 			'associated_case': result.associated_case,
 			'task_status': result.task_status,
-			'locust_cl': result.locust_cl
+			'locust_cl': result.locust_cl,
+			'pytest_para': result.pytest_para
 		}
 		return to_json
 	except Exception as e:
@@ -242,7 +255,8 @@ def task_insert(post_json):
 	task = TaskInfo(task_name=post_json['task_name'],
 					associated_case=post_json['associated_case'],
 					task_status=False,
-					locust_cl=post_json['locust_cl'])
+					locust_cl=post_json['locust_cl'],
+					pytest_para=post_json['pytest_para'])
 	db.session.add(task)
 	db.session.commit()
 
@@ -252,10 +266,12 @@ def task_update(put_json):
 	result.task_name = put_json['task_name']
 	result.associated_case = put_json['associated_case']
 	result.task_status = put_json['task_status']
+	result.locust_cl = put_json['locust_cl']
+	result.pytest_para = put_json['pytest_para']
 	db.session.commit()
 
 
-def task_cl_update(put_json):
+def task_cl_update(put_json):# 2.0版本此接口弃用
 	result = TaskInfo.query.get(put_json['task_id'])
 	result.locust_cl = put_json['locust_cl']
 	db.session.commit()
@@ -317,6 +333,8 @@ if __name__ == '__main__':
 	# print(pdt_update(data))
 	# print(api_select())
 	# print(pdt_select_id(3))
-	print(api_select_id(35))
+	# print(api_select_id(35))
+	cases = CaseInfo.query.all()
+	for i in cases:
+		print(type(i),i)
 
-# insert('')

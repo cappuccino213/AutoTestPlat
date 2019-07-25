@@ -1,0 +1,30 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+
+//用户组表
+message UserGroupRequestPb{
+//用户组ID
+string  userGroupID=1;
+//用户组编号
+string  userGroupCode=2;
+//用户组名称
+string  userGroupName=3;
+//用户组邮箱
+string  userGroupEmail=4;
+//用户组描述
+string  description=5;
+//所属科室
+string  observationDeptID=6;
+//所属机构
+string  organizationID=7;
+//删除标志:0-未删除，1-已删除
+bool  deletedFlag=8;
+//当前页
+int32 currentPage=9;
+//每页条数
+int32 pageSize=10;
+
+}
+
+
+

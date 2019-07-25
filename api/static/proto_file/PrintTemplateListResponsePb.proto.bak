@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordRIS.Proto";
+import "PrintTemplateResponsePb.proto";
+import "PrintTemplateClassLinkResponsePb.proto";
+
+
+//打印模板详情列表
+message PrintTemplateListResponsePb{
+
+//打印模板表
+PrintTemplateResponsePb printTemplate = 1;
+
+//打印模板类别关联表
+repeated PrintTemplateClassLinkResponsePb printTemplateClassLink = 2;
+
+
+
+
+}
+
+
+

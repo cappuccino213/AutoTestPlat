@@ -1,0 +1,58 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//设备入参
+message ObservationEquipmentResponsePb{
+//设备主键
+string observationEquipmentID =1;
+//设备名称
+string observationEquipmentName =2;
+//制造商
+string equipmentManufacturer =3;
+//设备序列号
+string equipmentSerialNo =4;
+//设备型号
+string modelNumber =5;
+//设备标识
+string callingAE =6;
+//设备状态（0关闭，1开启，2维护）
+string status =7;
+//设备状态中文描述
+string statusCH=8;
+//设备价格
+int32 price =9;
+//设备保管人
+string custodian =10;
+//记录人
+string recorder =11;
+//维护人
+string maintainer =12;
+//维护周期
+int32 maintenanceCycle =13;
+//维护日期
+string maintenanceDate =14;
+//购买日期
+string purchaseDate =15;
+//开始保修日期
+string guaranteeBeginDate =16;
+//出保修日期
+string guaranteeOutDate =17;
+//检查类型
+string serviceSectID =18;
+//检查机房
+string observationLocationID =19;
+//所属工作站
+string belongWorkStation =20;
+//所属科室
+string observationDeptID =21;
+//所属医院
+string organizationID =22;
+//序号
+int32 sortNo =23;
+//备注
+string remark =24;
+//删除标记（0未删除，1删除）
+bool deletedFlag =25;
+//删除标记中文描述
+string deletedFlagCH=26;
+}

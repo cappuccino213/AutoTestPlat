@@ -1,0 +1,32 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordRIS.Proto"; 
+
+//检查部位传参
+message ExamBodyPartResponsePb {
+//主键
+string examBodyPartID =1;
+//检查部位编码
+string examBodyPartCode =2;
+//输入码
+string inPutCode =3;
+//检查部位名称
+string examBodyPartName =4;
+//检查部位英文名称
+string examBodyPartEng =5;
+//关联的检查类型
+string serviceSectID =6;
+//标记是否是体检部位
+bool physicalFlag =7;
+//是否为体检部分中文描述
+string physicalFlagCH=8;
+//所属科室
+string observationDeptID =9;
+//所属机构
+string organizationID =10;
+//删除标记
+bool deletedFlag =11;
+//删除标记中文描述
+string deletedFlagCH=12;
+//排序号
+int32 sortNO =13;
+}
