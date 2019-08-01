@@ -1,0 +1,13 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message UserQuerySetMstProto {
+int32 querySeq =1;
+string queryType =2;
+string userUID =3;
+string name =4;
+string queryCondition =5;
+string sortNO =6;
+string defaultFlag =7;
+string publicFlag =8;
+}

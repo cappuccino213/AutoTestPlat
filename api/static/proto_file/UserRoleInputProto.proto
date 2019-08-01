@@ -1,0 +1,7 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message UserRoleInputProto{
+string userUID=1;
+string organizationID=2;
+}

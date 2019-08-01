@@ -1,0 +1,16 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message DeptMstProto {
+ string deptID =1;
+ string searchOrganizationID =2;
+ string deptName =3;
+ string officePhoneNO =4;
+ string inputCode =5;
+ string memo =6;
+ string deleteFlag =7;
+ string rowTimestamp =8;
+ string deptType =9;
+ string examClass =10;
+ string alias =11;
+}

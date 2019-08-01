@@ -1,0 +1,17 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message RightMstOutputProto {
+ string rightID =1;
+ string rightClass =2;
+ string rightName =3;
+ string title =4;
+ string controllerName =5;
+ string actionName =6;
+ string parameter =7;
+ string active =8;
+ string parentRightID =9;
+ string sortNO =10;
+ string memo =11;
+ string lAY_CHECKED =12;
+}

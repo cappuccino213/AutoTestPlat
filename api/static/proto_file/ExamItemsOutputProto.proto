@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message ExamItemsOutputProto {
+string examUID =1;
+string serviceText =2;
+string examTime =3;
+string serviceSectID =4;
+string resultStatus =5;
+string abnormalFlags =6;
+}

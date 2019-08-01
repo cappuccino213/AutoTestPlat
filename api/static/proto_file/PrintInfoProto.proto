@@ -1,0 +1,34 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message PrintLogRequestProto{
+string patientID=1; //病人ID
+int32 sourceType=2;  //来源
+string organizationID=3;  //医院ID
+string oprerator=4; //操作者
+string requestIP=5; //请求设备IP
+string examUID=6;  //检查UID（多个的时候以逗号分隔开）
+}
+
+message PrintLogInputProto{
+string organizationID=1;  //医院ID
+string oprerator=2; //操作者
+string operateTime=3; //操作时间
+int32 pageSize=4; //每页条数
+int32 currentPage=5; //当前页码
+}
+
+message PrintLogRequestDtoProto {
+string patientID=1; //病人ID
+string sourceType=2;  //来源
+string organizationID=3;  //医院ID
+string oprerator=4; //操作者
+string requestIP=5; //请求设备IP
+string examUID=6;  //检查UID（多个的时候以逗号分隔开）
+string patientName=7; //病人姓名
+string organizationName=8; //医院名称
+string operateTime=9;  //操作时间
+}
+
+
+

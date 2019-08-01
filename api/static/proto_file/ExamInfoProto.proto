@@ -1,0 +1,18 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message ExamInfoProto{
+string patientID=1;
+string name=2;
+string sex=3;
+string birthDate=4;
+string phoneNumber=5;
+string accessionNumber=6;
+string patientClass=7;
+string serviceSect=8;
+string examDate=9;
+string resultStatus=10;
+int32 printTimes=11;
+string examUID=12;
+repeated string docInfoList=13;
+}

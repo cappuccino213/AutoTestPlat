@@ -1,0 +1,11 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message ServiceInputProto {
+ string serviceUID =1;
+ string serviceName =2;
+ string ifEnable =3;
+ string ifDelete =4;
+ int32 pageSize=5;
+ int32 currentPage=6;
+}

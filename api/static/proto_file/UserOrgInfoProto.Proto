@@ -1,0 +1,17 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message UserOrgInfoProto{
+string userUID=1;
+string deptID=2;
+string deptName=3;
+string organizationID=4;
+string organizationName=5;
+string isSuperManager=6;
+string loginName=7;
+string userName=8;
+string workNO=9;
+string officePhone=10;
+string privatePhone=11;
+string email=12;
+}

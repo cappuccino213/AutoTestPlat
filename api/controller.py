@@ -175,8 +175,8 @@ def case_select():
 		to_json = {'case_id': cases[i].case_id,
 				   'case_name': cases[i].case_name,
 				   'api_weight': cases[i].api_weight,
-				   'type_id':cases[i].type_id,
-				   'api_expection':cases[i].api_expection}
+				   'type_id': cases[i].type_id,
+				   'api_expection': cases[i].api_expection}
 		cl.append(to_json)
 	return cl
 
@@ -230,7 +230,7 @@ def task_select():
 				   'associated_case': tasks[i].associated_case,
 				   'task_status': tasks[i].task_status,
 				   'locust_cl': tasks[i].locust_cl,
-				   'pytest_para':tasks[i].pytest_para}
+				   'pytest_para': tasks[i].pytest_para}
 		tl.append(to_json)
 	return tl
 
@@ -271,7 +271,7 @@ def task_update(put_json):
 	db.session.commit()
 
 
-def task_cl_update(put_json):# 2.0版本此接口弃用
+def task_cl_update(put_json):  # 2.0版本此接口弃用
 	result = TaskInfo.query.get(put_json['task_id'])
 	result.locust_cl = put_json['locust_cl']
 	db.session.commit()
@@ -283,17 +283,10 @@ def task_delete(del_json):
 	db.session.commit()
 
 
-# task的运行状态
-# def task_run():
-# 	from script import run_script
-# 	run_script.main()
-# 	return True
-
-
 # report的相关操作
 def report_insert(post_json):
 	report = Report(report_name=post_json['report_name'],
-					case_id=post_json['case_id'],
+					task_id=post_json['task_id'],
 					create_date=post_json['create_date'],
 					file_path=post_json['file_path'])
 	db.session.add(report)
@@ -306,7 +299,7 @@ def report_select():
 	for i in range(len(reports)):
 		to_json = {'rpt_id': reports[i].rpt_id,
 				   'report_name': reports[i].report_name,
-				   'case_id': reports[i].case_id,
+				   'task_id': reports[i].task_id,
 				   'create_date': reports[i].create_date,
 				   'file_path': reports[i].file_path}
 		rl.append(to_json)
@@ -318,7 +311,7 @@ def report_select_id(rpt_id):
 		result = Report.query.get(rpt_id)
 		to_json = {'rpt_id': result.rpt_id,
 				   'report_name': result.report_name,
-				   'case_id': result.case_id,
+				   'task_id': result.task_id,
 				   'create_date': result.create_date,
 				   'file_path': result.file_path}
 		return to_json
@@ -326,15 +319,31 @@ def report_select_id(rpt_id):
 		return {"desc": "暂未查询到数据,原因：%s" % str(e)}
 
 
-if __name__ == '__main__':
-	# ph = pdt_select()
-	# print(ph)
-	# data = {'pdt_id': 1}
-	# print(pdt_update(data))
-	# print(api_select())
-	# print(pdt_select_id(3))
-	# print(api_select_id(35))
-	cases = CaseInfo.query.all()
-	for i in cases:
-		print(type(i),i)
+def report_new_record(task_id, report_json):  # 根据任务id生成报告记录
+	search_res = Report.query.filter(Report.task_id == task_id).first()
+	if search_res is not None:  # 判断是否有记录
+		search_res.report_name = report_json['report_name']
+		search_res.task_id = report_json['task_id']
+		search_res.create_date = report_json['create_date']
+		search_res.file_path = report_json['file_path']
+		db.session.commit()
+	else:
+		report_insert(report_json)
 
+
+# report更新 暂未使用到
+def report_update(data_json):
+	result = Report.query.get(data_json['rpt_id'])
+	result.report_name = data_json['report_name']
+	result.task_id = data_json['task_id']
+	result.create_date = data_json['create_date']
+	result.file_path = data_json['file_path']
+	db.session.commit()
+
+if __name__ == '__main__':
+	print(case_select_id(32)['api_weight'])
+	# cases = CaseInfo.query.all()
+# 	# for i in cases:
+# 	# 	print(type(i),i)
+# 	task_id = report_new_record['task_id']
+# 	print(type(task_id),task_id)

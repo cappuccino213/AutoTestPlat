@@ -1,0 +1,26 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message OrganizationMstProto {
+ string searchOrganizationID=1;
+ string organizationName =2;
+ string alias =3;
+ string inputCode =4;
+ string contactUserName =5;
+ string officePhoneNO =6;
+ string personalPhoneNO =7;
+ string email =8;
+ string address =9;
+ string organizationTypeCode =10;
+ string parentOrganizationID =11;
+ string createUserUID =12;
+ string createDate =13;
+ string memo =14;
+ string deleteFlag =15;
+ string rowTimestamp =16;
+ string organizationCode =17;
+ string province =18;
+ string city =19;
+ string district =20;
+ string sortNO =21;
+}

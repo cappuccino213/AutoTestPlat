@@ -1,0 +1,8 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+import "DigitalImageExamInputProto.proto";
+
+message DigitalImageInputProto{
+int32 digitalImageState=1;
+repeated DigitalImageExamInputProto examList=2;
+}

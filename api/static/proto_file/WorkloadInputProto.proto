@@ -1,0 +1,17 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message WorkloadInputProto {
+ string rows =1;
+ string columns =2;
+ string registerTime =3;
+ string patientClass =4;
+ string organizationID =5;
+ string requestDeptName =6;
+ string serviceSectID =7;
+ string resultStatus =8;
+ string criticalValue =9;
+ string dateField =10;
+ string startDate =11;
+ string endDate =12;
+}

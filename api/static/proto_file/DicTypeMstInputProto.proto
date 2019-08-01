@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message DicTypeMstInputProto{
+string typeClass=1;
+string typeCode=2;
+string typeName=3;
+int32 pageSize=4;
+int32 currentPage=5;
+}
+

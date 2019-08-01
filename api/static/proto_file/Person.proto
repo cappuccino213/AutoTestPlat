@@ -1,0 +1,16 @@
+syntax = "proto3";
+option csharp_namespace = "probofu.Controllers";
+
+message Person {
+  int32 Id = 1;
+  string Name = 2;
+  Address  Address=3;
+}
+message Address {
+  string Line1 = 1;
+  string Line2 = 2;
+}
+
+
+
+

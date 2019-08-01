@@ -1,0 +1,129 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+import "UserOrgInfoProto.Proto";
+
+
+message CheckInfoDtoProto{
+string id=1;
+string patientName=2;
+string gender=3;
+int32 age=4;
+string ageUnit=5;
+string birthDay=6;
+string iDCardNo=7; 
+string serviceSectID=8;
+string examItem=9;
+string checkArea=10;
+string medRecNO=11;
+string patientClass=12;
+string visitID=13;
+string alternateVisitID=14;
+string outPatientID=15;
+string pointOfCareID=16;
+string pointOfCare=17;
+string bed=18;
+string organizationName=19;
+string requestOrgName =20;
+string requestDept=21;
+string requestDocName=22;
+string requestTime =23; 
+string regTime=24;
+string examTime =25;
+string examEndDate =26;
+string resultDate =27;
+string auditDate =28;
+string reviseDate =29;
+string patientID=30;
+string accessionNumber=31;
+string abnormalFlags =32;
+string criticalValue =33;
+string consultationStatus=34;
+string consultRequestDate=35;
+string consultEndDate =36;
+string ifHasImage =37;
+string examStatus=38;
+string examCode=39;
+string clinicDiagnosis=40;
+string placerOrderNO=41;
+string reason=42;
+string contactPhoneNO =43;
+string symptom=44;
+string patientMasterID=45;
+string examUID=46;
+string resultStatus=47;
+string studyInstanceUID=48;
+string otherClinicalInfo=49;
+string attention=50;
+string resultReviseName=51;
+}
+
+message SearchInputProto{
+string patientName=1;
+string gender=2;
+int32 age=3;
+string ageUnit=4;
+string birthDay =5;
+string iDCardNo =6;    
+string medRecNO=7;
+string visitID =8;
+string alternateVisitID=9;
+string outPatientID =10;
+string patientClass =11;
+string requestDeptID =12;
+string requestDocName =13;
+string accessionNumber=14;
+string organizationID =15;
+string organizationIDPerson =16;
+string serviceSectID=17;
+string resultAssistantName=18;
+string examStartTime =19;
+string examEndTime =20;
+string registerStartTime =21;
+string registerEndTime =22;
+string resultStartDate =23;
+string resultEndDate =24;
+string requestStartTime =25;
+string requestEndTime =26;
+string consultRequestStartDate=27;
+string consultRequestEndDate=28;
+string consultEndDateStart =29;
+string consultEndDateEnd =30;
+string appointmentSaveStartDate =31;
+string appointmentSaveEndDate =32;
+string lastUpdateStartDate =33;
+string lastUpdateEndDate =34;
+string examStatus =35;
+string ifHasImage =36;
+string resultPrintCount =37;
+string criticalValue =38;
+string patientMasterID=39;
+string examUID=40;
+string personExamUID=41;
+string quickSearch=42;
+int32 pageSize=43;
+int32 currentPage=44;
+string token=45;
+string isInteragency =46;
+string isInteragencyExam =47;
+string isInteragencyClinic =48;
+string isInteragencyStatistic =49;
+UserOrgInfoProto userInfo =50;
+string isInteragencyData =51;
+string outPatientNO=52; //门诊号
+string inPatientNO=53; //住院号
+}
+
+
+
+message UserQuerySetMstDtoProto{
+int32 querySeq=1;
+string queryType=2;
+string userUID=3;
+string name=4;
+string queryCondition=5;
+int32 sortNO=6;
+string defaultFlag=7;
+string publicFlag=8;
+UserOrgInfoProto userInfo =9;
+}
+

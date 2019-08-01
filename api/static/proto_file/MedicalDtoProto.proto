@@ -1,0 +1,17 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message MedicalDtoProto {
+string recordUID =1;
+string createDate =2;
+string recordTypeID =3;
+string recordTypeName =4;
+string status =5;
+string detailSeq =6;
+string itemName =7;
+string valueTitle =8;
+string valueType =9;
+string valueText =10;
+string valueCode =11;
+string doctorName =12;
+}

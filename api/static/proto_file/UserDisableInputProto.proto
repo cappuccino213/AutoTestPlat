@@ -1,0 +1,7 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message UserDisableInputProto{
+string userUID=1;
+bool status=2;
+}

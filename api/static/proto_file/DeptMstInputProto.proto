@@ -1,0 +1,10 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message DeptMstInputProto{
+string searchOrganizationID=1;
+string deptID=2;
+string deptName=3;
+int32 pageSize=4;
+int32 currentPage=5;
+}

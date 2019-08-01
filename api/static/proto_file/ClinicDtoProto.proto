@@ -1,0 +1,14 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+import "ExamRequestDtoProto.proto";
+import "ExamRequestProto.proto";
+import "MedicalDtoProto.proto";
+
+message ClinicDtoProto {
+int32 obRequestExamCount =1;
+int32 obRequestLabCount =2;
+int32 medicalRecordCount =3;
+repeated ExamRequestDtoProto obRequestExam =4;
+repeated ExamRequestProto obRequestLab =5;
+repeated MedicalDtoProto medicalRecord =6;
+}

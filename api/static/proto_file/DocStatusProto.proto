@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message  DocStatusProto {
+bool examResultStatus =1;
+bool examWrittenStatus=2;
+bool examFilmStatus=3;
+bool examImgStatus=4;
+}

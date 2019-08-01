@@ -1,0 +1,31 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message WrittenReportProto {
+string patientName =1;
+string gender =2;
+int32 age =3;
+string ageUnit =4;
+string patientID =5;
+string medRecNO =6;
+string alternateVisitID =7;
+string outPatientID =8;
+string requestDept =9;
+string pointOfCareID =10;
+string pointOfCare =11;
+string bed =12;
+string serviceSectID =13;
+string examItem =14;
+string examTime =15;
+string clinicDiagnosis =16;
+string checkArea =17;
+string observationMethod =18;
+string dicomView =19;
+string dicomConsultation =20;
+string resultAssistantName =21;
+string resultPrincipalName =22;
+string resultDate =23;
+string resultReviseName =24;
+string reviseDate =25;
+string auditDate =26;
+}

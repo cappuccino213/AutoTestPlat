@@ -1,0 +1,39 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message VisitPeopleProto {
+string patientName =1;
+string gender =2;
+int32 age =3;
+string ageUnit =4;
+string patientClass =5;
+string patientMasterID =6;
+string visitUID =7;
+string medRecNO =8;
+string patientID =9;
+string pointOfCare =10;
+string pointOfCareID =11;
+string bed =12;
+string healthCardNO =13;
+string nation =14;
+string birthPlace =15;
+string maritalStatus =16;
+string iDCardNo =17;
+string occupation =18;
+string contactPhoneNO =19;
+string email =20;
+string homePhoneNO =21;
+string addressDetail =22;
+string workUnit =23;
+string businessPhoneNO =24;
+string cardType =25;
+string cardNO =26;
+string outPatientNO =27;
+string inPatientNO =28;
+string reAmissionFlag =29;
+string directorDoctorName =30;
+string attendingDoctorName =31;
+string admitDate =32;
+string dischargeDate =33;
+string deptName =34;
+}

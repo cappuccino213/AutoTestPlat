@@ -1,0 +1,15 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message DocumentRequestProto{
+string cardNo=1;
+string organizationID=2;
+int32 cardType=3;
+string typeCode=4;
+string classCode=5;
+string businessType=6;
+string serviceSectID=7;
+string rePrint=8;
+string examDate=9;
+}
+

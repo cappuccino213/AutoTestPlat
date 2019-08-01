@@ -1,0 +1,17 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+import "WorkloadDtoProto.proto";
+
+message WorkloadPlusDtoProto {
+repeated WorkloadDtoProto workloadDto =1;
+ string row1Name =2;
+ string row2Name =3;
+ string column1Name =4;
+ string column2Name =5;
+ string row1DisplayName =6;
+ string row2DisplayName =7;
+ string column1DisplayName =8;
+ string column2DisplayName =9;
+ int32 rowTotal =10;
+ int32 columnTotal =11;
+}

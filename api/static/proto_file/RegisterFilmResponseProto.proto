@@ -1,0 +1,7 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message RegisterFilmResponseProto{
+int32 errorCode=1;
+string errorMessage=2;
+}

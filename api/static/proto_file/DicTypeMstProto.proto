@@ -1,0 +1,34 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message DicTypeMstProto {
+string typeCode =1;
+string typeName =2;
+string codeScheme =3;
+string typeClass =4;
+string allowCreateItem =5;
+string allowUpdateItem =6;
+string allowDeleteItem =7;
+string memo =8;
+string itemRepresenTitle =9;
+string itemRepresenExt1Title =10;
+string itemRepresenExt2Title =11;
+string itemRepresenExt3Title =12;
+string itemRepresenExt4Title =13;
+string itemRepresenExt5Title =14;
+string itemRepresenExt6Title =15;
+string itemRepresenExt7Title =16;
+string itemRepresenExt8Title =17;
+string itemRepresenExt9Title =18;
+string itemRepresenExt10Title =19;
+string itemRepresenExt11Title =20;
+string itemRepresenExt12Title =21;
+string itemRepresenExt13Title =22;
+string itemRepresenExt14Title =23;
+string itemRepresenExt15Title =24;
+string itemRepresenExt16Title =25;
+string itemRepresenExt17Title =26;
+string itemRepresenExt18Title =27;
+string itemRepresenExt19Title =28;
+string itemRepresenExt20Title =29;
+}

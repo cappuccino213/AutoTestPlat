@@ -1,0 +1,60 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message StorageDtoProto{
+        string mediaUID =1;
+        string name =2;
+        string type =3;
+        string path =4;
+        string organizationID =5;
+        string subDir =6;
+        string ifEnable =7; 
+        string customConfig =8;
+        string description =9;
+		string host =10;
+		string bucket =11;
+        string accessID =12; 
+        string accessKey =13;
+        string isSharePath =14;
+		string shareAddress =15;
+		string shareUserName =16;
+		string sharePassWord =17;
+}
+
+message StorageInputProto{
+  string mediaUID =1;
+  int32 pageSize=2;
+  int32 currentPage=3;
+  string organizationID =4;
+}
+
+message StorageTempProto{
+        string mediaUID =1;
+        string name =2;
+        string type =3;
+        string path =4;
+        string organizationID=5;
+        string subDir=6;
+        string ifEnable=7; 
+        string customConfig=8;
+        string description=9;
+        string organizationName=10;
+		string bucket =11;
+        string accessID =12; 
+        string accessKey =13;
+        string isSharePath =14;
+		string shareAddress =15;
+		string shareUserName =16;
+		string sharePassWord =17;
+		string host =18;
+}
+
+message DicItemInputProto{
+ string typeCode =1;    
+ string searchOrganizationID=2;
+}
+
+message DicItemOutputProto{
+  string label=1;
+  string value=2;
+}

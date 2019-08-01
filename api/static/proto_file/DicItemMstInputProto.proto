@@ -1,0 +1,18 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+import "UserOrgInfoProto.Proto";
+
+message DicItemMstInputProto{
+string itemCode=1;
+string itemCodeScheme=2;
+string typeCode=3;
+int32 pageSize=4;
+int32 currentPage=5;
+string token=6;
+string isInteragency =7;
+string isInteragencyExam =8;
+string isInteragencyClinic =9;
+string isInteragencyStatistic =10;
+UserOrgInfoProto userInfo =11;
+string isInteragencyData =12;
+}

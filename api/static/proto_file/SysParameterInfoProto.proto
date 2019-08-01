@@ -1,0 +1,16 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message SysParameterMstProto {
+  string code = 1;
+  string name = 2;
+  string value = 3;
+  string module = 4;
+  string memo = 5;
+}
+message SysParameterInputProto {
+  string code = 1;
+  string name = 2;
+  int32 pageSize = 3;
+  int32 currentPage = 4;
+}

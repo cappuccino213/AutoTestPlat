@@ -1,0 +1,9 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+import "UserOrgInfoProto.Proto";
+
+message UserQuerySetInputProto {
+string userId =1;
+int32 querySeq =2;
+UserOrgInfoProto userInfo =3;
+}

@@ -1,0 +1,73 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message AdminLoginUserInfoProto {
+string userUID =1;
+string loginName =2;
+string userName =3;
+string workNO =4;
+string officePhone =5;
+string privatePhone =6;
+string email =7;
+string isSuperManager =8;
+string organizationID =9;
+string organizationName =10;
+string deptID =11;
+string deptName =12;
+repeated ViewPartProto viewParts=13;
+UserRightDtoProto UserRight =14;
+}
+
+message ViewPartProto{
+string url=1;
+repeated ChildrenProto children=2;
+metaProto meta=3;
+}
+
+message ChildrenProto{
+string url=1;
+metaProto meta=2;
+}
+
+message metaProto{
+bool requiresAuth=1;
+string title=2;
+}
+
+message UserRightDtoProto {
+ string userUID =1;
+ExamInfoRightProto examInfo =2;
+ClinicInfoRightProto clinicInfo =3;
+StatisticInfoRightProto statisticInfo =4;
+DataRightProto data =5;
+}
+
+message ExamInfoRightProto {
+ string visible =1;
+ string doctorVisible =2;
+ string departmentVisible =3;
+ string organizationVisible =4;
+ string listVisible =5;
+}
+
+message ClinicInfoRightProto {
+ string visible =1;
+ string doctorVisible =2;
+ string departmentVisible =3;
+ string organizationVisible =4;
+}
+
+message StatisticInfoRightProto {
+ string visible =1;
+ string doctorVisible =2;
+ string departmentVisible =3;
+ string organizationVisible =4;
+}
+
+message DataRightProto {
+ string requestVisible =1;
+ string reportVisible =2;
+ string imageVisible =3;
+ string filmVisible =4;
+ string isOpenUpload =5;
+}

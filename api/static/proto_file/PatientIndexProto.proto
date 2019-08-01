@@ -1,0 +1,46 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message PatientIndexProto {
+string patientID =1;
+string pIDAssigningAuthority =2;
+int32 isMPI =3;
+string patientMasterID =4;
+string password =5;
+string createDate =6;
+string createUserID =7;
+string createUserName =8;
+string createOrgnizationID =9;
+string name =10;
+string nameSpell =11;
+string motherName =12;
+string sex =13;
+string birthDate =14;
+string birthPlace =15;
+string nation =16;
+string citizenship =17;
+string maritalStatus =18;
+string identityType =19;
+string identityID =20;
+string iDCardNO =21;
+string healthCardNO =22;
+string insuranceType =23;
+string insuranceID =24;
+string contactPhoneNO =25;
+string homePhoneNO =26;
+string businessPhoneNO =27;
+string email =28;
+string addressProvince =29;
+string addressCity =30;
+string addressDistrict =31;
+string addressStreet =32;
+string addressRoad =33;
+string addressDetail =34;
+string postalcode =35;
+string occupation =36;
+string workUnit =37;
+string language =38;
+string lastUpdateDate =39;
+string inHospitalFlag =40;
+string status =41;
+}

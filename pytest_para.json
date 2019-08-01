@@ -1,0 +1,8 @@
+﻿{
+    "opts_list": [
+        "--html=report.html"
+    ],
+    "plugins": [
+        "html()"
+    ]
+}

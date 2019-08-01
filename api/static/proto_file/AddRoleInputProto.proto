@@ -1,0 +1,9 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+import "RoleMstOutputProto.proto";
+
+message AddRoleInputProto{
+string userUID=1;
+string searchOrganizationID=2;
+repeated RoleMstOutputProto right=3; 
+}

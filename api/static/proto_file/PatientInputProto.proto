@@ -1,0 +1,22 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+import "UserOrgInfoProto.Proto";
+
+message PatientInputProto {
+string patientName =1;
+string iDCardNo =2;
+string healthCardNO =3;
+string insuranceID =4;
+string userOrganizationID=5;
+string quickSearch =6;
+int32 pageSize=7;
+int32 currentPage=8;
+string token=9;
+UserOrgInfoProto userInfo=10;
+string isInteragency =11;
+string isInteragencyExam =12;
+string IsInteragencyClinic =13;
+string IsInteragencyStatistic =14;
+string test=15;
+}
+

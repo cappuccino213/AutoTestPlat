@@ -175,7 +175,7 @@ class GenerateScript():
 		import subprocess
 		proto_file = [i['proto_file'] + '.proto' for i in self.sp.para]  # proto文件名
 		proto_path = os.path.join(self.project_path, 'api', 'static', 'proto_file')  # proto文件目录
-		py_path = os.path.join(self.project_path, 'script', 'proto_script')  # 编译生成py文件目录
+		py_path = os.path.join(self.project_path, 'script', 'protobuf_script')  # 编译生成py文件目录
 		proto_list = [os.path.join(proto_path, proto) for proto in proto_file]  # proto文件路径
 		for proto in proto_list:
 			if self.if_proto_import(proto):
@@ -199,7 +199,7 @@ class GenerateScript():
 			py_path = os.path.join(self.project_path, 'script', 'json_script')
 			self.write_script(py_path, self.json_script_content())
 		elif self.data_type == 'proto':
-			py_path = os.path.join(self.project_path, 'script', 'proto_script')
+			py_path = os.path.join(self.project_path, 'script', 'protobuf_script')
 			self.proto2py()
 			self.write_script(py_path, self.proto_script_content())
 		else:

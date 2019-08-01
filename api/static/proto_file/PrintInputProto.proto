@@ -1,0 +1,6 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message PrintInputProto{
+string examUID=1;
+}

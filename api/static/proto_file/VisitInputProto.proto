@@ -1,0 +1,35 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+import "UserOrgInfoProto.Proto";
+
+message VisitInputProto {
+string patientName =1;
+string pointOfCareID =2;
+string bed =3;
+string admitDeptID =4;
+string attendingDoctorID =5;
+string directorDoctorName =6;
+string medRecNO =7;
+string visitID =8;
+int32 age =9;
+string ageUnit =10;
+string gender =11;
+string birthDay =12;
+string organizationID =13;
+string patientClass =14;
+string admitStartDate =15;
+string admitEndDate =16;
+string curPatCondition =17;
+string nursingGrade =18;
+string dietType =19;
+string quickSearch =20;
+int32 pageSize=21;
+int32 currentPage=22;
+string token=23;
+string isInteragency =24;
+string isInteragencyExam =25;
+string IsInteragencyClinic =26;
+string IsInteragencyStatistic =27;
+UserOrgInfoProto userInfo =28;
+string IsInteragencyData =29;
+}

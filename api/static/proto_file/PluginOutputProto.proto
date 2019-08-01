@@ -1,0 +1,12 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message PluginOutputProto{
+string value=1;
+string label=2;
+string dllName=3;
+string className=4;
+string description=5;
+string pluginType=6;
+string pluginConfigs=7;
+}

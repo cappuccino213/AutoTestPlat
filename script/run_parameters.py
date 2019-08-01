@@ -78,19 +78,22 @@ class ScriptPara(object):
 		return response.json()['token']
 	
 	def locust_url(self):
-		import re
 		temp = self.option
-		# 找到host
-		find_host = r'--web-host=.{12}'
-		host_exp = re.findall(re.compile(find_host), temp)[0]
-		host = re.sub('--web-host=', '', host_exp)
-		# 找到端口
-		find_port = r'--web-port=.{4}'  # 注意这里设置了4位的端口号
-		port_exp = re.findall(re.compile(find_port), temp)[0]
-		port = re.sub('--web-port=', '', port_exp)
-		url = host + ':' + port
-		return url
-	
+		if temp:
+			import re
+			# 找到host
+			find_host = r'--web-host=.{12}'
+			host_exp = re.findall(re.compile(find_host), temp)[0]
+			host = re.sub('--web-host=', '', host_exp)
+			# 找到端口
+			find_port = r'--web-port=.{4}'  # 注意这里设置了4位的端口号
+			port_exp = re.findall(re.compile(find_port), temp)[0]
+			port = re.sub('--web-port=', '', port_exp)
+			url = host + ':' + port
+			return url
+		else:
+			return '192.168.1.56:8181' # 默认给运行地址，如果没有填写值
+		
 	def data_type(self):  # 判断body的数据类型
 		content_type = ScriptPara(self.task_id).para[0]['header']['content-type']
 		if 'octet-stream' in content_type:
@@ -100,11 +103,11 @@ class ScriptPara(object):
 
 
 if __name__ == "__main__":
-	sp = ScriptPara(20)
+	sp = ScriptPara(15)
 	# print(sp.weight)
 	# print(sp.option)
 	# print(sp.case_id)
 	# print(sp.para)
 	# print(sp.host)
-	print(type(sp.pytest_option))
+	print(sp.api_weight())
 # print(sp.weight)

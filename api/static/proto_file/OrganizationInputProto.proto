@@ -1,0 +1,8 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message OrganizationInputProto{
+string organizationName=1;
+string organizationID=2;
+string deptType=3;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto"; 
+
+
+//查询和编辑日志接口的入参和返回值对象
+message ParamAppenderProto {
+ string file =1; //日志输出到exe程序这个相对目录下
+ string maxSizeRollBackups =2; //备份文件的个数
+ string appendToFile =3; //输出的日志不会覆盖以前的信息
+ string maximumFileSize =4; //单个日志文件的最大大小
+ string layoutPattern =5; //错误日志布局
+ string rollingStyle =6; //文件创建的方式
+ string datePattern =7; //日志文件名
+ string level =8; //日志级别
+}
+
+//查询和编辑数据库接口的入参和返回值对象
+message DBConfigDtoProto {
+ string dbType =1; //数据库类型(MySql:0;SqlServer:1;Sqlite:2;Oracle:3;PostgreSQL:4;)
+ string lsSlave =2; //主从关系
+ string dataSource =3; //数据库服务IP
+ string initialCatalog =4; //数据库名称
+ string userId =5; //用户名
+ string password =6; //密码
+ string hostPort =7; //数据库服务端口
+}

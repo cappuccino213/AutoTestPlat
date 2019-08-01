@@ -1,0 +1,35 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message PersonalCheckRcdDtoProto {
+string patientName =1;
+string gender =2;
+string serviceSectID =3;
+string examItem =4;
+string checkArea =5;
+string medRecNO =6;
+string pointOfCare =7;
+string patientClass =8;
+string visitID =9;
+string pointOfCareID =10;
+string bed =11;
+string organizationName =12;
+string requestOrgName =13;
+string requestDept =14;
+string requestDocName =15;
+string requestTime =16;
+string regTime =17;
+string examTime =18;
+string patientID =19;
+string accessionNumber =20;
+string abnormalFlags =21;
+string criticalValue =22;
+string resultStatus =23;
+string ifHasImage =24;
+string examStatus =25;
+string examCode =26;
+string patientMasterID =27;
+string examUID =28;
+string outPatientID  =29; //门诊号
+string alternateVisitID =30; //住院号
+}

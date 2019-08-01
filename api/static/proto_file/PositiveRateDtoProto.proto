@@ -1,0 +1,11 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+import "PositiveRateOutputProto.proto";
+
+message PositiveRateDtoProto{
+repeated PositiveRateOutputProto positiveRateOutput=1;
+string row1Name=2;
+string row2Name=3;
+string column1Name=4;
+string column2Name=5;
+}

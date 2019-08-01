@@ -1,0 +1,12 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto"; 
+
+message DeptInfoProto {
+ string name =1;
+ string value=2;
+ string organizationID =3;
+ string organizationName =4;
+ string deptName =5;
+ string deptID =6;
+ string deptType =7;
+}

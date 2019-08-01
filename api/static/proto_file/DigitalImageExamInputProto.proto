@@ -1,0 +1,7 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message DigitalImageExamInputProto{
+string organizationID=1;
+string accessionNumber=2;
+}

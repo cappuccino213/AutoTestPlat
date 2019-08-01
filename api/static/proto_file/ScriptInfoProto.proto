@@ -1,0 +1,16 @@
+syntax = "proto3";
+option csharp_namespace =  "TomTaw.eWordIMCIS.Proto";
+
+message ScriptMstProto
+{
+int32 scriptID =1;
+string script =2;
+string scriptType =3;
+string createDate =4;
+string lastEditDate =5;
+string creator =6;
+string lastEditor =7;
+string scriptDescription =8;
+string scriptMemo =9;
+string programVersion =10;
+}

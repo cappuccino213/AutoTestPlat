@@ -1,0 +1,12 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message PluginRecordInputProto{
+string serviceName=1;
+string pluginName=2;
+string operateDate=3;
+string timeSpan=4;
+string splitChar=5;
+int32 currentPage=6;
+int32 pageSize=7;
+}

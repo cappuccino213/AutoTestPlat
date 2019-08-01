@@ -1,0 +1,23 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+import "UserOrgInfoProto.Proto";
+
+message DocumentInputProto{
+string examUID=1;
+string typeCode=2;
+string classCode=3;
+string businessType=4;
+string access_Token=5;
+string shareAddress=6;
+string shareUserName=7;
+string sharePassWord=8;
+int32 pageSize=9;
+int32 currentPage=10;
+string token=11;
+string isInteragency =12;
+string isInteragencyExam =13;
+string isInteragencyClinic =14;
+string isInteragencyStatistic =15;
+UserOrgInfoProto userInfo =16;
+string isInteragencyData =17;
+}

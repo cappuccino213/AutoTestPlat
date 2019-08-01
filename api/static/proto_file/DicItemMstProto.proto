@@ -1,0 +1,36 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message DicItemMstProto {
+string typeCode =1;
+string itemCode =2;
+string organizationID =3;
+string itemName =4;
+string parentItemCode =5;
+string inputCode =6;
+string sortNO =7;
+string memo =8;
+string defaultFlag =9;
+string deleteFlag =10;
+string itemRepresen =11;
+string itemRepresenExt1 =12;
+string itemRepresenExt2 =13;
+string itemRepresenExt3 =14;
+string itemRepresenExt4 =15;
+string itemRepresenExt5 =16;
+string itemRepresenExt6 =17;
+string itemRepresenExt7 =18;
+string itemRepresenExt8 =19;
+string itemRepresenExt9 =20;
+string itemRepresenExt10 =21;
+string itemRepresenExt11 =22;
+string itemRepresenExt12 =23;
+string itemRepresenExt13 =24;
+string itemRepresenExt14 =25;
+string itemRepresenExt15 =26;
+string itemRepresenExt16 =27;
+string itemRepresenExt17 =28;
+string itemRepresenExt18 =29;
+string itemRepresenExt19 =30;
+string itemRepresenExt20 =31;
+}

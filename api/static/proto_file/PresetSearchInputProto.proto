@@ -1,0 +1,16 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+import "UserOrgInfoProto.Proto";
+
+message PresetSearchInputProto{
+int32 querySeq=1;
+int32 pageSize=2;
+int32 currentPage=3;
+string token=4;
+string isInteragency =5;
+string isInteragencyExam =6;
+string isInteragencyClinic =7;
+string isInteragencyStatistic =8;
+UserOrgInfoProto userInfo =9;
+string isInteragencyData =10;
+}

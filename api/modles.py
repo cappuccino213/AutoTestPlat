@@ -102,6 +102,7 @@ class TaskInfo(db.Model):
 class Report(db.Model):
 	rpt_id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)
 	report_name = db.Column(db.String(32), unique=True)
-	case_id = db.Column(db.Integer, db.ForeignKey('case_info.case_id'))
+	# case_id = db.Column(db.Integer, db.ForeignKey('case_info.case_id'))
+	task_id = db.Column(db.Integer,db.ForeignKey('task_info.task_id'))
 	create_date = db.Column(db.DateTime)
 	file_path = db.Column(db.String(255))

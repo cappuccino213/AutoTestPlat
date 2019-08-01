@@ -1,0 +1,28 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models";
+
+message UserMstProto {
+string userUID =1;
+string account =2;
+string password =3;
+string type =4;
+string name =5;
+string iDCardNO =6;
+string officePhone =7;
+string privatePhone =8;
+string email =9;
+string address =10;
+string status =11;
+string organizationID =12;
+string deptID =13;
+string workNO =14;
+string validityStartDate =15;
+string validityEndDate =16;
+string createUserUID =17;
+string createUserName =18;
+string createDate =19;
+string lastLogonTime =20;
+string memo =21;
+string rowTimestamp =22;
+string updateDate =23;
+}

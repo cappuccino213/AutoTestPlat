@@ -1,0 +1,57 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message PluginInfoProto{
+string pluginUID=1;
+string pluginName=2;
+string dllName=3;
+string className=4;
+string description=5;
+string pluginType=6;
+repeated BasicFormProto BasicFormProto=7;
+}
+
+message BasicFormProto {
+ string type =1;
+ string label =2;
+ string prop =3;
+ repeated OptionProto opt =4;
+ string linkFlag =5;
+ string fieldDescription =6;
+ string dataDefault =7;
+}
+
+message PluginInfoDtoProto {
+ string serviceUID =1;
+ string pluginUID =2;
+ bool ifEnable =3;
+ string pluginName =4;
+ repeated BasicFormConfigProto BasicFormConfigProto =5;
+}
+
+message PluginInfoDtoMstProto {
+ string serviceUID =1;
+ string pluginUID =2;
+ bool ifEnable =3;
+ string pluginName =4;
+ string triggerTimes =5;
+ repeated BasicFormConfigProto BasicFormConfigProto =6;
+}
+
+message BasicFormConfigProto {
+ string type =1;
+ string label =2;
+ string prop =3;
+ repeated OptionProto opt =4;
+ string linkFlag =5;
+ string fieldDescription =6;
+ string data =7;
+ string pluginConfigUID=8;
+}
+
+message OptionProto {
+ string label =1;
+ string prop =2;
+}
+		
+

@@ -1,0 +1,14 @@
+syntax = "proto3"; 
+option csharp_namespace = "TomTaw.eWordIMCIS.WebAPI.Models"; 
+
+message RoleMstInputProto {
+ string roleUID =1;
+ string roleName =2;
+ string createUserUID =3;
+ string createUserName =4;
+ string createDate =5;
+ string memo =6;
+ string organizationID =7;
+ int32 currentPage=8;
+ int32 pageSize=9;
+}

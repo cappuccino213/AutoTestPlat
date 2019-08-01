@@ -1,0 +1,45 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message DocumentListProto{
+repeated DocumentProto document=1;
+}
+
+message DocumentProto {
+repeated DocumentDtoProto documentDtos=1;
+}
+
+message DocumentDtoProto {
+string businessType =1;
+string businessTime =2;
+string classCode =3;
+string typeCode =4;
+string mimeType =5;
+string fileSize =6;
+string fileCreateTime =7;
+string fileCreateUserID =8;
+string fileCreateUserName =9;
+string originalFileName =10;
+string title =11;
+string uploadTime =12;
+string dicomInfo =13;
+string fileRelativePath =14;
+string mediaName =15;
+string pathType =16;
+string mediaHost =17;
+string path =18;
+bytes base64url =19;
+string subDir =20;
+string patientID =21;
+string accessionNumber =22;
+string serviceSectID =23;
+string studyInstanceUID =24;
+string organizationID=25;
+string imgUrl =26;
+string access_Token =27;
+string examUID =28;
+string resultSeq =29;
+string imagingFinding =30;
+string imagingDiagnosis =31;
+}
+

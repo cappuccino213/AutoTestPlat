@@ -42,7 +42,7 @@ class Logger(object):
 		'critical': logging.CRITICAL
 	}
 	
-	def __init__(self, filename, level='info', when='D', back_count=3, fmt='''[时间]:%(asctime)s
+	def __init__(self, filename, level='error', when='D', back_count=3, fmt='''[时间]:%(asctime)s
 [线程]:%(thread)s
 [级别]:%(levelname)s
 [路径]:%(pathname)s

@@ -1,0 +1,11 @@
+syntax = "proto3";
+option csharp_namespace = "probofu.Controllers";
+import "google/protobuf/any.proto";
+
+message BaseResponse {
+  bool IsSuccess = 1;
+  string Message = 2;
+  string Token = 3;
+  google.protobuf.Any data = 4;
+}
+

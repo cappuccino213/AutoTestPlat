@@ -1,0 +1,12 @@
+syntax = "proto3";
+option csharp_namespace = "TomTaw.eWordIMCIS.Proto";
+
+message DoctorOutputProto {
+string organizationID =1;
+string organizationName =2;
+string deptID =3;
+string doctorName =4;
+string userUID =5;
+string type =6;
+string value=7;
+}

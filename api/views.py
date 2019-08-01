@@ -14,12 +14,17 @@ import os
 from flask_script import Manager
 
 manager = Manager(app)
-# 格式化返回结果
+
+
+# 接口response消息格式化
 def format_result(title, message, status):
 	return {"title": title, "message": message, "status": status}
 
 
-# 产品路由
+"""产品管理相关接口"""
+
+
+# 产品列表
 @app.route('/api/product/getproductlist', methods=['GET'])
 def product_get():
 	if request.method == 'GET':
@@ -28,6 +33,7 @@ def product_get():
 		return jsonify(format_result('405 Method Not Allowed', "The method is not allowed for the requested URL.", 405))
 
 
+# 根据id查询产品
 @app.route('/api/product/getproduct', methods=['GET'])
 def product_get_id():
 	if request.method == 'GET':
@@ -35,6 +41,7 @@ def product_get_id():
 		return jsonify(format_result('获取id=%s的产品' % pid, pdt_select_id(pid), 200))
 
 
+# 增加
 @app.route('/api/product/addproducts', methods=['POST'])
 def product_post():
 	if request.method == 'POST':
@@ -46,6 +53,7 @@ def product_post():
 			return jsonify(format_result('添加产品', 'failed,%s' % str(e), 400))
 
 
+# 更新
 @app.route('/api/product/updateproduct', methods=['PUT'])
 def product_put():
 	if request.method == 'PUT':
@@ -57,6 +65,7 @@ def product_put():
 			return jsonify(format_result('修改产品', 'failed,%s' % str(e), 400))
 
 
+# 删除
 @app.route('/api/product/delproduct', methods=['DELETE'])
 def product_del():
 	if request.method == 'DELETE':
@@ -66,6 +75,9 @@ def product_del():
 			return jsonify(format_result('删除产品', 'successful', 204))
 		except Exception as e:
 			return jsonify(format_result('删除产品', 'failed,%s' % str(e), 400))
+
+
+"""API管理相关接口"""
 
 
 # API路由
@@ -110,6 +122,9 @@ def api_handle():
 		return jsonify(format_result('405 Method Not Allowed', "The method is not allowed for the requested URL.", 405))
 
 
+"""case管理相关接口"""
+
+
 # case路由
 @app.route('/api/caseinfo/caselist', methods=['GET'])
 def case_list():
@@ -147,13 +162,17 @@ def case_handle():
 		return jsonify(format_result('405 Method Not Allowed', "The method is not allowed for the requested URL.", 405))
 
 
-# task路由绑定
+"""任务管理相关接口"""
+
+
+# task列表
 @app.route('/api/taskinfo/tasklist', methods=['GET'])
 def task_list():
 	if request.method == 'GET':
 		return jsonify(format_result('获取task列表', task_select(), 200))
 
 
+# task增删改查
 @app.route('/api/taskinfo/task', methods=['GET', 'POST', 'PUT', 'DELETE'])
 def task_handle():
 	if request.method == 'GET':
@@ -184,7 +203,8 @@ def task_handle():
 		return jsonify(format_result('405 Method Not Allowed', "The method is not allowed for the requested URL.", 405))
 
 
-@app.route('/api/taskinfo/task/locust', methods=['PUT']) # 2.0版本此接口弃用
+# locust参数修改
+@app.route('/api/taskinfo/task/locust', methods=['PUT'])  # 2.0版本此接口弃用
 def task_locust():
 	if request.method == 'PUT':
 		put_json = json.loads(request.data)
@@ -195,13 +215,17 @@ def task_locust():
 			return jsonify(format_result('修改locust参数', str(e), 400))
 
 
-# report路由绑定
+"""报告相关接口"""
+
+
+# report列表
 @app.route('/api/reportinfo/reportlist', methods=['GET'])
 def report_list():
 	if request.method == 'GET':
 		return jsonify(format_result('获取report列表', report_select(), 200))
 
 
+# 根据报告id查询报告
 @app.route('/api/reportinfo/report', methods=['GET', 'POST'])
 def report_handle():
 	if request.method == 'GET':
@@ -218,18 +242,30 @@ def report_handle():
 		return jsonify(format_result('405 Method Not Allowed', "The method is not allowed for the requested URL.", 405))
 
 
-# 下载报告文件
-@app.route('/viewreport/<filename>', methods=['GET'])
-def download_file(filename):
-	cur_path = os.path.abspath(os.path.dirname(__file__))  # 当前目录
-	directory = os.path.join(cur_path, 'report')
-	print(directory)
-	response = make_response(send_from_directory(directory, filename, as_attachment=True))
-	response.headers["Content-Disposition"] = "attachment; filename={}".format(filename.encode().decode('latin-1'))
-	return response
+# 下载报告
+@app.route('/api/report/download/<filename>', methods=['GET'])
+def report_download(filename):
+	"""
+	:param diretory:本地目录的path
+	:param filename: 文件名（带扩展名）
+	"""
+	if request.method == 'GET':
+		project_path = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
+		directory = os.path.join(project_path, 'report')  # 本地目录
+		response = make_response(send_from_directory(directory, filename, as_attachment=True))
+		response.headers["Content-Disposition"] = "attachment; filename={}".format(filename.encode().decode('latin-1'))# 解决文件名中文问题
+		return response
+
+# 访问报告
+@app.route('/api/report/access/<report_html>', methods=['GET'])
+def report_access(report_html):
+	return render_template(report_html)
 
 
-# html文件路由绑定
+"""页面访问相关"""
+
+
+# 页面html文件路由绑定
 @app.route('/<file>', methods=['GET'])
 def index(file):
 	if '.' in file:
@@ -247,8 +283,11 @@ def demo():
 	return "test successfully"
 
 
+"""性能测试流程相关接口"""
+
+
 # 生成脚本
-@app.route('/api/taskscript', methods=['GET'])
+@app.route('/api/taskscript-performance', methods=['GET'])
 def gnr_script():
 	task_id = int(request.args.get('task_id'))
 	try:
@@ -260,7 +299,7 @@ def gnr_script():
 		return jsonify(format_result('生成执行脚本', 'generate script failed,%s' % str(e), 500))
 
 
-# 启停任务
+# 启停性能测试任务
 @app.route('/api/task-performance', methods=['GET'])
 def locust_cl():
 	"""
@@ -269,7 +308,7 @@ def locust_cl():
 	"""
 	order = request.args.get('order')
 	task_id = int(request.args.get('task_id'))
-	from script.run_script import start,stop
+	from script.run_script import start, stop
 	if request.method == 'GET':
 		if order == '1':
 			try:
@@ -296,5 +335,38 @@ def check_locust():
 		status = is_running()
 		return jsonify(format_result('locust运行状态', status, 200))
 
+
+"""接口测试流程相关接口"""
+
+
+# 生成测试脚本
+@app.route('/api/taskscript-interface', methods=['GET'])
+def gnr_in_script():
+	task_id = int(request.args.get('task_id'))
+	try:
+		from script.generate_pytest_script import PytestScript
+		gs = PytestScript(task_id)
+		gs.main()
+		return jsonify(format_result('生成执行脚本', 'generate script successfully', 200))
+	except Exception as e:
+		return jsonify(format_result('生成执行脚本', 'generate script failed,%s' % str(e), 500))
+
+
+# 启动接口测试
+@app.route('/api/task-interface', methods=['GET'])
+def interface():
+	if request.method == 'GET':
+		task_id = int(request.args.get('task_id'))
+		from script.run_pytest import main
+		import os
+		os.chdir(os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))),
+							  'script'))  # 修改当前工作目录为与script目录同级，不然收集不到测试的.py
+		try:
+			main(task_id)
+			return jsonify(format_result('执行接口测试任务', 'task:%d finished' % task_id, 200))
+		except Exception as e:
+			return jsonify(format_result('执行接口测试任务', 'task:%d failed,reason:%s' % (task_id, str(e)), 500))
+
+
 if __name__ == '__main__':
-	app.run(debug=True, host='0.0.0.0', port=CONF['api_port'],threaded=True)
+	app.run(debug=True, host='0.0.0.0', port=CONF['api_port'], threaded=True)
