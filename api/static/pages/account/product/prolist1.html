@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>产品管理</title>
+    <link rel="stylesheet" type="text/css" href="../../../assets/iview/iview-3.1.0/styles/iview.css" />
+    <script src="../../../assets/vue/vue-2.5.17.min.js"></script>
+    <script src="../../../assets/iview/iview-3.1.0/iview.min.js"></script>
+    <script src="../../../assets/axios/axios.js"></script>
+    <script src="../../../js/config.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <i-Button type="primary" @click="modal1 = true">添加产品</i-Button>
+    <Modal
+            v-model="modal1"
+            title="添加产品"
+            @on-ok="ok"
+            @on-cancel="cancel"
+    >
+        <i-form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
+            <Form-item label="产品名称" prop="pdt_name">
+                <i-input v-model="formValidate.pdt_name" placeholder="请输入产品名称"></i-input>
+            </Form-item>
+            <Form-item label="产品版本" prop="version">
+                <i-input v-model="formValidate.version" placeholder="请输入产品版本号 "></i-input>
+            </Form-item>
+            <Form-item label="产品地址" prop="host">
+                <i-input v-model="formValidate.host" placeholder="请输入产品地址"></i-input>
+            </Form-item>
+            <Form-item label="产品描述" prop="description">
+                <i-input v-model="formValidate.description" placeholder="请输入产品描述"></i-input>
+            </Form-item>
+            <!--                <Form-item label="文件上传" >
+                                <i-input type="file" class="file"  @change="tirggerFile"/>
+            &lt;!&ndash;                    <Upload action="//jsonplaceholder.typicode.com/posts/" >
+                                    <i-Button icon="ios-cloud-upload-outline">Upload files</i-Button>
+                                </Upload>&ndash;&gt;
+                            </Form-item>-->
+            <Form-item label="api_json" prop="api_json">
+                <i-input v-model="formValidate.api_json" placeholder="请输入接口字符串"></i-input>
+            </Form-item>
+        </i-form>
+
+    </Modal>
+    <i-Table :border="showBorder" :stripe="showStripe" :show-header="showHeader"
+             :height="fixedHeader ? 250 : ''" :size="tableSize" :data="tableData3" :columns="tableColumns3"></i-Table>
+
+    <Modal
+            v-model="editFormVisible"
+            title="编辑产品"
+            @on-ok="update"
+            @on-cancel="cancel"
+    >
+        <i-form ref="editForm" :model="editForm" :rules="ruleValidate" :label-width="80">
+            <Form-item label="产品名称" prop="pdt_name">
+                <i-input v-model="editForm.pdt_name" placeholder="请输入产品名称"></i-input>
+            </Form-item>
+            <Form-item label="产品版本" prop="version">
+                <i-input v-model="editForm.version" placeholder="请输入产品版本号 "></i-input>
+            </Form-item>
+            <Form-item label="产品地址" prop="host">
+                <i-input v-model="editForm.host" placeholder="请输入产品地址"></i-input>
+            </Form-item>
+            <Form-item label="产品描述" prop="description">
+                <i-input v-model="editForm.description" placeholder="请输入产品描述"></i-input>
+            </Form-item>
+            <!--                <Form-item label="文件上传" >
+                                <i-input type="file" class="file"  @change="tirggerFile"/>
+            &lt;!&ndash;                    <Upload action="//jsonplaceholder.typicode.com/posts/" >
+                                    <i-Button icon="ios-cloud-upload-outline">Upload files</i-Button>
+                                </Upload>&ndash;&gt;
+                            </Form-item>-->
+            <Form-item label="api_json" prop="api_json">
+                <i-input v-model="editForm.api_json" placeholder="请输入接口字符串"></i-input>
+            </Form-item>
+        </i-form>
+
+    </Modal>
+
+</div>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: function () {
+            return {
+                editFormVisible:false,
+                editFormRules: {
+                    name: [
+                        { required: true, message: '请输入姓名', trigger: 'blur' }
+                    ]
+                },
+                editForm: {
+                    pdt_id:'' ,
+                    pdt_name: '',
+                    version: '',
+                    host: '',
+                    description: '',
+
+                },
+                modal1: false,
+                formValidate: {
+                    pdt_name: '123',
+                    version: '',
+                    host: '',
+                    description: '',
+                    api_json: ''
+                },
+                ruleValidate: {
+                    pdt_name: [
+                        { required: true, message: '产品名称不能为空', trigger: 'blur' }
+                    ],
+                    host: [
+                        { required: true, message: '产品地址不能为空', trigger: 'blur' }
+                    ],
+                    version: [
+                        { required: true, message: '产品版本不能为空', trigger: 'blur' }
+                    ],
+                    description: [
+                        { required: true, message: '请输入产品描述', trigger: 'blur' },
+                    ],
+                    api_json: [
+                        { required: true, message: '产品接口字符串不能为空', trigger: 'blur' }
+                    ]
+                },
+                tableData3: [
+                    {
+                        'pdt_id': 12,
+                        'pdt_name': '集成平台1.0',
+                        'version': '集成平台1.0——V1.1.7.0_12&13',
+                        'host': '192.168.1.50:8888',
+                        'description': '这个是一个产品名称示例，请按照标准进行编写'
+                    }
+                ],
+                showBorder: false, // 显示边框
+                showStripe: true, // 是否显示斑马纹
+                showHeader: true, // 是否显示头部信息
+                showIndex: false, // 是否显示索引
+                showCheckbox: true, // 显示多选框
+                fixedHeader: false, // 显示滑动
+                tableSize: 'default'
+            }
+        },
+        computed: {
+            tableColumns3 () {
+                let columns = [];
+                if (this.showCheckbox) {
+                    columns.push({
+                        type: 'selection',
+                        width: 60,
+                        align: 'center'
+                    })
+                }
+                if (this.showIndex) {
+                    columns.push({
+                        type: 'index.html--',
+                        width: 60,
+                        align: 'center'
+                    })
+                }
+                columns.push({
+                    title: 'ID',
+                    key: 'pdt_id',
+                    sortable: true
+                });
+                console.log("length:"+this.tableData3.length);
+                var filters_name1=[];
+                for(var i = 0; i <this.tableData3.length; i++){
+                    var filters_name0={
+                        label:this.tableData3[i].pdt_name,
+                        value: this.tableData3[i].pdt_name
+                    };
+                    filters_name1.push(filters_name0);
+                }
+                console.log("file:"+JSON.stringify(filters_name1));
+                columns.push({
+                    title: '产品名称',
+                    key: 'pdt_name',
+                    filters:filters_name1 ,
+                    filterMethod (value, row) {
+                        return row.pdt_name.indexOf(value) > -1
+                    }
+                });
+                columns.push({
+                    title: '产品版本',
+                    key: 'version'
+                });
+                columns.push({
+                    title: '产品地址',
+                    key: 'host',
+                    sortable: true,
+                    filters: [
+                        {
+                            "label": 'Greater than 25',
+                            "value": "1"
+                        },
+                        {
+                            "label": 'Less than 25',
+                            "value": "2"
+                        }
+                    ],
+                    filterMultiple: false,
+                    filterMethod (value, row) {
+                        if (value === 1) {
+                            return row.age > 25
+                        } else if (value === 2) {
+                            return row.age < 25
+                        }
+                    }
+                });
+                columns.push({
+                    title: '产品描述',
+                    key: 'description'
+                });
+                columns.push({
+                    title: '操作',
+                    key: 'action',
+                    render: (h, params) => {
+                        return h('div', [
+                            h('Button', {
+                                props: {
+                                    type: 'primary',
+                                    icon:"ios-create-outline",//编辑
+                                    shape:"circle",
+                                    size: 'buttonSize'
+                                },
+                                style: {
+                                    marginRight: '5px'
+                                },
+                                on: {
+                                    click: () => {
+                                        this.show(params.index)
+                                    }
+                                }
+                            }, '编辑'),
+                            h('Button', {
+                                props: {
+                                    type: 'error',
+                                    icon:"ios-trash-outline",//删除
+                                    shape:"circle",
+                                    size: 'buttonSize'
+                                },
+                                on: {
+                                    click: () => {
+                                        this.remove(params.index)
+                                    }
+                                }
+                            }, '删除')
+                        ])
+                    }
+                });
+                console.log("columns"+JSON.stringify(columns));
+                return columns
+            }
+        },
+        mounted:function(){
+            axios.get(''+host+'/api/product/getproductlist')
+                .then(res => {
+                    console.log(res);
+                    this.tableData3 = res.data.message
+                    //this.filters=this.tableData3.pdt_name
+                })
+                .catch(function (error) {
+                    console.log(error)
+                });
+
+        },
+        methods:{
+            //文件上传按钮
+            tirggerFile: function (event) {
+                // 此处校验文件后缀
+                var self = this.formValidate;
+                var file = event.target.files[0]
+                    .name; // (利用console.log输出看file文件对象) properties/xml/json/conf/config/data/ini/txt/yaml/yml/cfg
+                var num = file.split('.');
+                var mun = num[num.length - 1];
+                console.log(mun);
+                if (!(mun == 'ini' || mun == 'properties' || mun == 'xml' || mun == 'json' || mun == 'conf' || mun ==
+                    'config' ||
+                    mun == 'data' || mun == 'txt' || mun == 'config' || mun == 'yaml' || mun == 'cfg')) {
+                    this.$Notice.error({
+                        title: '请重新点击选择文件传入符合标准的文件',
+                        duration: 2
+                    })
+                } else {
+                    let fileselect = document.querySelector('input[type=file]').files[0]; // 找到文件上传的元素
+                    let reader = new FileReader();
+                    // console.log(fileselect);
+                    if (typeof FileReader === 'undefined') {
+                        alert('您的浏览器不支持FileReader接口')
+                    }
+                    reader.readAsText(fileselect, 'gb2312'); // 注意读取中文的是用这个编码，不是utf-8
+                    reader.onload = function () {
+                        console.log(reader.result);// 文件内容
+                        let api_json = reader.result;
+                        self.formValidate.api_json = api_json
+                    }
+                }
+            },
+            //删除按钮
+            remove: function (index) {
+                console.log('date1' + this.tableData3[index].pdt_id);
+                // 格局id删除数据
+                var obj = {pdt_id: this.tableData3[index].pdt_id};
+                this.tableData3.splice(index, 1);
+                // var url = '/api/product/delproduct'
+                // 发送异步请求
+                axios({
+                    url: ''+host+'/api/product/delproduct',
+                    method: 'delete',
+                    dataType: 'json',
+                    headers: {
+                        'Content-type': 'application/json;'
+                    },
+                    data: JSON.stringify(obj),
+                }).then(res => {
+                    if (res.status === 200) {
+                        alert('success');
+                        // 更新数据
+                        console.log(res.message);
+                        this.tableData3.splice(index, 1)
+                    } else {
+                        alert(res.message)
+                    }
+                }).catch(function () {
+                    alert('服务连接出错了')
+                })
+            },
+            //点击编辑
+            show (index) {
+                this.editFormVisible=true;
+                console.log("shouw"+JSON.stringify(this.tableData3[index]));
+                this.editForm=this.tableData3[index];
+                console.log("shouw1"+JSON.stringify(this.editForm))
+                /*                  this.$Modal.confirm({
+                                      title: '编辑产品',
+                                      fullscreen:true,
+                                      title: '编辑产品',
+                                      content: `
+                                              产品名称：<input size="35"v-bind:value="${this.tableData3[index].pdt_name}"
+                  v-on:input="${this.tableData3[index].pdt_name} = $event.target.value" /><br>
+                                             <br>产品版本：<input  size="35"value="${this.tableData3[index].version}"/><br>
+                                             <br>产品地址：<input size="35" value="${this.tableData3[index].host}"/><br>
+                                             <br>产品描述：<input size="35" value="${this.tableData3[index].description}"/><br>
+                                             <br>api_json ：<input  size="35" value=${JSON.stringify(this.tableData3[index].api_json)}/>`,
+                                      onOk: () => {
+                                          this.$Message.info('点击了确定');
+                                          console.log("修改数据:"+JSON.stringify(this.tableData3[index]));
+                                          axios({
+                                              url: ''+host+'/api/product/updateproduct',
+                                              "method": "PUT",
+                                              dataType: 'json',
+                                              headers: {
+                                                  'Content-type': 'application/json;'
+                                              },
+                                              data: JSON.stringify(this.tableData3[index]),
+                                          }).then(function (response){
+                                              console.log("修改产品："+JSON.stringify(response))
+                                              alert("操作:"+response.data.title+",\n结果:"+response.data.message)
+                                              location.reload()
+
+                                          })
+                                              .catch(function(error){
+                                                  console.log(error)
+                                              })
+
+                                      },
+                                      onCancel: () => {
+                                          this.$Message.info('点击了取消');
+                                      }
+                                  })*/
+            },
+            //弹窗点击确定
+            ok () {
+                console.log("123:"+JSON.stringify(this.formValidate));
+                axios({
+                    url: ''+host+'/api/product/addproducts',
+                    method: 'post',
+                    dataType: 'json',
+                    headers: {
+                        'Content-type': 'application/json;'
+                    },
+                    data: JSON.stringify(this.formValidate),
+                }).then(function (response){
+                    console.log(response);
+                    alert("操作:"+response.data.title+",\n结果:"+response.data.message);
+                    location.reload()
+
+                })
+                    .catch(function(error){
+                        console.log(error)
+                    })
+
+            },
+            //编辑
+            update() {
+                console.log("修改:"+JSON.stringify(this.editForm));
+                axios({
+                    url: ''+host+'/api/product/updateproduct',
+                    method: 'put',
+                    dataType: 'json',
+                    headers: {
+                        'Content-type': 'application/json;'
+                    },
+                    data: JSON.stringify(this.editForm),
+                }).then(function (response){
+                    console.log(response);
+                    alert("操作:"+response.data.title+",\n结果:"+response.data.message);
+                    location.reload()
+
+                })
+                    .catch(function(error){
+                        console.log(error)
+                    })
+
+            },
+            cancel () {
+                this.$Message.info('已取消');
+                this.formValidate = [];
+                this.editForm=[];
+                //location.reload()
+            },
+
+        }
+    });
+</script>
+</body>
+
+</html>

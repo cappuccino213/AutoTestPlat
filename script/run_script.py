@@ -11,11 +11,12 @@ from script.run_parameters import ScriptPara
 
 def start(task_id):
 	script_para = ScriptPara(task_id) # 脚本参数
-	script_name = 'case_' + script_para.case_id[0] + '.py'  # 脚本名称
+	# script_name = 'case_' + script_para.case_id[0] + '.py'  # 脚本名称
+	script_name = 'case_%s.py'%(str(script_para.case_id[0]))  # 脚本名称
 	if script_para.data_type()== 'json':
 		type_path ='json_script'
 	else:
-		type_path = 'proto_script'
+		type_path = 'protobuf_script'
 	script_file = os.path.join(os.path.abspath(os.path.dirname(__file__)), type_path,
 							   script_name)  # 脚本文件
 	locust_option = script_para.locust_option()  # 运行参数
@@ -23,7 +24,8 @@ def start(task_id):
 	ls_command.append(script_file)
 	ls_command += locust_option.split()  # 因为这边得到字符串,如"--host=127.0.0.1 --web-host=192.168.1.56 --web-port=8188",为subprocess的列表取值方式用split进行切割
 	lo_process = subprocess.Popen(ls_command, stdout=subprocess.PIPE)
-	print(lo_process.stdout.readlines())
+	# print(lo_process.stdout.readlines())
+	return (lo_process.stdout.readlines(),200)
 
 
 def stop():
@@ -35,6 +37,7 @@ def stop():
 	kill_process = subprocess.Popen(kill_cmd, shell=True, stdout=subprocess.PIPE)
 	out_message = kill_process.stdout.readlines()
 	print(out_message)
+	
 
 def is_running():
 	os = platform.architecture()[1]  # 获取平台操作系统

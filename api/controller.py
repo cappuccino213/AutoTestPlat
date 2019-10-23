@@ -6,7 +6,9 @@
 # @Software: PyCharm
 # @license : Copyright(C), eWord Technology Co., Ltd.
 # @Contact : yeahcheung213@163.com
+import platform, subprocess
 from api.modles import *
+import os, json
 
 
 # product相关操作
@@ -50,12 +52,17 @@ def pdt_insert(post_json):
 
 
 def pdt_update(put_json):
-	# result = Product.query.filter_by(pdt_id=data['pdt_id']).first()
 	result = Product.query.get(put_json['pdt_id'])  # 通过主键查询
 	result.pdt_name = put_json['pdt_name']
 	result.version = put_json['version']
 	result.host = put_json['host']
 	result.description = put_json['description']
+	result.api_json = put_json['api_json']
+	db.session.commit()
+
+
+def pdt_update_api_json(put_json):  # 更新api_json
+	result = Product.query.get(put_json['pdt_id'])
 	result.api_json = put_json['api_json']
 	db.session.commit()
 
@@ -79,6 +86,7 @@ def api_select():
 				   'header': apis[i].header,
 				   'body': apis[i].body, 'has_token': apis[i].has_token,
 				   'pdt_id': apis[i].pdt_id,
+				   'pdt_name': pdt_select_id(apis[i].pdt_id)['pdt_name'],
 				   'values': apis[i].values,
 				   'proto_message': apis[i].proto_message,
 				   'proto_file': apis[i].proto_file}
@@ -176,7 +184,8 @@ def case_select():
 				   'case_name': cases[i].case_name,
 				   'api_weight': cases[i].api_weight,
 				   'type_id': cases[i].type_id,
-				   'api_expection': cases[i].api_expection}
+				   'api_expection': cases[i].api_expection,
+				   'associated_pdt_id': cases[i].associated_pdt_id}
 		cl.append(to_json)
 	return cl
 
@@ -189,7 +198,8 @@ def case_select_id(case_id):
 			'case_name': result.case_name,
 			'api_weight': result.api_weight,
 			'type_id': result.type_id,
-			'api_expection': result.api_expection
+			'api_expection': result.api_expection,
+			'associated_pdt_id': result.associated_pdt_id
 		}
 		return to_json
 	except Exception as e:
@@ -200,17 +210,24 @@ def case_insert(post_json):
 	case = CaseInfo(case_name=post_json['case_name'],
 					api_weight=post_json['api_weight'],
 					type_id=post_json['type_id'],
-					api_expection=post_json['api_expection'])
+					api_expection=post_json['api_expection'],
+					associated_pdt_id=post_json['associated_pdt_id']
+					)
 	db.session.add(case)
 	db.session.commit()
 
 
-def case_update(put_json):
+def case_update(type_id, put_json):
 	result = CaseInfo.query.get(put_json['case_id'])
 	result.case_name = put_json['case_name']
-	result.api_weight = put_json['api_weight']
 	result.type_id = put_json['type_id']
-	result.api_expection = put_json['api_expection']
+	result.associated_pdt_id = put_json['associated_pdt_id']
+	if type_id == 1:
+		result.api_weight = put_json['api_weight']
+	elif type_id == 2:
+		result.api_expection = put_json['api_expection']
+	else:
+		pass
 	db.session.commit()
 
 
@@ -233,6 +250,24 @@ def task_select():
 				   'pytest_para': tasks[i].pytest_para}
 		tl.append(to_json)
 	return tl
+
+
+def task_mlist():  # 任务列表显示内容
+	tasks = task_select()
+	for task in tasks:
+		try:  # 脏数据处理，当case表、task表不同时删除时的异常数据
+			task['type_id'] = case_select_id(task['associated_case'][0]['case_id'])['type_id']
+		except:
+			task['type_id'] = None
+		if task['type_id'] == 1:
+			task['parameter'] = task['locust_cl']
+		elif task['type_id'] == 2:
+			task['parameter'] = task['pytest_para']
+		else:
+			task['parameter'] = []
+		del task['locust_cl']
+		del task['pytest_para']
+	return tasks
 
 
 def task_select_id(task_id):
@@ -271,6 +306,12 @@ def task_update(put_json):
 	db.session.commit()
 
 
+def task_update_status(id, status):
+	result = TaskInfo.query.get(id)
+	result.task_status = status
+	db.session.commit()
+
+
 def task_cl_update(put_json):  # 2.0版本此接口弃用
 	result = TaskInfo.query.get(put_json['task_id'])
 	result.locust_cl = put_json['locust_cl']
@@ -281,6 +322,24 @@ def task_delete(del_json):
 	result = TaskInfo.query.get(del_json['task_id'])
 	db.session.delete(result)
 	db.session.commit()
+
+
+def is_running():  # 判断locust是否在运行
+	os = platform.architecture()[1]  # 获取平台操作系统
+	if os == 'WindowsPE':
+		check_cmd = 'tasklist -v | findstr locust'
+		check_process = subprocess.Popen(check_cmd, shell=True, stdout=subprocess.PIPE)
+		if check_process.stdout.readlines():
+			return True
+		else:
+			return False
+	else:
+		check_cmd = 'ps -ef |grep locust |grep -v "grep" |wc -l'
+		check_process = subprocess.Popen(check_cmd, shell=True, stdout=subprocess.PIPE)
+		if check_process.stdout.readlines()[0] != b'0\n':  # 判断是否存在locust的进程
+			return True
+		else:
+			return False
 
 
 # report的相关操作
@@ -340,10 +399,158 @@ def report_update(data_json):
 	result.file_path = data_json['file_path']
 	db.session.commit()
 
+
+"""API模板生成相关"""
+
+
+# 删除上传的文件
+def del_file(filename):
+	PROJECT_PATH = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
+	extensions = filename.rsplit('.', 1)[1]
+	if extensions == 'json':
+		file_path = os.path.join(PROJECT_PATH, 'api/static/json_file')
+	elif extensions == 'xlsx':
+		file_path = os.path.join(PROJECT_PATH, 'api/static/protobuf_xlsx')
+	else:
+		file_path = os.path.join(PROJECT_PATH, 'api/static/proto_file')
+	os.remove(os.path.join(file_path, filename))
+
+
+# 对上传的json文件解析后，入库到指定产品（api_json字段）
+def json2templates(filename, product_id):
+	"""
+	:param filename: 文件名
+	:param product_id: 产品ID
+	:return: api_json写入product表的api_json字段
+	"""
+	file_path = os.path.join(os.path.dirname(os.path.abspath(os.path.dirname(__file__))), 'api/static/json_file',
+							 filename)
+	with open(file_path, 'rb') as f:
+		try:
+			load_dict = json.load(f)['paths']  # 获取字典
+		except Exception as e:
+			print("模板文件内容格式有误，请确认后重试，原因：%s"%str(e))
+		api_list = []
+		for item in load_dict.items():  # api列表
+			d = {}
+			d[item[0]] = item[1]
+			api_list.append(d)
+	
+	def get_values(dictionary):  # 获取元素值
+		return list(list(dict.values(dictionary))[0].values())[0]
+	
+	result = []
+	for i in api_list:  # 序列化想要的格式
+		pre_dict = {}
+		pre_dict['uri'] = list(i.keys())[0]
+		pre_dict['function'] = get_values(i)['tags'][0]
+		pre_dict['method'] = list(list(i.values())[0].keys())[0]
+		if 'summary' in get_values(i):
+			pre_dict['summary'] = get_values(i)['summary']
+		else:
+			pre_dict['summary'] = ''
+		pre_dict['produces'] = {'content-type': 'application/json'}  # json格式的设置
+		if len(get_values(i)['parameters']) > 0:
+			pre_dict['parameters'] = get_values(i)['parameters'][0]
+		else:
+			pre_dict['parameters'] = get_values(i)['parameters']
+		pre_dict['responses'] = get_values(i)['responses']
+		result.append(pre_dict)
+	put_json = {'pdt_id': product_id, 'api_json': result}
+	pdt_update_api_json(put_json)
+
+
+# 对上传的protobuf文件和接口文档解析，入库到指定产品（api_json字段）
+def protobuf2templates(xlsx, product_id):
+	"""
+	:param xlsx: 读取excel的接口文档，获取url、method等信息
+	:param proto: 从proto文件获取parameters
+	:param product_id: 产品id
+	:return:api_json写入product表的api_json字段
+	"""
+	project_path = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
+	
+	def read_excel():
+		import xlrd
+		xlsx_file = os.path.join(project_path, 'api/static/protobuf_xlsx', xlsx)
+		with xlrd.open_workbook(xlsx_file) as wb:
+			sheet_list = wb.sheet_names()  # 获取所有sheet名字
+			api = []
+			for name in sheet_list:
+				sheet = wb.sheet_by_name(name)  # 通过名字获取sheet
+				row_num = sheet.nrows  # 获取sheet行
+				controller = sheet.row_values(1)[0]  # 处理合并单元格时，其他行可控制器值为空的情况
+				for row in range(1, row_num):  # 遍历所有行
+					api_dict = {}
+					api_dict['function'] = name  # sheet名称定义为功能模块
+					rows = sheet.row_values(row)  # 获取行内容
+					api_dict['uri'] = '/api/%s/%s' % (controller, rows[1])
+					api_dict['method'] = rows[2].lower()
+					api_dict['summary'] = rows[-1]
+					api_dict['produces'] = {'content-type': 'application/octet-stream'}
+					api_dict['input_proto'] = rows[4]
+					api_dict['message'] = rows[5]
+					api.append(api_dict)  # 将每一行转换成dict，追加到apilist
+			return api
+	
+	def get_params_from_proto(proto):
+		import codecs
+		with codecs.open(proto, 'r', encoding='utf-8', errors='ignore') as f:
+			data = f.readlines()
+			temp = [i for i in data if 'syntax' not in i and 'option' not in i]  # 去除无用信息
+			two_lst = [s.split() for s in ''.join(temp).split('}') if s]  # 按'}'切割成多个子list
+			two_lst = [x for x in two_lst if x != []]  # 去除空列表
+			ls = []
+			for li in two_lst:
+				sub_list = []
+				for i in li:
+					if 'message' not in i:
+						import re
+						letter = ''.join(re.findall(r'[A-Za-z]', i))  # 获取字母串
+						if letter != '':
+							sub_list.append(letter)
+				ls.append(sub_list)  # 获取到的params列表
+				# 将结果转化成指定的字典
+				try:
+					list1 = [i[j] for i in ls for j in range(1)]
+				except Exception as e:
+					list1 = []
+					print(str(e))
+				list2 = []
+				for sub in ls:
+					dict1 = {}
+					for i in range(1, len(sub) - 1, 2):
+						dict1[sub[i + 1]] = sub[i]
+					list2.append(dict1)
+				json_dict = dict(zip(list1, list2))
+				return json_dict
+	
+	# 将api_json入库
+	doc = read_excel()
+	api_list = []
+	for api in doc:
+		proto = api['input_proto']
+		message = api['message']
+		proto_file = os.path.join(project_path, 'api/static/proto_file', proto + '.proto')
+		try:
+			dic = get_params_from_proto(proto_file)
+			for item in dic:
+				if message == item:
+					api['parameters'] = dic[message]
+		except FileNotFoundError as e:
+			print('file error:%s' % e)
+		finally:
+			api_list.append(api)
+	put_json = {'pdt_id': product_id, 'api_json': api_list}
+	pdt_update_api_json(put_json)
+
+
 if __name__ == '__main__':
-	print(case_select_id(32)['api_weight'])
+	# print(case_select_id(32)['api_weight'])
 	# cases = CaseInfo.query.all()
-# 	# for i in cases:
-# 	# 	print(type(i),i)
-# 	task_id = report_new_record['task_id']
-# 	print(type(task_id),task_id)
+	# print(json2templates('token.json'))
+	# json2templates('token.json', 125)
+	# protobuf2templates('eWordRIS25509214753577435745_transfer.xlsx', 105)
+	# task_mlist()
+	# json2templates('format_imcis1.json', 143)
+	task_update_status(46,True)

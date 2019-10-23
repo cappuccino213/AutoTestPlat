@@ -72,7 +72,7 @@ class CaseInfo(db.Model):
 	api_weight = db.Column(db.JSON)
 	type_id = db.Column(db.SmallInteger)
 	api_expection = db.Column(db.JSON)
-
+	associated_pdt_id = db.Column(db.Integer)
 
 class RelationInfo(db.Model):
 	rlt_id = db.Column(db.Integer, primary_key=True, unique=True, autoincrement=True)

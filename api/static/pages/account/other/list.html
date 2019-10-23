@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<meta charset="UTF-8" />
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>资源管理</title>
+    <link rel="stylesheet" type="text/css" href="../../../assets/iview/iview-3.1.0/styles/iview.css" />
+    <script src="../../../assets/vue/vue-2.5.17.min.js"></script>
+    <script src="../../../assets/iview/iview-3.1.0/iview.min.js"></script>
+    <script src="../../../assets/axios/axios.js"></script>
+    <script src="../../../js/config.js"></script>
+
+</head>
+
+<body>
+<div id="app">
+    <div style="height: 500px margin-top：50px" >
+
+
+
+
+        <i-Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100" >
+
+            <Form-Item label="所属产品" prop="pdt_name1">
+                <i-Select v-model="pdt_name" size="large" style="width:300px">
+                    <i-Option v-for="(item,index) in formValidate ":key="index" :value="item.pdt_id">{{ item.pdt_name }}</i-Option>
+                </i-Select>
+            </Form-Item>
+
+            <Form-Item label="协议类型" prop="type">
+                <i-select  v-model="types" style="width:300px" >
+                    <i-Option  value="json">JSON</i-option>
+                    <i-Option value="protobuf">PROTOBUF</i-Option>
+                </i-select>
+            </Form-Item>
+
+            <Form-Item label="模板示例" >
+
+                <div class="leixing">
+                    <template v-if="types === 'json'">
+                        <img  src="../../../images/json.png"  style="width:500px" >
+                    </template>
+                    <template v-else="types === 'protobuf'">
+                        <img   src="../../../images/protobuf.png" style="width:1500px" >
+                    </template>
+
+                </div>
+            </Form-Item>
+
+            <Form-Item label="文件上传"  prop="fileupload">
+                <Upload
+                        :on-success="handleSuccess"
+                        :on-remove="handleRemove"
+                        multiple
+                        action="http://192.168.1.56:8181/api/upload">
+                    <i-Button  icon="ios-cloud-upload-outline" >上传文件</i-Button>
+
+
+            </Form-Item>
+
+            <Form-Item>
+                <i-Button type="primary" @click="handleSubmit('formValidate')">提交</i-Button>
+
+            </Form-Item>
+        </i-Form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: function () {
+            return {
+                pdt_name:'',
+                // modal1: false,
+                types:'protobuf',
+                api_pdt:'',
+                filename:'',
+                api_function:'',
+                formValidate: {
+
+                },
+
+                ruleValidate: {
+                    pdt_name1: [
+                        { required: true, message: '请选择产品', trigger: 'blur' }
+                    ],
+                    type: [
+                        { required: true, message: '请选择类型', trigger: 'blur' }
+                    ],
+                    fileupload: [
+                        { required: true, message: '请选择文件', trigger: 'blur' }
+                    ]
+                }
+            }
+        },
+
+//   watch:{
+// 		  types(val,oldval){
+// 			 console.log("val:"+val) ;
+// 		}
+// },
+        //获取产品列表
+        created:function(){
+            axios.get(''+host+'/api/product/getproductlist')
+                .then(res => {
+                    console.log(res);
+                    this.formValidate = res.data.message
+                })
+                .catch(function (error) {
+                    console.log(error)
+                });
+        },
+
+        methods: {
+
+            handleRemove (file, fileList) {
+
+                console.log('fileremove:'+JSON.stringify(file));
+                // const fileList = this.$refs.upload.fileList;
+                // this.$refs.upload.fileList.splice(fileList.indexOf(file), 1);
+                axios.get(''+host+'/api/upload-delete',{
+                    params:{
+                        filename:file.name
+                    }
+                }) .then(res => {
+                    this.file = res.data.message;
+                    console.log('delete:'+JSON.stringify( this.file))
+                })
+                    .catch(function (error) {
+                        console.log(error)
+                    })
+            },
+
+            handleSuccess (response, file, fileList) {
+                /*    file.url = 'https://o5wwk8baw.qnssl.com/7eb99afb9d5f317c912f08b5212fd69a/avatar';
+                    file.name = '7eb99afb9d5f317c912f08b5212fd69a'; */
+                console.log('filelistadd:'+JSON.stringify(fileList));
+                console.log('filelistall:'+JSON.stringify(file));
+                this.filename=fileList
+            },
+
+            handleSubmit: function (name) {
+
+
+
+                for(var i=0; i<this.filename.length;i++){
+                    if(this.filename[i].name.includes('.json') ){
+                        let obj={
+
+                            "product_id":this.pdt_name,
+                            "filename":this.filename[i].name
+
+                        };
+                        console.log("obj:"+JSON.stringify(obj));
+                        axios({
+                            url: ''+host+'/api/product/api-templates/json',
+                            method: 'post',
+                            dataType: 'json',
+                            headers: {
+                                'Content-type': 'application/json;'
+                            },
+                            data: JSON.stringify(obj)
+                        }).then(function (response){
+                            console.log("req："+JSON.stringify(response));
+                            alert("操作:"+response.data.title+",\n结果:"+response.data.message)
+                        })
+                            .catch(function(error){
+                                console.log(error)
+                            })
+                    }else if(this.filename[i].name.includes('.xlsx') ){
+                        file=this.filename[i].name;
+                        let obj={
+
+                            "product_id":this.pdt_name,
+                            "filename":this.filename[i].name
+
+                        };
+                        console.log("obj:"+JSON.stringify(obj));
+                        axios({
+                            url: ''+host+'/api/product/api-templates/protobuf',
+                            method: 'post',
+                            dataType: 'json',
+                            headers: {
+                                'Content-type': 'application/json;'
+                            },
+                            data: JSON.stringify(obj),
+                        }).then(function (response){
+                            console.log("req："+JSON.stringify(response));
+                            alert("操作:"+response.data.title+",\n结果:"+response.data.message)
+                        })
+                            .catch(function(error){
+                                alert(error)
+                            })
+                    }
+                    console.log("submitfile:"+this.filename[i].name)
+                }
+
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+                        this.$Message.success('成功');
+                    } else {
+                        this.$Message.error('请输入必填项');
+                    }
+                });
+            },
+
+
+
+
+
+
+
+        }
+
+    });
+
+</script>
+</body>
+
+</html>

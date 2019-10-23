@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <title>添加产品</title>
+  <link rel="stylesheet" type="text/css" href="../../../assets/iview/iview-3.1.0/styles/iview.css" />
+  <script src="../../../assets/vue/vue-2.5.17.min.js"></script>
+  <script src="../../../assets/iview/iview-3.1.0/iview.min.js"></script>
+  <script src="../../../assets/axios/axios.js"></script>
+  <script src="../../../js/config.js"></script>
+</head>
+
+<body>
+<div id="app">
+  <div style="height: 600px">
+    <i-Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
+      <Form-Item label="产品名称" prop="pdt_name">
+
+        <CheckboxGroup v-model="hobby2">
+          <Checkbox label="twitter">
+            <Icon type="logo-twitter"></Icon>
+            <span>Twitter</span>
+          </Checkbox>
+          <Checkbox label="facebook">
+            <Icon type="logo-facebook"></Icon>
+            <span>Facebook</span>
+          </Checkbox>
+          <Checkbox label="github">
+            <Icon type="logo-github"></Icon>
+            <span>Github</span>
+          </Checkbox>
+          <Checkbox label="snapchat">
+            <Icon type="logo-snapchat"></Icon>
+            <span>Snapchat</span>
+          </Checkbox>
+          <span>{{hobby2}}}</span>
+        </CheckboxGroup>
+        <RadioGroup v-model="phone">
+          <Radio label="apple">
+            <Icon type="logo-apple"></Icon>
+            <span>Apple</span>
+          </Radio>
+          <Radio label="android">
+            <Icon type="logo-android"></Icon>
+            <span>Android</span>
+          </Radio>
+          <Radio label="windows">
+            <Icon type="logo-windows"></Icon>
+            <span>Windows</span>
+          </Radio>
+        </RadioGroup>
+        <RadioGroup v-model="animal">
+          <Radio label="金斑蝶"></Radio>
+          <Radio label="爪哇犀牛"></Radio>
+          <Radio label="印度黑羚"></Radio>
+        </RadioGroup>
+
+        <div>请选择你的爱好(vue)</div>
+        <input type="checkbox" v-model="hobby2" value="游泳">游泳1
+        <input type="checkbox" v-model="hobby2" value="健身">健身2
+        <input type="checkbox" v-model="hobby2" value="旅游">旅游3
+        <div>你已选中：{{hobby2}}</div>
+      </Form-Item>
+      <Form-Item label="产品版本" prop="version">
+        <i-Input v-model="formValidate.version" placeholder="Enter your version"></i-Input>
+      </Form-Item>
+      <Form-Item label="产品地址" prop="host">
+        <i-Input v-model="formValidate.host" placeholder="Enter your host"></i-Input>
+      </Form-Item>
+      <Form-Item label="产品描述" prop="description">
+        <i-Input v-model="formValidate.description" type="textarea" :autosize="{minRows: 2,maxRows: 2}" placeholder="Enter something..."></i-Input>
+      </Form-Item>
+      <Form-Item label="文件上传" >
+        <i-input type="file" class="file" @change="tirggerFile($event)">
+      </Form-Item>
+      <Form-Item label="api_json" prop="description">
+        <i-Input v-model="formValidate.api_json" type="textarea" :autosize="{minRows: 2,maxRows: 2}" placeholder="Enter something..."></i-Input>
+      </Form-Item>
+      <Form-Item label="api_json2" prop="description">
+        <i-Input v-model="formValidate.api_json2" type="textarea" placeholder="Enter something..."></i-Input>
+      </Form-Item>
+      <Form-Item>
+        <i-Button type="primary" @click="handleSubmit('formValidate')">Submit</i-Button>
+        <i-Button @click="handleReset('formValidate')" style="margin-left: 8px">Reset</i-Button>
+      </Form-Item>
+    </i-Form>
+  </div>
+
+</div>
+<script type="text/javascript">
+  var vm = new Vue({
+    el: "#app",
+    data() {
+      return {
+        hobby2:[],
+        checkedNames:[],
+        phone: 'apple',
+        animal: '爪哇犀牛',
+        formValidate: {
+          pdt_name: '',
+          version: '',
+          host: '',
+          description: '',
+          api_json: ''
+        },
+        ruleValidate: {
+          pdt_name: [
+            { required: true, message: 'The name cannot be empty', trigger: 'blur' }
+          ],
+          host: [
+            { required: true, message: 'The host cannot be empty', trigger: 'blur' }
+          ],
+          version: [
+            { required: true, message: 'The host cannot be empty', trigger: 'blur' }
+          ],
+          description: [
+            { required: true, message: 'Please enter a personal introduction', trigger: 'blur' },
+            { type: 'string', min: 10, message: 'Introduce no less than 20 words', trigger: 'blur' }
+          ],
+          api_json: [
+            { required: true, message: 'The host cannot be empty', trigger: 'blur' }
+          ]
+        }
+      }
+    },
+    methods: {
+      handleSubmit: function (name) {
+        console.log(this.$refs[name]);
+        this.$refs[name].validate((valid) => {
+          if (valid) {
+            this.formValidate.api_json=JSON.parse(this.formValidate.api_json);
+            console.log('aaa:' + JSON.stringify(this.formValidate));
+            this.$axios({
+              url: '/api/product/addproducts11',
+              method: 'post',
+              dataType: 'json',
+              headers: {
+                'Content-type': 'application/json;'
+              },
+              data: JSON.stringify(this.formValidate),
+              success: function (data) {
+                alert('操作:' + data.title + ',\n结果:' + data.message)
+              },
+              error: function (data) {
+                alert(data.status)
+              }
+            })
+                    .then(function (response){
+                      console.log("操作:"+response.title+",\n结果:"+response.message)
+                    })
+                    .catch(function(error){
+                      console.log(error)
+                    })
+          } else {
+            this.$Message.error('Link Server Fail!')
+          }
+        })
+      },
+      handleReset (name) {
+        this.$refs[name].resetFields()
+      },
+      tirggerFile: function (event) {
+        // 此处校验文件后缀
+        var self = this;
+        var file = event.target.files[0]
+                .name; // (利用console.log输出看file文件对象) properties/xml/json/conf/config/data/ini/txt/yaml/yml/cfg
+        var num = file.split('.');
+        var mun = num[num.length - 1];
+        console.log(mun);
+        if (!(mun == 'ini' || mun == 'properties' || mun == 'xml' || mun == 'json' || mun == 'conf' || mun ==
+                'config' ||
+                mun == 'data' || mun == 'txt' || mun == 'config' || mun == 'yaml' || mun == 'cfg')) {
+          this.$Notice.error({
+            title: '请重新点击选择文件传入符合标准的文件',
+            duration: 2
+          })
+        } else {
+          let fileselect = document.querySelector('input[type=file]').files[0]; // 找到文件上传的元素
+          let reader = new FileReader();
+          // console.log(fileselect);
+          if (typeof FileReader === 'undefined') {
+            alert('您的浏览器不支持FileReader接口')
+          }
+          reader.readAsText(fileselect, 'gb2312'); // 注意读取中文的是用这个编码，不是utf-8
+          reader.onload = function () {
+            console.log(reader.result);// 文件内容
+            let api_json = reader.result;
+            self.formValidate.api_json = api_json
+          }
+        }
+      }
+    }
+
+  });
+</script>
+</body>
+
+</html>

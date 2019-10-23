@@ -37,7 +37,9 @@ class ScriptPara(object):
 		return option
 	
 	def pytest_option(self):
-		options = task_select_id(self.task_id)['pytest_para']
+		cl_list = task_select_id(self.task_id)['pytest_para']
+		cl = [i['parameter'] for i in cl_list]
+		options = " ".join(cl)
 		return options
 	
 	def get_id(self):
@@ -103,11 +105,12 @@ class ScriptPara(object):
 
 
 if __name__ == "__main__":
-	sp = ScriptPara(15)
+	sp = ScriptPara(46)
 	# print(sp.weight)
 	# print(sp.option)
 	# print(sp.case_id)
 	# print(sp.para)
 	# print(sp.host)
-	print(sp.api_weight())
+	print(sp.api_para()[0]['header']['content-type'])
+	# print(sp.weight)
 # print(sp.weight)

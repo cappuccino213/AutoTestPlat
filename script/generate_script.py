@@ -17,12 +17,12 @@ import os
 
 
 class GenerateScript():
-	def __init__(self, task_id):# 声明生成脚本需要的数据
+	def __init__(self, task_id):  # 声明生成脚本需要的数据
 		self.task_id = task_id
 		self.data_type = self.data_type()
 		self.sp = ScriptPara(task_id)
-		
-		self.script_classname = 'case_' + self.sp.case_id[0]  # 脚本的类名
+		# self.script_classname = 'case_' + self.sp.case_id[0]  # 脚本的类名
+		self.script_classname = 'case_%s'%(str(self.sp.case_id[0]))  # 脚本的类名
 		self.script_funcname = [i['url'].split('/')[-1].lower() for i in self.sp.para]  # script 函数名
 		self.script_funcname = list(self.rename_duplicates(self.script_funcname))
 		
@@ -41,11 +41,11 @@ class GenerateScript():
 		self.locust_max = self.sp.max_wait  # locust等待最大值
 		self.locust_weight = [int(i['weight']) for i in self.sp.weight]  # 执行权重
 		
-		self.proto_path = os.path.join(os.path.abspath(os.path.dirname(__file__)),'proto_script')
-		self.json_path = os.path.join(os.path.abspath(os.path.dirname(__file__)),'json_script')
+		self.proto_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'proto_script')
+		self.json_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'json_script')
 		self.project_path = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))  # 工程根目录
 	
-	def rename_duplicates(self,old): # 将列表中重复项附加计数重命名
+	def rename_duplicates(self, old):  # 将列表中重复项附加计数重命名
 		seen = {}
 		for x in old:
 			if x in seen:
@@ -54,7 +54,8 @@ class GenerateScript():
 			else:
 				seen[x] = 0
 				yield x
-		# return seen
+	
+	# return seen
 	
 	def dictvalue2str(self, dictionary):  # 处理header里面的嵌套dict，转化成str
 		di = {}
@@ -110,8 +111,8 @@ class GenerateScript():
 	
 	def proto_script_content(self):  # proto类脚本的内容
 		code_import = ['import sys',
-					   'sys.path.append("%s")' % self.project_path,# 解决linux下访问不到项目目录
-					   'sys.path.append("%s")' % self.proto_path,# 解决linux下访问不到proto_script目录
+					   'sys.path.append("%s")' % self.project_path,  # 解决linux下访问不到项目目录
+					   'sys.path.append("%s")' % self.proto_path,  # 解决linux下访问不到proto_script目录
 					   'from locust import TaskSet, task, HttpLocust']
 		
 		code_taskset_class = ['class %sTask(TaskSet):' % self.script_classname,
@@ -124,7 +125,7 @@ class GenerateScript():
 		for i in range(len(self.script_funcname)):
 			code_function.append('@task(%d)' % self.locust_weight[i])
 			code_function.append('def %s(self):' % self.script_funcname[i])
-			code_function.append('from script.proto_script.%s_pb2 import %s' % (proto_file[i], proto_message[i]))
+			code_function.append('from script.protobuf_script.%s_pb2 import %s' % (proto_file[i], proto_message[i]))
 			if self.api_method[i] == 'POST':  # 暂时只支持post方法
 				code_function.append('url = "%s"' % self.api_url[i])
 				code_function.append('header = %s' % self.api_headers[i])
@@ -174,16 +175,19 @@ class GenerateScript():
 	def proto2py(self):  # 将proto编译生成py文件
 		import subprocess
 		proto_file = [i['proto_file'] + '.proto' for i in self.sp.para]  # proto文件名
-		proto_path = os.path.join(self.project_path, 'api', 'static', 'proto_file')  # proto文件目录
+		proto_path = os.path.join(self.project_path, 'api', 'static_old', 'proto_file')  # proto文件目录
 		py_path = os.path.join(self.project_path, 'script', 'protobuf_script')  # 编译生成py文件目录
 		proto_list = [os.path.join(proto_path, proto) for proto in proto_file]  # proto文件路径
 		for proto in proto_list:
 			if self.if_proto_import(proto):
 				cli = "protoc -I=%s --python_out=%s %s --include_imports %s" % (
-				proto_path, py_path, proto, self.if_proto_import(proto))
+					proto_path, py_path, proto, self.if_proto_import(proto))
 			else:
 				cli = "protoc -I=%s --python_out=%s %s" % (proto_path, py_path, proto)
-			subprocess.Popen(cli, stdout=subprocess.PIPE, shell=True)# 编译proto生成py文件
+			try:
+				subprocess.Popen(cli, stdout=subprocess.PIPE, shell=True)  # 编译proto生成py文件
+			except Exception as e:
+				raise str(e)
 	
 	def if_proto_import(self, proto):  # 判断proto中是否又依赖其他proto导入
 		import codecs, re
@@ -191,7 +195,7 @@ class GenerateScript():
 			data = f.readlines()
 			for line in data:
 				if "import" in line:
-					import_proto=re.findall('.*"(.*)".*', line)  # 取引号中的proto名列表
+					import_proto = re.findall('.*"(.*)".*', line)  # 取引号中的proto名列表
 					return "".join(import_proto)  # 返回proto名
 	
 	def main(self):  # 执行生成脚本
@@ -207,9 +211,9 @@ class GenerateScript():
 
 
 if __name__ == '__main__':
-	g = GenerateScript(15)
+	g = GenerateScript(46)
 	# g.proto_script_content()
 	# g.write_script(r'D:\flask-project\ApiPerformanceTest\script\proto_script',g.proto_script_content())
 	g.main()
-	# print(os.path.abspath(os.path.dirname(__file__)))
+# print(os.path.abspath(os.path.dirname(__file__)))
 # print(g.if_proto_import(r'E:\Test\IMCIS\proto\VisitInputProto.proto'))

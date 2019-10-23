@@ -62,5 +62,5 @@ def main(task_id):
 	report_copy(task_id) # 复制report.html
 
 if __name__ == '__main__':
-	main(29)
+	main(21)
 	# print(pytest_option(29))

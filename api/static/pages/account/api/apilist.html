@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>API管理</title>
+    <link rel="stylesheet" type="text/css" href="../../../assets/iview/iview-3.1.0/styles/iview.css" />
+    <script src="../../../assets/vue/vue-2.5.17.min.js"></script>
+    <script src="../../../assets/iview/iview-3.1.0/iview.min.js"></script>
+    <script src="../../../assets/axios/axios.js"></script>
+    <script src="../../../js/config.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <i-Button type="primary" @click="modal1 = true">添加API</i-Button>
+    <Modal
+            v-model="modal1"
+            title="添加API"
+            @on-ok="ok"
+            @on-cancel="cancel"
+    >
+
+        <i-form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
+            <Form-item label="所属产品" >
+                <i-Select v-model="api_pdt" size="large" style="width:100px" clearable="true" >
+                    <i-Option v-for="(item,index) in formValidate ":key="item.pdt_id" :value="index">{{ item.pdt_name }}</i-Option>
+                </i-Select>
+
+            </Form-item>
+            <Form-item label="模块名称" prop="version">
+                <i-Select v-model="api_hashfunction"   clearable="true" size="large" style="width:100px" ref="store" >
+                    <i-Option v-for="(item,index) in hash ":key="item" :value="item">{{ item }}</i-Option>
+                </i-Select>
+            </Form-item>
+            <Form-item label="API参数名" prop="host">
+                <i-Select v-model="api_summary" size="large" style="width:100px"  clearable="true"   ref="store1" @on-change='change_pro(api_pdt)'>
+                    <i-Option v-for="(item,index) in api_summary1 ":key="index" :value="index">{{ item.summary }}</i-Option>
+                </i-Select>
+            </Form-item>
+            <Form-item label="API名称" prop="description">
+                <i-input v-model="api_api.summary" placeholder="请输入产品描述" clearable="true"   ref="store3"></i-input>
+            </Form-item>
+            <Form-item label="HTTP请求方式" prop="description">
+                <i-select  v-model="api_api.method" style="width:200px" >
+                    <i-Option  value="post">POST</i-option>
+                    <i-Option value="get">GET</i-Option>
+                    <i-Option  value="put">PUT</i-option>
+                </i-select>
+            </Form-item>
+            <Form-item label="URL" prop="description">
+                <i-input v-model="api_api.uri " placeholder="请输入产品描述" clearable="true"   ref="store2"></i-input>
+            </Form-item>
+            <Form-item label="Header" prop="description">
+                <i-input  v-model="api_api.produces" placeholder="请输入产品描述" clearable="true"   ref="store2"></i-input>
+            </Form-item>
+            <Form-item label="Token" >
+                <i-switch  v-model="api_api.has_token"  size="large">
+                    <span slot="open">On</span>
+                    <span slot="close">Off</span>
+                </i-switch>
+            </Form-item>
+            <Form-item label="proto_file" prop="description" >
+                <i-input  v-model="api_api.input_proto" placeholder="请输入产品描述" clearable="true"   ref="store2"></i-input>
+            </Form-item>
+            <Form-item label="proto_msg" prop="description" >
+                <i-input  v-model="api_api.message" placeholder="请输入产品描述" clearable="true"   ref="store2"></i-input>
+            </Form-item>
+            <Form-item label="Body" prop="api_json">
+                <i-Input v-model='api_api.parameters' type="textarea" :autosize="{minRows: 3,maxRows: 5}" placeholder="请输入接口字符串"></i-Input>
+            </Form-item>
+        </i-form>
+
+    </Modal>
+    <Modal
+            v-model="editFormVisible"
+            title="编辑接口"
+            @on-ok="update"
+            @on-cancel="cancel"
+    >
+        <i-form ref="editForm" :model="editForm" :rules="ruleValidate" :label-width="80">
+            <Form-item label="API名称" prop="description">
+                <i-input v-model="editForm.api_name" placeholder="请输入产品描述" clearable="true"   ref="store3"></i-input>
+            </Form-item>
+            <Form-item label="HTTP请求方式" prop="description">
+                <i-select  v-model="editForm.method" style="width:200px" >
+                    <i-Option  value="post">POST</i-option>
+                    <i-Option value="get">GET</i-Option>
+                    <i-Option  value="put">PUT</i-option>
+                </i-select>
+            </Form-item>
+            <Form-item label="URL" prop="description">
+                <i-input v-model="editForm.url " placeholder="请输入产品描述" clearable="true"   ref="store2"></i-input>
+            </Form-item>
+            <Form-item label="Header" prop="description">
+                <i-input  v-model="editForm.header" placeholder="请输入产品描述" clearable="true"   ref="store2"></i-input>
+            </Form-item>
+            <Form-item label="Token" >
+                <i-switch  v-model="editForm.has_token"  size="large">
+                    <span slot="open">On</span>
+                    <span slot="close">Off</span>
+                </i-switch>
+            </Form-item>
+            <Form-item label="proto_file" prop="description" >
+                <i-input  v-model="editForm.proto_file" placeholder="请输入产品描述" clearable="true"   ref="store2"></i-input>
+            </Form-item>
+            <Form-item label="proto_msg" prop="description" >
+                <i-input  v-model="editForm.proto_message" placeholder="请输入产品描述" clearable="true"   ref="store2"></i-input>
+            </Form-item>
+            <Form-item label="Body" prop="api_json">
+                <i-Input v-model='editForm.body' type="textarea" :autosize="{minRows: 3,maxRows: 5}" placeholder="请输入接口字符串"></i-Input>
+            </Form-item>
+        </i-form>
+
+    </Modal>
+    <i-table :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 300 : ''"
+             :size="tableSize" :data="apitable" :columns="apiColumns" ></i-table>
+
+
+</div>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: function () {
+            return {
+                modal1: false,
+                api_pdt:'',
+                hash:[],//存储模块名称
+                api_hashfunction:'',//模块名称
+                api_function:'',//存储对应产品的API-json
+                api_summary:'',//API名称
+                api_summary1:'',//存储模块名称
+                api_api:{
+                    has_token: false,
+                },//存储api相关数据
+                formValidate: {},//产品列表数据存储
+                ruleValidate: {
+                    pdt_name: [
+                        { required: true, message: '产品名称不能为空', trigger: 'blur' }
+                    ],
+                    host: [
+                        { required: true, message: '产品地址不能为空', trigger: 'blur' }
+                    ],
+                    version: [
+                        { required: true, message: '产品版本不能为空', trigger: 'blur' }
+                    ],
+                    description: [
+                        { required: true, message: '请输入产品描述', trigger: 'blur' },
+                    ],
+                    api_json: [
+                        { required: true, message: '产品接口字符串不能为空', trigger: 'blur' }
+                    ]
+                },
+                apitable: [],//api列表数据存储
+
+                editFormVisible:false,
+                editForm: {
+                    pdt_id:'' ,
+                    pdt_name: '',
+                    version: '',
+                    host: '',
+                    description: '',
+                    api_json:'',
+
+                },//修改模块
+                showBorder: false, // 显示边框
+                showStripe: true, // 是否显示斑马纹
+                showHeader: true, // 是否显示头部信息
+                showIndex: true, // 是否显示索引
+                showCheckbox: true, // 显示多选框
+                fixedHeader: false, // 显示滑动
+                tableSize: 'default'
+
+            }
+        },
+/*        created(){
+            //如果没有这句代码，select中初始化会是空白的，默认选中就无法实现
+            this.api_pdtname = this.api_pdt[0].pdt_name;
+        },*/
+        computed: {
+            apiColumns() {
+                let columns = [];
+                if (this.showCheckbox) {
+                    columns.push({
+                        type: 'selection',
+                        width: 60,
+                        align: 'center'
+                    })
+                }
+                if (this.showIndex) {
+                    columns.push({
+                        type: 'index.html--',
+                        width: 60,
+                        align: 'center'
+                    })
+                }
+                columns.push({
+                    title: 'API名称',
+                    key: 'api_name',
+                    align: 'center',
+                    sortable: true
+                });
+                columns.push({
+                    title: 'method',
+                    key: 'method',
+                    align: 'center',
+                    sortable: true
+                });
+                //console.log("length1:"+this.api_pdt.length)
+                var filters_name1=[];
+                for(var i = 0; i <this.formValidate.length; i++){
+                    var filters_name0={
+                        label:this.formValidate[i].pdt_name,
+                        value: this.formValidate[i].pdt_name
+                    };
+                    filters_name1.push(filters_name0);
+                }
+                console.log("file:"+JSON.stringify(filters_name1));
+                columns.push({
+                    title: '产品名称',
+                    key: 'pdt_name',
+                    formatter:"table_pdt",
+                    align: 'center',
+                    sortable: true,
+                    filters:filters_name1,
+                    filterMethod (value,row) {
+/*                        console.log(value)
+                        console.log(row.api_name)*/
+                        return row.pdt_name.indexOf(value) > -1;
+                    }
+                });
+                columns.push({
+                    title: '接口参数',
+                    key: 'body',
+                    align: 'center',
+                    tooltip:true,
+
+                });
+                columns.push({
+                    title: 'Action',
+                    key: 'action',
+                    align: 'center',
+                    render: (h, params) => {
+                        return h('div', [
+                            h('Button', {
+                                props: {
+                                    type: 'primary',
+                                    icon:"ios-create-outline",//编辑
+                                    shape:"circle",
+                                    size: 'buttonSize'
+                                },
+                                style: {
+                                    marginRight: '5px',
+                                },
+                                on: {
+                                    click: () => {
+                                        this.show(params.row)
+                                    }
+                                }
+                            }, '编辑'),
+                            h('Button', {
+                                props: {
+                                    type: 'error',
+                                    icon:"ios-trash-outline",//删除
+                                    shape:"circle",
+                                    size: 'buttonSize'
+                                },
+                                on: {
+                                    click: () => {
+                                        this.remove(params.index)
+                                    }
+                                }
+                            }, '删除')
+                        ])
+                    }
+                });
+                return columns;
+            }
+        },
+        watch:{
+            //选择所属产品
+            api_pdt(val,oldval){
+                this.hash=[],
+                    //this.$refs.store.clearSingleSelect()
+                    this.api_function=[],
+                 this.api_function=this.formValidate[val].api_json;
+               // console.log("function"+JSON.stringify(this.api_function))
+                for (var i = 0; i <this.api_function.length; i++) {
+                    for (var j = i+1; j < this.api_function.length; j++) {
+                        if(this.api_function[i].function===this.api_function[j].function){
+                            ++i;
+                        }
+                    }
+                    this.hash.push(this.api_function[i].function);
+                }
+               // console.log("push+function:"+this.hash)
+            },
+            //选择模块名称
+            api_hashfunction(val,oldval) {
+                console.log("hashfunctionn:" + val);
+               this.api_summary1=[];
+                //this.$refs.store1.clearSingleSelect()
+               // console.log("hashfunctionn:" + JSON.stringify(this.api_function))
+                for (i = 0; i < this.api_function.length; i++) {
+                    //console.log("i："+apiarray.length)
+                    if (this.api_function[i].function === val) {
+                      this.api_summary1.push(this.api_function[i])
+                    }
+                    //console.log("push+function+summary:"+JSON.stringify(this.api_summary1))
+                }
+            },
+            //选择API
+            api_summary(val,odlval){
+                console.log("hashfunctionn2:" + val);
+                this.api_api=[];
+                this.api_api=this.api_summary1[this.api_summary];
+                //console.log("push+function+summary22:"+JSON.stringify(this.api_api.produces))
+                this.api_api.produces=JSON.stringify(this.api_api.produces);
+                this.api_api.parameters=JSON.stringify(this.api_api.parameters);
+                this.api_api.has_token=false
+
+            },
+            //修改模块中的数据变化
+            editForm(){
+                this.editForm.header=JSON.stringify(this.editForm.header);
+                this.editForm.body=JSON.stringify(this.editForm.body);
+            }
+
+        },
+        created:function(){
+            axios.get(''+host+'/api/apiinfo/apilist')
+                .then(res => {
+                    console.log(res);
+                    this.apitable = res.data.message;
+                    console.log("123"+this.api_pdt)
+
+                })
+                .catch(function (error) {
+                    console.log(error)
+                });
+            axios.get(''+host+'/api/product/getproductlist')
+                .then(res => {
+                    console.log(res);
+                    this.formValidate = res.data.message;
+                    console.log(this.formValidate [0].pdt_name)
+
+                })
+                .catch(function (error) {
+                    console.log(error)
+                });
+        },
+        mounted:function(){
+        },
+        methods:{
+           change_pro:function(status){
+
+           },
+            //删除按钮
+            remove: function (index) {
+                console.log('date1' + this.apitable[index].api_id);
+                // 格局id删除数据
+                var obj = {api_id: this.apitable[index].api_id};
+                this.apitable.splice(index, 1);
+                // var url = '/api/product/delproduct'
+                // 发送异步请求
+                axios({
+                    url: ''+host+'/api/apiinfo/api',
+                    method: 'delete',
+                    dataType: 'json',
+                    headers: {
+                        'Content-type': 'application/json;'
+                    },
+                    data: JSON.stringify(obj),
+                }).then(res => {
+                    if (res.status === 200) {
+                        alert("success");
+                        // 更新数据
+                        console.log(res.message);
+                        this.apitable.splice(index, 1)
+                    } else {
+                        alert(res.message)
+                    }
+                }).catch(function () {
+                    alert('服务连接出错了')
+                })
+            },
+            //点击编辑
+            show: function (row) {
+                this.editFormVisible=true;
+                console.log("shouw"+JSON.stringify(row));
+                this.editForm=row;
+                //this.editForm.api_json=JSON.parse(this.editForm.api_json)
+                console.log("shouw1"+JSON.stringify(this.editForm))
+            },
+            //弹窗点击确定添加
+            ok () {
+                console.log("点击确定:"+JSON.stringify(this.api_api));
+                console.log("点击确定id:"+this.formValidate[this.api_pdt].pdt_id);
+                console.log("点击确定method:"+this.api_api.method);
+                console.log("点击确定method2:"+this.api_api.input_proto);
+                console.log("点击确定method3:"+this.api_api.message);
+                console.log("点击确定method4:"+this.api_api.has_token);
+                let  obj={
+                        "pdt_id":this.formValidate[this.api_pdt].pdt_id,
+                        "method":this.api_api.method,
+                        "header":this.api_api.produces,
+                        "body":this.api_api.parameters,
+                        "api_name":this.api_api.summary,
+                        "values":"",
+                          "url":this.api_api.uri,
+                        "has_token":this.api_api.has_token,
+                        "proto_message":this.api_api.message,
+                        "proto_file":this.api_api.input_proto
+
+                    };
+                    console.log(obj);
+                axios({
+                    url: ''+host+'/api/apiinfo/api',
+                    method: 'post',
+                    dataType: 'json',
+                    headers: {
+                        'Content-type': 'application/json;'
+                    },
+                    data: JSON.stringify(obj),
+                }).then(function (response){
+                    console.log(response);
+                    alert("操作:"+response.data.title+",\n结果:"+response.data.message)
+                    //location.reload()
+
+                })
+                    .catch(function(error){
+                        console.log(error)
+                    })
+
+            },
+            //编辑
+            update() {
+                console.log("修改:"+JSON.stringify(this.editForm));
+                this.editForm.header=JSON.parse(this.editForm.header);
+                this.editForm.body=JSON.parse(this.editForm.body);
+                axios({
+                    url: ''+host+'/api/apiinfo/api',
+                    method: 'put',
+                    dataType: 'json',
+                    headers: {
+                        'Content-type': 'application/json;'
+                    },
+                    data: this.editForm,
+                }).then(function (response){
+                    console.log(response);
+                    alert("操作:"+response.data.title+",\n结果:"+response.data.message);
+                    location.reload()
+
+                })
+                    .catch(function(error){
+                        console.log(error)
+                    })
+
+            },
+            cancel () {
+                this.$Message.info('已取消');
+            },
+
+        }
+    });
+</script>
+</body>
+
+</html>
+

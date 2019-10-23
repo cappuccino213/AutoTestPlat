@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>产品列表页面</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <link rel="stylesheet" href="../static_old/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static_old/css/bootstrap-responsive.min.css" />
+<!-- <link rel="stylesheet" href="../static_old/css/uniform.css" /> -->
+<!-- 搜索栏 -->
+<link rel="stylesheet" href="../static_old/css/select2.css" />
+<link rel="stylesheet" href="../static_old/css/matrix-style.css" />
+<!-- 导航栏背景颜色 -->
+<link rel="stylesheet" href="../static_old/css/matrix-media.css" />
+<!-- <link href="../static_old/font-awesome/css/font-awesome.css" rel="stylesheet" /> -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'> -->
+</head>
+<body>
+
+<!--Header-part-->
+<div id="header">
+  <h1><a href="dashboard.html">全网云</a></h1>
+</div>
+<!--close-Header-part-->
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">欢迎Admin</span><b class="caret"></b></a>
+      <ul class="dropdown-menu">
+        <li class="divider"></li>
+        <li><a href="login.html"><i class="icon-key"></i> 退出</a></li>
+      </ul>
+    </li>
+ 
+    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+  </ul>
+</div>
+
+<!--start-top-serch--><!--close-top-serch--> 
+
+<!--sidebar-menu-->
+
+<div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-th"></i>Tables</a>
+   <ul>
+    <li class="active"><a href="index.html"><i class="icon icon-home"></i><span>产品管理</span></a> </li>
+   <!-- <li> <a href="product.html"><i class="icon icon-signal"></i> <span>product</span></a> </li> -->
+    <li > <a href="api.html"><i class="icon icon-file"></i><span>api接口</a></span></li>
+    <li> <a href="case.html"><i class="icon icon-inbox"></i><span>用例管理</a></span></li>
+    <li><a href="task.html"><i class="icon icon-th"></i><span>任务管理</a></span></li>
+    <li><a href="report.html"><i class="icon icon-fullscreen"></i><span>报告管理</span></a></li>
+     <li class="submenu"> <a href="#"><i class="icon icon-file"></i> <span>其他</span> </a>
+           <ul>
+               <li><a href="template.html">模板生成</a></li>
+           </ul>
+       </li>
+  </ul>
+</div>
+</div>
+<div id="content">
+  <div id="content-header">
+    <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#" class="current">product</a> </div>
+    <h1>product列表</h1>
+  </div>
+  <div class="container-fluid">
+    <hr>
+    <div class="row-fluid">
+      
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
+            <h5>product</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-bordered data-table">
+              <thead disabled = "disabled">
+                <tr disabled = "disabled">
+                  <th width="10%">ID</th>
+                  <th width="12%">产品名称</th>
+                  <th width="12%">版本</th>
+                  <th width="49%">产品描述</th>
+                  <th width="15%">产品地址</th>
+                  <th width="12%"><a href="addproduct.html"><input type="button" value="增加产品" style="height:25px; width:70px;"/></a></th>
+                </tr>
+              </thead>
+              <tbody id="tbody-result">
+              <tr class="gradeX" style="display: none;" >
+                  <td>1</td>
+                  <td>IMCIS</td>
+                  <td>V1.0</td>
+                  <td>集成平台涉及按需平台，自助打印，影像浏览器等服务</td>
+                  <td>http://192.168.1.19：8089</td>
+                  <td ><table width="100" border="0" cellspacing="0" cellpadding="0" align="center" >
+                    <tr>
+                      <td><img src="../static_old/img/u48.svg"></td>
+                      <td><a href="error405.html"><img src="../static_old/img/u50.svg"></a></td>
+                    </tr>
+                  </table></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Footer-part-->
+<div class="row-fluid">
+  <div id="footer" class="span12">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
+</div>
+<!--end-Footer-part-->
+<script src="../static_old/js/jquery.min.js"></script>
+<script src="../static_old/js/jquery.ui.custom.js"></script>
+<script src="../static_old/js/bootstrap.min.js"></script>
+<script src="../static_old/js/jquery.uniform.js"></script>
+<script src="../static_old/js/select2.min.js"></script>
+<script src="../static_old/js/jquery.dataTables.min.js"></script>
+<script src="../static_old/js/matrix.js"></script>
+<script src="../static_old/js/matrix.tables.js"></script>
+<script src="../static_old/config.js"></script>
+<script src="../static_old/js1/PRODUCT.js">
+
+	</script>
+</body>
+</html>

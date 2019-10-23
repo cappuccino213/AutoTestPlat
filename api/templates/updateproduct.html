@@ -4,11 +4,11 @@
 <title>编辑产品</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="../static/css/bootstrap.min.css" />
-<link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css" />
-<link rel="stylesheet" href="../static/css/matrix-style.css" />
-<link rel="stylesheet" href="../static/css/matrix-media.css" />
-<link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link rel="stylesheet" href="../static_old/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../static_old/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="../static_old/css/matrix-style.css" />
+<link rel="stylesheet" href="../static_old/css/matrix-media.css" />
+<link href="../static_old/font-awesome/css/font-awesome.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -36,7 +36,7 @@
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-info-sign"></i> </a>
    <ul>
-    <li class="active"><a href="index.html"><i class="icon icon-home"></i><span>产品管理</span></a> </li>
+    <li class="active"><a href="index.html--"><i class="icon icon-home"></i><span>产品管理</span></a> </li>
    <!-- <li> <a href="product.html"><i class="icon icon-signal"></i> <span>product</span></a> </li> -->
     <li > <a href="api.html"><i class="icon icon-file"></i><span>api接口</a></span></li>
     <li> <a href="case.html"><i class="icon icon-inbox"></i><span>用例管理</a></span></li>
@@ -111,10 +111,10 @@
   <div id="footer" class="span12">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
 </div>
 <!--end-Footer-part-->
-<script src="../static/js/jquery.min.js"></script> 
-<script src="../static/js/jquery.ui.custom.js"></script> 
-<script src="../static/js/bootstrap.min.js"></script> 
-<script src="../static/config.js"></script>
+<script src="../static_old/js/jquery.min.js"></script>
+<script src="../static_old/js/jquery.ui.custom.js"></script>
+<script src="../static_old/js/bootstrap.min.js"></script>
+<script src="../static_old/config.js"></script>
 		<script>
 			$(function() {
 
@@ -139,7 +139,7 @@
                             var div = "";
                             div = '<textarea id="api_json" cols="45" rows="5">'+JSON.stringify(api_json)+'</textarea>';
                             $("#addapi_json").append(div);
-                        }
+                        };
                         reader.readAsText(file);
 
 
@@ -174,10 +174,10 @@
 					success: function(data) {
                         $('#addapi_json').html("");
                        var msg=data.message;
-						$("#product").append('<input type="text" name="productid" id="productid" value="' + msg.pdt_name + '">')
-						$("#version").append('<input type="text" name="versionname" id="versionid" value="' + msg.version + '">')
-						$("#host").append('<textarea name="hostname" id="hostid"  cols="2" rows="2">'+msg.host+'</textarea>')
-						$("#description").append('<textarea name="descriptionname" id="descriptionid"  cols="3" rows="3" >'+msg.description+'</textarea>')
+						$("#product").append('<input type="text" name="productid" id="productid" value="' + msg.pdt_name + '">');
+						$("#version").append('<input type="text" name="versionname" id="versionid" value="' + msg.version + '">');
+						$("#host").append('<textarea name="hostname" id="hostid"  cols="2" rows="2">'+msg.host+'</textarea>');
+						$("#description").append('<textarea name="descriptionname" id="descriptionid"  cols="3" rows="3" >'+msg.description+'</textarea>');
                         $("#addapi_json").append('<textarea name="api_json" id="api_json"  cols="3" rows="6" >'+JSON.stringify(msg.api_json)+'</textarea>')
 					}
 				});
@@ -209,7 +209,7 @@
 							data: JSON.stringify(obj),
 							success: function(data) {
 								alert("操作:"+data.title+",\n结果:"+data.message);
-								window.location.href="index.html"; 
+								window.location.href="index.html--";
 							},
 						});
 					}

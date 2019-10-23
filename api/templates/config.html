@@ -4,11 +4,11 @@
 		<title>修改task</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../static/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="../static/css/matrix-style.css" />
-		<link rel="stylesheet" href="../static/css/matrix-media.css" />
-		<link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../static_old/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../static_old/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="../static_old/css/matrix-style.css" />
+		<link rel="stylesheet" href="../static_old/css/matrix-media.css" />
+		<link href="../static_old/font-awesome/css/font-awesome.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -35,7 +35,7 @@
 		<!--sidebar-menu-->
 		<div id="sidebar"> <a href="case.html" class="visible-phone"><i class="icon icon-info-sign"></i> case</a>
 			<ul>
-				<li><a href="index.html"><i class="icon icon-home"></i> <span>产品管理</span></a> </li>
+				<li><a href="index.html--"><i class="icon icon-home"></i> <span>产品管理</span></a> </li>
 				<li> <a href="api.html"><i class="icon icon-signal"></i> <span>api接口</span></a> </li>
 				<li> <a href="case.html"><i class="icon icon-info-sign"></i> <span>c用例管理</span> </a></li>
 				<li class="active"> <a href="task.html"><i class="icon icon-inbox"></i> <span>任务管理</span></a> </li>
@@ -92,11 +92,11 @@
 			<div id="footer" class="span12">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
 		</div>
 		<!--end-Footer-part-->
-		<script src="../static/js/jquery.min.js"></script>
-		<script src="../static/js/jquery.ui.custom.js"></script>
-		<script src="../static/js/bootstrap.min.js"></script>
-		<script src="../static/config.js"></script>
-		<script src="../static/locust.js"></script>
+		<script src="../static_old/js/jquery.min.js"></script>
+		<script src="../static_old/js/jquery.ui.custom.js"></script>
+		<script src="../static_old/js/bootstrap.min.js"></script>
+		<script src="../static_old/config.js"></script>
+		<script src="../static_old/locust.js"></script>
 		<script>
 			$(function() {
 				function getUrlParam(name) {
@@ -120,7 +120,7 @@
 					} else {
 						div = '<td><input type="checkbox" name="need" id="' + arr[0] + '" value="havetoken" >';
 					}
-					div += '<td>' + locust[i].parameter + '</td>'
+					div += '<td>' + locust[i].parameter + '</td>';
 
 					if (str.match(reg)) {
 
@@ -154,7 +154,7 @@
 							}
 							//console.log("下标:" + index)
 							//勾选复选框
-							var id_array = new Array();
+							var id_array = [];
 							$('input[name="need"]').each(function() {
 								var inputid = $(this).attr('id');
 								if (item.parameter.match(reg1)) {
@@ -182,8 +182,8 @@
 
 				});
 				updateConfig = function() {
-					var datalist = new Array();; //定义一个数组 
-					var flg = 0;
+                    var datalist = []; //定义一个数组
+                    var flg = 0;
 					$('input[name="need"]:checked').each(function() {
 						flg++;
 						console.log("fla:" + flg);
@@ -192,7 +192,7 @@
 						var name = "a" + config_id;
 						var config_name= document.getElementById(name).value;
 						console.log("id2:" + config_name);
-						var obj = new Object();
+						var obj = {};
 						if(config_name=="只可勾选"){obj.parameter=config_id;}
 						else{obj.parameter=config_id+"="+config_name;}
 						obj.need = 1;

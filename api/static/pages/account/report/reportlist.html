@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>报告管理</title>
+    <link rel="stylesheet" type="text/css" href="../../../assets/iview/iview-3.1.0/styles/iview.css" />
+    <script src="../../../assets/vue/vue-2.5.17.min.js"></script>
+    <script src="../../../assets/iview/iview-3.1.0/iview.min.js"></script>
+    <script src="../../../assets/axios/axios.js"></script>
+    <script src="../../../js/config.js"></script>
+</head>
+
+<body>
+<div id="app">
+    <i-table :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 300 : ''"
+             :size="tableSize" :data="reporttable" :columns="reportColumns"></i-table>
+</div>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: function () {
+            return {
+                reporttable: [],
+                showBorder: true,
+                showStripe: true,
+                showHeader: true,
+                showIndex: true,
+                showCheckbox: false,
+                fixedHeader: false,
+                tableSize: 'default'
+
+            }
+        },
+        computed: {
+            reportColumns() {
+                let columns = [];
+                if (this.showCheckbox) {
+                    columns.push({
+                        type: 'selection',
+                        width: 60,
+                        align: 'center'
+                    })
+                }
+                if (this.showIndex) {
+                    columns.push({
+                        type: 'index.html--',
+                        width: 60,
+                        align: 'center'
+                    })
+                }
+                columns.push({
+                    title: '任务id',
+                    key: 'task_id'
+                });
+                columns.push({
+                    title: '报告名称',
+                    key: 'report_name',
+                    sortable: true
+                });
+                columns.push({
+                    title: '报告地址',
+                    key: 'file_path'
+                });
+                columns.push({
+                    title: '生成时间',
+                    key: 'create_date'
+                });
+                columns.push({
+                    title: '操作',
+                    key: 'action',
+                    render: (h, params) => {
+                        return h('div', [
+                            h('Button', {
+                                props: {
+                                    type: 'primary',
+                                    size: 'small'
+                                },
+                                style: {
+                                    marginRight: '5px'
+                                },
+                                on: {
+                                    click: () => {
+                                        this.show(params.index)
+                                    }
+                                }
+                            }, '查看报告'),
+                            h('Button', {
+                              props: {
+                                type: 'error',
+                                size: 'small'
+                              },
+                              on: {
+                                click: () => {
+                                  this.down(params.index)
+                                }
+                              }
+                            }, '报告下载')
+                        ])
+                    }
+                });
+                return columns;
+            }
+        },
+        mounted:function(){
+            axios.get(''+host+'/api/reportinfo/reportlist')
+                .then(res => {
+                    console.log(res);
+                    this.reporttable = res.data.message;
+                    console.log("123"+this.reporttable)
+
+                })
+                .catch(function (error) {
+                    console.log(error)
+                });
+
+        },
+        methods:{
+            show:function (index) {
+                // 获取file_name
+                var fn = this.reporttable[index].report_name;
+                console.log("fn："+fn);
+                /*var host1 = axios.get(''+ host +'/api/report/access/'+fn+'')*/
+                window.open(''+ host +'/api/report/access/'+fn+'')
+            },
+            down:function (index) {
+                // 获取file_name
+                var fn = this.reporttable[index].report_name;
+                console.log("fn："+''+host+'/api/report/download/report_task20.html');
+                /*var host1 = axios.get(''+ host +'/api/report/access/'+fn+'')*/
+               /* window.open(''+ host +'/api/report/access/'+fn+'','_blank')*/
+                window.open(''+host+'/api/report/download/report_task20.html')
+            }
+        },
+        // // 下载按钮
+        //       down: function (index) {
+        //          //获取file_name
+        //           var obj = this.reporttable[index].file_path;
+        //          window.open(''+ host +'/api/report/access/'+fn+'')
+        //       },
+
+    });
+</script>
+</body>
+
+</html>

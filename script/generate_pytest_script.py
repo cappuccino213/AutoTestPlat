@@ -32,7 +32,8 @@ class PytestScript(object):
 		# if not self.verify_expection:
 		self.script_funcname = ['test_' + i['url'].split('/')[-1].lower() for i in self.script_para.para]  # script 函数名
 		self.script_funcname = list(self.rename_duplicates(self.script_funcname))
-		self.script_file = ['test_case_' + case_id for case_id in self.script_para.case_id]  # 根据case_id命名脚本名字
+		# self.script_file = ['test_case_' + case_id for case_id in self.script_para.case_id]  # 根据case_id命名脚本名字
+		self.script_file = ['test_case_%s'%str(case_id) for case_id in self.script_para.case_id]  # 根据case_id命名脚本名字
 		self.project_path = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))  # 工程根目录
 		self.generate_time = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
 		self.options = self.script_para.pytest_option # pytest运行参数
@@ -62,7 +63,9 @@ class PytestScript(object):
 				yield x
 				
 	def data_type(self):  # 判断body的数据类型
+		print(ScriptPara(self.task_id))
 		content_type = ScriptPara(self.task_id).para[0]['header']['content-type']
+		print(content_type)
 		if 'octet-stream' in content_type:
 			return 'protobuf'
 		else:
@@ -146,7 +149,7 @@ class PytestScript(object):
 	def proto2py(self):  # 将proto编译生成py文件
 		import subprocess
 		proto_file = [i['proto_file'] + '.proto' for i in self.script_para.para]  # proto文件名
-		proto_path = os.path.join(self.project_path, 'api', 'static', 'proto_file')  # proto文件目录
+		proto_path = os.path.join(self.project_path, 'api', 'static_old', 'proto_file')  # proto文件目录
 		py_path = os.path.join(self.project_path, 'script', 'protobuf_script')  # 编译生成py文件目录
 		proto_list = [os.path.join(proto_path, proto) for proto in proto_file]  # proto文件路径
 		for proto in proto_list:
@@ -196,7 +199,8 @@ class PytestScript(object):
 			
 
 if __name__ == '__main__':
-	s = PytestScript(29)
+	s = PytestScript(49)
+	# print(s)
 	s.main()
 # print(s.verify_expection)
 # print(s.script_funcname)

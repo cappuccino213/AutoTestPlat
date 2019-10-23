@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" type="text/css" href="./assets/iview/iview-3.1.0/styles/iview.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <script src="./assets/vue/vue-2.5.17.min.js"></script>
+    <script src="./assets/iview/iview-3.1.0/iview.min.js"></script>
+    <script src="./assets/axios/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="layout">
+            <Layout>
+                <Sider ref="side1" hide-trigger collapsible :collapsed-width="80" v-model="isCollapsed">
+                    <div class="sider-logo">
+                        <span class="sider-logo-text">性能平台</span>
+                        <Icon class="sider-logo-icon" type="md-home" size="24"></Icon>
+                    </div>
+                    <i-menu id="sider_menu" ref="myMenu" :active-name="currentTab.name" theme="dark" width="auto"
+                        :open-names="menuState.openNames" accordion :class="menuitemClasses" :style="{height:menuState.height+'px'}">
+                        <template v-for="submenu in menu" :key="submenu.name">
+                             <submenu :name="submenu.name">
+                                <template slot="title">
+                                    <Icon :type="submenu.icon"></Icon>
+                                    <span :title="submenu.title" >{{menu[index].title}}</span>
+                                </template>
+                                <template v-for="(item,index) in submenu.menuItem">
+                                    <menu-item :name="item.name" @click.native="handleMenuClick(item)" :style="{paddingLeft:(!isCollapsed?43:25)+'px'}">
+                                        <Icon :type="item.icon"></Icon>
+                                        <span :title="item.label">item.label</span>
+                                    </menu-item>
+                                </template>
+                            </submenu>
+                        </template>
+                    </i-menu>
+                </Sider>
+                <Layout>
+                    <i-header :style="{position: 'fixed', width: '100%'}" class="layout-header-bar">
+                        <i-menu mode="horizontal" theme="dark" active-name="1">
+                            <div class="layout-logo">
+                                <Icon @click.native="collapsedSider" class="menu-toggle" :class="rotateIcon" :style="{margin: '0'}"
+                                    type="md-menu" size="24"></Icon>
+                            </div>
+                            <div class="layout-nav" :style="{width: (isCollapsed ? 390 : 500) + 'px'}">
+                                <menu-item name="1" title="内容管理">
+                                    JSON格式化
+                                </menu-item>
+                                <menu-item name="2">
+                                    接口列表
+                                </menu-item>
+                                <menu-item name="4">
+                                    用例管理
+                                </menu-item>
+                              <menu-item name="5">
+
+                              </menu-item>
+                                <Submenu name="3">
+                                    <template slot="title">
+                                        我的
+                                    </template>
+                                    <menu-group title="使用">
+                                        <menu-item name="3-1">新增和启动</menu-item>
+                                        <menu-item name="3-2">活跃分析</menu-item>
+                                        <menu-item name="3-3">时段分析</menu-item>
+                                    </menu-group>
+                                    <menu-group title="留存">
+                                        <menu-item name="3-4">用户留存</menu-item>
+                                        <menu-item name="3-5">流失用户</menu-item>
+                                    </menu-group>
+                                </Submenu>
+                            </div>
+                        </i-menu>
+                    </i-header>
+                    <i-content :style="mainContentHeight">
+                        <tabs :type="tab.type" closable v-show="tabs.length>0" :value="currentTab.name" :animated="true"
+                            @on-click="handleTabClicked" @on-tab-remove="handleTabRemoved">
+                            <Dropdown style="margin-left: 20px" placement="bottom-end" transfer="true" slot="extra"
+                                @on-click="handleTabDropdownClick">
+                                <i-button type="text" style="height:30px;">
+                                    <Icon type="ios-arrow-down"></Icon>
+                                </i-button>
+                                <dropdown-menu slot="list">
+                                    <dropdown-item name="close-all">
+                                        <Icon type="md-close"></Icon> 关闭全部
+                                    </dropdown-item>
+                                    <dropdown-item name="close-current">
+                                        <Icon type="ios-arrow-forward"></Icon> 关闭当前
+                                    </dropdown-item>
+                                    <dropdown-item name="close-others">
+                                        <Icon type="md-arrow-forward"></Icon> 关闭其他
+                                    </dropdown-item>
+                                    <dropdown-item name="switch-tab-type" divided>
+                                        <Icon type="md-swap"></Icon> 切换模式
+                                    </dropdown-item>
+                                </dropdown-menu>
+                            </Dropdown>
+                            <tab-pane v-for="(tab,index) in tabs" :key="tab" :label="tab.label" :icon="tab.icon" :name="tab.name"
+                                :closable="tab.closable">
+                                <iframe :src="tab.href" style="border:none;width:100%;" frameborder="0" :height="frameHeight"
+                                    marginheight="0" scrolling="auto" marginwidth="0"></iframe>
+                            </tab-pane>
+                        </tabs>
+                    </i-content>
+                </Layout>
+            </Layout>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //检查是否已登录
+/*        var token = localStorage.getItem("dnc_token");
+        if (!token) {
+            window.location.href = "login.html";
+        }*/
+        Vue.prototype.$Message.config({
+            top: 10,
+            duration: 3
+        });
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                windowHeight: 0,
+                frameHeight: 0,
+                menuState: {
+                    openMenus: [],
+                    height: 300
+                },
+                tab: {
+                    type: "line" //可选值:line,card
+                },
+                currentTab: {
+                    index: 0,
+                    name: "",
+                    closable: true
+                },
+                isCollapsed: false,
+                menu: [
+                    {
+                        title: "产品管理", name: "1", icon: "md-home", menuItem: [
+                            { label: "产品列表", name: "1-1", href: "pages/account/product/prolist.html", icon: "md-home", closable: false },
+                            { label: "产品新增", name: "1-2", href: "pages/account/product/addpro.html", icon: "logo-windows", closable: true },
+                        ]
+                    },
+                    {
+                        title: "接口管理", name: "2", icon: "logo-windows", menuItem: [
+                            { label: "接口管理", name: "2-1", href: "pages/account/api/apilist.html", icon: "logo-apple", closable: true }
+                        ]
+                    },
+                    {
+                        title: "用例管理", name: "3", icon: "md-square", menuItem: [
+                            { label: "用例列表", name: "3-1", href: "pages/account/case/caselist.html", icon: "md-square", closable: true }
+                            ]
+                    },
+                  {
+                    title: "任务管理", name: "4", icon: "md-settings", menuItem: [
+                      { label: "任务列表", name: "4-1", href: "pages/account/task/tasklist.html", icon: "md-settings", closable: true }
+                    ]
+                  },
+                  {
+                    title: "报告管理", name: "5", icon: "ios-podium ", menuItem: [
+                      { label: "HTML报告", name: "5-1", href: "pages/account/report/reportlist.html", icon: "ios-podium ", closable: true }
+                    ]
+                  },
+                  {
+                    title: "其他", name: "6", icon: "logo-tux", menuItem: [
+                      { label: "数据生成", name: "6-1", href: "pages/account/other/list.html", icon: "logo-apple", closable: true }
+                    ]
+                  }
+                ],
+                tabs: [
+                ]
+            },
+            computed: {
+                rotateIcon() {
+                    return [
+                        'menu-icon',
+                        this.isCollapsed ? 'rotate-icon' : ''
+                    ];
+                },
+                menuitemClasses() {
+                    return [
+                        'menu-item',
+                        this.isCollapsed ? 'collapsed-menu' : ''
+                    ];
+                },
+                mainContentHeight() {
+                    var docHeight = this.windowHeight - 65;
+                    return { margin: '50px 2px 0', background: '#fff', height: '100%', minHeight: docHeight + 15 + 'px' };
+                }
+            },
+            ready: function () {
+
+            },
+            beforeDestroy: function () {
+                window.removeEventListener('resize', this.handleResize)
+            },
+            mounted() {
+                this.init();
+                window.addEventListener('resize', this.handleResize);
+                this.handleMenuClick({ label: "产品列表", name: "1-1", href: "pages/account/product/prolist.html", icon: "md-home", closable: false });
+
+            },
+            methods: {
+                init: function () {
+                    this.calcFrameHeight();
+                    this.calcSiderMenuHeight();
+                },
+                calcFrameHeight: function () {
+                    this.windowHeight = (document.documentElement.scrollHeight || document.body.scrollHeight);
+                    this.frameHeight = this.windowHeight - 95;
+                },
+                calcSiderMenuHeight: function () {
+                    this.menuState.height = this.windowHeight - 50;
+                },
+                setCurrentTab: function (name) {
+                    var tab = this.getTab(name);
+                    var tabIndex = this.getTabIndex(name);
+                    if (tab) {
+                        this.currentTab.index = tabIndex;
+                        this.currentTab.name = tab.name;
+                        this.currentTab.closable = tab.closable;
+                    }
+                },
+                handleMenuClick(menu) {
+                    var tab = { label: menu.label, href: menu.href, icon: menu.icon, name: menu.name, closable: menu.closable };
+                    if (this.tabs.map(x => x.name).indexOf(menu.name) === -1) {
+                        this.tabs.push(tab);
+                    }
+                    this.setCurrentTab(tab.name);
+                },
+                handleMenuSelected(name) {
+                    var menu = this.menu.menuItem;
+                },
+                collapsedSider() {
+                    this.$refs.side1.toggleCollapse();
+                },
+                getTab: function (name) {
+                    for (var i = 0; i < this.tabs.length; i++) {
+                        if (this.tabs[i].name == name) {
+                            return this.tabs[i];
+                        }
+                    }
+                    return null;
+                },
+                getTabIndex: function (name) {
+                    for (var i = 0; i < this.tabs.length; i++) {
+                        if (this.tabs[i].name == name) {
+                            return i;
+                        }
+                    }
+                    return -1;
+                },
+                handleTabClicked: function (name) {
+                    this.setCurrentTab(name);
+                    var openNames = name.split("-")[0] + "";
+                    this.menuState.openNames = [openNames];
+                    this.$nextTick(function () {
+                        this.$refs["myMenu"].updateOpened();
+                    });
+                },
+                handleTabRemoved: function (name) {
+                    var index = this.getTabIndex(name);
+                    this.doRemoveTab(index);
+                },
+                handleResize: function () {
+                    this.calcFrameHeight();
+                    this.calcSiderMenuHeight();
+                },
+                handleTabDropdownClick: function (name) {
+                    switch (name) {
+                        case "close-all":
+                            this.doCloseTabAll();
+                            break;
+                        case "close-current":
+                            this.doCloseTabCurrent();
+                            break;
+                        case "close-others":
+                            this.doCloseTabOthers();
+                            break;
+                        case "switch-tab-type":
+                            this.handleSwitchTabType();
+                            break;
+                    }
+                },
+                doRemoveTab: function (index) {
+                    var tab = this.tabs[index];
+                    if (!tab.closable) {
+                        return;
+                    }
+                    this.tabs.splice(index, 1);
+                },
+                doCloseTabAll: function () {
+                    for (var i = this.tabs.length - 1; i >= 0; i--) {
+                        var tab = this.tabs[i];
+                        if (tab.closable) {
+                            this.doRemoveTab(i);
+                        }
+                    }
+                    if (this.currentTab.closable) {
+                        var index = this.tabs.length - 1;
+                        this.currentTab.index = index;
+                        this.currentTab.name = this.tabs[index].name;
+                        this.currentTab.closable = this.tabs[index].closable;
+                    }
+                    var target = this;
+                    setTimeout(function () {
+                        target.resetActiveTab();
+                    }, 50);
+                },
+                doCloseTabCurrent: function () {
+                    this.handleTabRemoved(this.currentTab.name);
+                    var index = this.currentTab.index - 1;
+                    if (index < 0) {
+                        index = 0;
+                    }
+                    if (this.currentTab.closable) {
+                        this.currentTab.index = index;
+                        this.currentTab.name = this.tabs[index].name;
+                        this.currentTab.closable = this.tabs[index].closable;
+                    }
+                    var target = this;
+                    setTimeout(function () {
+                        target.resetActiveTab();
+                    }, 50);
+                },
+                doCloseTabOthers: function () {
+                    var previousRemoveCount = 0;
+                    var count = true;
+                    for (var i = this.tabs.length - 1; i >= 0; i--) {
+                        var tab = this.tabs[i];
+                        if (tab.closable && tab.name != this.currentTab.name) {
+                            this.doRemoveTab(i);
+                        }
+                        if (tab.closable && count) {
+                            previousRemoveCount++;
+                            if (tab.name == this.currentTab.name) {
+                                count = false;
+                            }
+                        }
+                    }
+                    if (previousRemoveCount > 0) {
+                        this.currentTab.index = this.getTabIndex(this.currentTab.name);
+                    }
+                },
+                resetActiveTab: function () {
+                    var target = this;
+                    setTimeout(function () {
+                        var name = target.currentTab.name;
+                        target.setCurrentTab(name);
+                        target.handleTabClicked(name);
+                    }, 100);
+
+                },
+                handleSwitchTabType: function () {
+                    this.tab.type = this.tab.type === "line" ? "card" : "line";
+                },
+                findNextTabIndex: function () {
+                    var index = this.currentTab.index - 1;
+                    if (index < 0) {
+                        index = 0;
+                    }
+                    return index;
+                },
+                findNextTabName: function () {
+                    var index = this.findNextTabIndex();
+                    return this.tabs[index].name;
+                },
+                findNextTab: function () {
+                    var index = this.findNextTabIndex();
+                    return this.tabs[index];
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

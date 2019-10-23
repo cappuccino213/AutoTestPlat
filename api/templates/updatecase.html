@@ -4,11 +4,11 @@
 		<title>修改CASE页面</title>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../static/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="../static/css/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="../static/css/matrix-style.css" />
-		<link rel="stylesheet" href="../static/css/matrix-media.css" />
-		<link href="../static/font-awesome/css/font-awesome.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../static_old/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="../static_old/css/bootstrap-responsive.min.css" />
+		<link rel="stylesheet" href="../static_old/css/matrix-style.css" />
+		<link rel="stylesheet" href="../static_old/css/matrix-media.css" />
+		<link href="../static_old/font-awesome/css/font-awesome.css" rel="stylesheet" />
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -35,7 +35,7 @@
 		<!--sidebar-menu-->
 		<div id="sidebar"> <a href="case.html" class="visible-phone"><i class="icon icon-info-sign"></i> case</a>
 			<ul>
-				<li><a href="index.html"><i class="icon icon-home"></i><span>产品管理</span></a> </li>
+				<li><a href="index.html--"><i class="icon icon-home"></i><span>产品管理</span></a> </li>
 				<!-- <li> <a href="product.html"><i class="icon icon-signal"></i> <span>product</span></a> </li> -->
 				<li> <a href="api.html"><i class="icon icon-file"></i><span>api接口</a></span></li>
 				<li class="active"> <a href="case.html"><i class="icon icon-inbox"></i><span>用例管理</a></span></li>
@@ -95,10 +95,10 @@
 			<div id="footer" class="span12">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></div>
 		</div>
 		<!--end-Footer-part-->
-		<script src="../static/js/jquery.min.js"></script>
-		<script src="../static/js/jquery.ui.custom.js"></script>
-		<script src="../static/js/bootstrap.min.js"></script>
-		<script src="../static/config.js"></script>
+		<script src="../static_old/js/jquery.min.js"></script>
+		<script src="../static_old/js/jquery.ui.custom.js"></script>
+		<script src="../static_old/js/bootstrap.min.js"></script>
+		<script src="../static_old/config.js"></script>
 		<script>
 			$(function() {
 
@@ -120,7 +120,7 @@
 					success: function(data) {
 						var msg = data.message;
 						$("#case_nameid").append('<input type="text" name="api_namename" id="api_nameid" value="' + msg.case_name +
-							'">')
+							'">');
 						var capi_id = msg.api_weight[0].api_id;
 						//console.log("capi_id:" + capi_id);
 						$.ajax({
@@ -158,11 +158,11 @@
 												'</label></td><td width="124"><table width="10" border="0"><tr ><td width="14">权重</td><td width="20"><input type="text" name="interest2" id=nme' +
 												item.api_id + '></td></tr></table></td></tr></table>';
 											$("#apilistone").append(div)
-										})
-										var weightlist = msg.api_weight
-										console.log("weigthlist:" + weightlist.length)
+										});
+										var weightlist = msg.api_weight;
+										console.log("weigthlist:" + weightlist.length);
 										//写入复选框
-										var id_array = new Array();
+										var id_array = [];
 										$('input[name="interest"]').each(function() {
 											var inputid = $(this).attr('id');
 											/* var id="7" */
@@ -193,7 +193,7 @@
 										});
 									},
 								});
-								var weightlist = msg.api_weight
+								var weightlist = msg.api_weight;
 								console.log("weigthlist:" + weightlist.length)
 							},
 						});
@@ -201,8 +201,8 @@
 
 				});
 				updateCASE = function() {
-					var datalist = new Array();; //定义一个数组 
-					var flg = 0;
+                    var datalist = []; //定义一个数组
+                    var flg = 0;
 					$('input[name="interest"]:checked').each(function() {
 						/* var id1=id_array.push($(this).attr('id')); */
 						/* var content = $("#"+id1 +).val(); */
@@ -217,7 +217,7 @@
 												alert("请输入"+$(this).attr('value')+"权重值");
 												flg=1;
 											}
-						var obj = new Object();
+						var obj = {};
 						obj.api_id = id1;
 						obj.weight = weight;
 						datalist.push(obj);
